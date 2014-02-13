@@ -79,6 +79,7 @@ public class StateFactory {
     	continentalAbbreviations=new ArrayList<String>();
     	continentalNames=new ArrayList<String>();
     	stateNames=new ArrayList<String>();
+    	statesByName=new TreeMap<String,State>();
     	militaryNames=new ArrayList<String>();
     	territoryNames=new ArrayList<String>();
     	
