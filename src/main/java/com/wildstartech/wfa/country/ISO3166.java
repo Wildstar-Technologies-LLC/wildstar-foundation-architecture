@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2013 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -35,8 +35,8 @@
  * If you need additional information or have any questions, please contact:
  *
  *      Wildstar Technologies, LLC.
- *      1453 Riverview Run Lane
- *      Suwanee, GA 30024
+ *      63 The Greenway Loop
+ *      Panama City Beach, FL 32413
  *      USA
  *
  *      derek.berube@wildstartech.com
@@ -45,6 +45,7 @@
 package com.wildstartech.wfa.country;
 
 import java.util.ListResourceBundle;
+import java.util.logging.Logger;
 /**
  * Resource bundle containing ISO3166 country names and abbreviations.
  * 
@@ -54,7 +55,11 @@ import java.util.ListResourceBundle;
  * @version 1.0
  */
 public class ISO3166 extends ListResourceBundle {
-	private static Object[][] contents = {
+	private static final String _CLASS=ISO3166.class.getName();
+	private static final Logger logger=Logger.getLogger(_CLASS);
+	
+	private static Object[][] contents = {	
+		{"AD",new Country("AD","Andorra")},
 		{"AE",new Country("AE","United Arab Emirates")},
 		{"AF",new Country("AF","Afghanistan")},
 		{"AG",new Country("AG","Antigua And Barbuda")},
@@ -286,7 +291,7 @@ public class ISO3166 extends ListResourceBundle {
 		{"US",new Country("US","United States")},
 		{"UY",new Country("UY","Uruguay")},
 		{"UZ",new Country("UZ","Uzbekistan")},
-		{"VA",new Country("VA","Holy See (Vatican City State)","Vatican City State")},
+		{"VA",new Country("VA","Vatican City State","Holy See (Vatican City State)")},
 		{"VC",new Country("VC","Saint Vincent and the Grenadines")},
 		{"VE",new Country("VE","Venezuela, Bolivarian Republic of")},
 		{"VG",new Country("VG","Virgin Islands, British")},
@@ -302,7 +307,9 @@ public class ISO3166 extends ListResourceBundle {
 		{"ZW",new Country("ZW","Zimbabwe")}
 	};
 	
-	public Object[][] getContents() {
+	protected Object[][] getContents() {
+		logger.entering(_CLASS,"getContents()");
+		logger.exiting(_CLASS,"getContents()",ISO3166.contents);
 		return ISO3166.contents;
 	}
 }

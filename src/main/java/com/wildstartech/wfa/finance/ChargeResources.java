@@ -35,8 +35,8 @@
  * If you need additional information or have any questions, please contact:
  *
  *      Wildstar Technologies, LLC.
- *      1453 Riverview Run Lane
- *      Suwanee, GA 30024
+ *      63 The Greenway Loop
+ *      Panama City Beach, FL 32413
  *      USA
  *
  *      derek.berube@wildstartech.com

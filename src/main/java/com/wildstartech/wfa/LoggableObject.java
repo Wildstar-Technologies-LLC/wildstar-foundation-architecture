@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2013 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -35,8 +35,8 @@
  * If you need additional information or have any questions, please contact:
  *
  *      Wildstar Technologies, LLC.
- *      1453 Riverview Run Lane
- *      Suwanee, GA 30024
+ *      63 The Greenway Loop
+ *      Panama City Beach, FL 32413
  *      USA
  *
  *      derek.berube@wildstartech.com
