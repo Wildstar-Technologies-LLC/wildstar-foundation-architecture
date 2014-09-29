@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.wildstartech</groupId>
   <artifactId>wfa</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1-SNAPSHOT</version>
   <name>Wildstar Foundation Architecture</name>
   <description>A collection of reusable classes for applications developed by Wildstar Technologies, LLC.</description>
   <organization>
@@ -10,12 +10,25 @@
   	<url>www.wildstartech.com</url>
   </organization>
   <url>http://www.wildstartech.com/</url>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.8.1</version>
-      <scope>test</scope>
-    </dependency>   
+  	<dependency>
+  		<groupId>org.testng</groupId>
+  		<artifactId>testng</artifactId>
+  		<version>6.8.5</version>
+  		<scope>test</scope>
+  	</dependency>
   </dependencies>
 </project>

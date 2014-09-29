@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2013 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -35,8 +35,8 @@
  * If you need additional information or have any questions, please contact:
  *
  *      Wildstar Technologies, LLC.
- *      1453 Riverview Run Lane
- *      Suwanee, GA 30024
+ *      63 The Greenway Loop
+ *      Panama City Beach, FL 32413
  *      USA
  *
  *      derek.berube@wildstartech.com
@@ -47,14 +47,21 @@ package com.wildstartech.wfa.country;
 import java.util.Enumeration;
 import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 /**
  * Provides access to instances of the Country object.
  * @author Derek Berube, Wildstar Technologies, LLC.
  */
 public class CountryFactory {
+	// Class name used in logging.
+	private static final String _CLASS=CountryFactory.class.getName();
+	// Static reference to class-wide logger.
+	private static final Logger logger=Logger.getLogger(_CLASS);
+	
 	/** Stores a reference to the CountryFactory */
-	private final static CountryFactory cf=new CountryFactory();	
+	private final static CountryFactory cf=new CountryFactory();
+	
 	/**
 	 * Map of <code>Country</code> objects using the name as a key.
 	 */
@@ -68,9 +75,11 @@ public class CountryFactory {
 	 * Preserve the singleton nature of the CountryFactory object. 
 	 */
 	private CountryFactory() {
-		// Obtain a reference to the ISO3166 resource bundle
-		this.countryInformation=ResourceBundle.getBundle("ISO3166");
-		// Lazy instantiation, so do nothing else.		
+		logger.entering(_CLASS,"CountryFactory()");
+		this.countryInformation=ResourceBundle.getBundle("com.wildstartech.wfa.country.ISO3166");
+		/* Lazy instantiation, simply locate the resource bundle and then do
+		 * nothing else. */
+		logger.exiting(_CLASS,"CountryFactory()");
 	}
 	
 	/**

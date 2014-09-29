@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2013 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -35,8 +35,8 @@
  * If you need additional information or have any questions, please contact:
  *
  *      Wildstar Technologies, LLC.
- *      1453 Riverview Run Lane
- *      Suwanee, GA 30024
+ *      63 The Greenway Loop
+ *      Panama City Beach, FL 32413
  *      USA
  *
  *      derek.berube@wildstartech.com
@@ -46,6 +46,7 @@ package com.wildstartech.wfa.country;
 
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.logging.Logger;
 
 /**
  * Provides access to ISO 3166 English Country names and code elements.
@@ -58,6 +59,9 @@ import java.util.TreeSet;
  * @version 1.0, 01 Jan 2010
  */
 public class Country {
+	private static final String _CLASS=Country.class.getName();
+	private static final Logger logger=Logger.getLogger(_CLASS);
+	
 	private String name;
 	private String code;
 	private Set<String> alternateNames;
@@ -73,10 +77,14 @@ public class Country {
 	 * 
 	 */
 	protected Country() {
+		logger.entering(_CLASS, "Country()");
 		// Not used.
+		logger.exiting(_CLASS, "Country()");
 	}
 	
 	protected Country(String code, String... names) {
+		logger.entering(_CLASS, "Country(String,String[]",
+				new Object[] {code,names});
 		// Handle the code value
 		if (code != null) { 
 			this.code=code;
@@ -106,6 +114,7 @@ public class Country {
 				this.alternateNames.add(altName);
 			} // END for (String altName; alternateNames)
 		} // END if (alternateNames != null)
+		logger.exiting(_CLASS,"Country(String,String[]");
 	}
 	/**
 	 * Returns a <code>String</code> array listing alternate names.
@@ -116,11 +125,13 @@ public class Country {
 	 * @return A <code>String</code> array of alternate names for the country.
 	 */
 	public String[] getAlternateNames() {
+		logger.entering(_CLASS,"getAlternateNames()");
 		String[] result=null;
 	
 		if (this.alternateNames != null) {
 			result=this.alternateNames.toArray(new String[0]);
 		} // END if (this.alternateNames != null)
+		logger.exiting(_CLASS,"getAlternateNames()",result);
 		return result;
 	}
 	/**
@@ -128,12 +139,16 @@ public class Country {
 	 * @return the English language name of the country.
 	 */
 	public String getName() {
+		logger.entering(_CLASS,"getNames()");
+		logger.exiting(_CLASS, "getNames()",this.name);
 		return this.name;
 	}
 	/**
 	 * Returns the ISO-3166 two-character country code abbreviation.
 	 */
 	public String getCode() {
+		logger.entering(_CLASS,"getCode()");
+		logger.exiting(_CLASS,"getCode()",this.code);
 		return this.code;
 	}
 	/**
@@ -141,6 +156,9 @@ public class Country {
 	 * @return a <code>String</code> representation of the <code>Country</code>.
 	 */
 	public String toString() {
-		return this.name+ " (" + this.code + ")";
+		logger.entering(_CLASS,"toString()");
+		String result=this.name+ " (" + this.code + ")";
+		logger.exiting(_CLASS,"toString()",result);
+		return result;
 	}
 }

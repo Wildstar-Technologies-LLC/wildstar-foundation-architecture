@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2013 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -35,8 +35,8 @@
  * If you need additional information or have any questions, please contact:
  *
  *      Wildstar Technologies, LLC.
- *      1453 Riverview Run Lane
- *      Suwanee, GA 30024
+ *      63 The Greenway Loop
+ *      Panama City Beach, FL 32413
  *      USA
  *
  *      derek.berube@wildstartech.com
@@ -44,2038 +44,2520 @@
  */
 package com.wildstartech.wfa.country;
 
-import junit.framework.TestCase;
+import org.testng.annotations.Test;
+
 /**
  * Test the <code>CountryFactory</code> to validate ISO3166 compliance.
  * 
  * @author Derek Berube, Wildstar Technologies, LLC.
  */
-public class TestCountryFactory extends TestCase {
-	private CountryFactory countryFactory;
-	/**
-	 * Obtain a reference to the <code>CountryFactory</code>.
-	 */
-	public void setup() {
-		this.countryFactory=CountryFactory.getInstance();
-	}
-	
-	/**
-	 * Cleanup after test execution.
-	 */
-	public void tearDown() {
-		this.countryFactory=null;
-	}
-	
+public class TestCountryFactory {
+	private static CountryFactory countryFactory=CountryFactory.getInstance();
+
 	// ***** (AD) - Andorra
+	@Test
 	public void testAndorra() {
 		Country country = null;
 		country = countryFactory.findByCode("AD");
-		assertTrue(country.getCode().equals("AD"));
-		assertTrue(country.getName().toUpperCase().equals("ANDORRA"));
+		assert country != null;
+		assert country.getCode().equals("AD")== true;
+		assert country.getName().toUpperCase().equals("ANDORRA")== true;
 	}
 
 	// ***** (AE) - United Arab Emirates
+	@Test
 	public void testUnitedArabEmirates() {
 		Country country = null;
 		country = countryFactory.findByCode("AE");
-		assertTrue(country.getCode().equals("AE"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"UNITED ARAB EMIRATES"));
+		assert country != null;
+		assert country.getCode().equals("AE")== true;
+		assert country.getName().toUpperCase()
+				.equals("UNITED ARAB EMIRATES")== true;
 	}
 
 	// ***** (AF) - Afghanistan
+	@Test
 	public void testAfghanistan() {
 		Country country = null;
 		country = countryFactory.findByCode("AF");
-		assertTrue(country.getCode().equals("AF"));
-		assertTrue(country.getName().toUpperCase().equals("AFGHANISTAN"));
+		assert country != null;
+		assert country.getCode().equals("AF")== true;
+		assert country.getName().toUpperCase().equals("AFGHANISTAN")== true;
 	}
 
 	// ***** (AG) - Antigua And Barbuda
+	@Test
 	public void testAntiguaAndBarbuda() {
 		Country country = null;
 		country = countryFactory.findByCode("AG");
-		assertTrue(country.getCode().equals("AG"));
-		assertTrue(country.getName().toUpperCase()
-				.equals("ANTIGUA AND BARBUDA"));
+		assert country != null;
+		assert country.getCode().equals("AG")== true;
+		assert country.getName().toUpperCase()
+				.equals("ANTIGUA AND BARBUDA")== true;
 	}
 
 	// ***** (AI) - Anguilla
+	@Test
 	public void testAnguilla() {
 		Country country = null;
 		country = countryFactory.findByCode("AI");
-		assertTrue(country.getCode().equals("AI"));
-		assertTrue(country.getName().toUpperCase().equals("ANGUILLA"));
+		assert country != null;
+		assert country.getCode().equals("AI")== true;
+		assert country.getName().toUpperCase().equals("ANGUILLA")== true;
 	}
 
 	// ***** (AL) - Albania
+	@Test
 	public void testAlbania() {
 		Country country = null;
 		country = countryFactory.findByCode("AL");
-		assertTrue(country.getCode().equals("AL"));
-		assertTrue(country.getName().toUpperCase().equals("ALBANIA"));
+		assert country != null;
+		assert country.getCode().equals("AL")== true;
+		assert country.getName().toUpperCase().equals("ALBANIA")== true;
 	}
 
 	// ***** (AM) - Armenia
+	@Test
 	public void testArmenia() {
 		Country country = null;
 		country = countryFactory.findByCode("AM");
-		assertTrue(country.getCode().equals("AM"));
-		assertTrue(country.getName().toUpperCase().equals("ARMENIA"));
+		assert country != null;
+		assert country.getCode().equals("AM")== true;
+		assert country.getName().toUpperCase().equals("ARMENIA")== true;
 	}
 
 	// ***** (AN) - Netherlands Antilles
+	@Test
 	public void testNetherlandsAntilles() {
 		Country country = null;
 		country = countryFactory.findByCode("AN");
-		assertTrue(country.getCode().equals("AN"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"NETHERLANDS ANTILLES"));
+		assert country != null;
+		assert country.getCode().equals("AN")== true;
+		assert country.getName().toUpperCase()
+				.equals("NETHERLANDS ANTILLES")== true;
 	}
 
 	// ***** (AO) - Angola
+	@Test
 	public void testAngola() {
 		Country country = null;
 		country = countryFactory.findByCode("AO");
-		assertTrue(country.getCode().equals("AO"));
-		assertTrue(country.getName().toUpperCase().equals("ANGOLA"));
+		assert country != null;
+		assert country.getCode().equals("AO")== true;
+		assert country.getName().toUpperCase().equals("ANGOLA")== true;
 	}
 
 	// ***** (AQ) - Antarctica
+	@Test
 	public void testAntarctica() {
 		Country country = null;
 		country = countryFactory.findByCode("AQ");
-		assertTrue(country.getCode().equals("AQ"));
-		assertTrue(country.getName().toUpperCase().equals("ANTARCTICA"));
+		assert country != null;
+		assert country.getCode().equals("AQ")== true;
+		assert country.getName().toUpperCase().equals("ANTARCTICA")== true;
 	}
 
 	// ***** (AR) - Argentina
+	@Test
 	public void testArgentina() {
 		Country country = null;
 		country = countryFactory.findByCode("AR");
-		assertTrue(country.getCode().equals("AR"));
-		assertTrue(country.getName().toUpperCase().equals("ARGENTINA"));
+		assert country != null;
+		assert country.getCode().equals("AR")== true;
+		assert country.getName().toUpperCase().equals("ARGENTINA")== true;
 	}
 
 	// ***** (AS) - American Samoa
+	@Test
 	public void testAmericanSamoa() {
 		Country country = null;
 		country = countryFactory.findByCode("AS");
-		assertTrue(country.getCode().equals("AS"));
-		assertTrue(country.getName().toUpperCase().equals("AMERICAN SAMOA"));
+		assert country != null;
+		assert country.getCode().equals("AS")== true;
+		assert country.getName().toUpperCase().equals("AMERICAN SAMOA")== true;
 	}
 
 	// ***** (AT) - Austria
+	@Test
 	public void testAustria() {
 		Country country = null;
 		country = countryFactory.findByCode("AT");
-		assertTrue(country.getCode().equals("AT"));
-		assertTrue(country.getName().toUpperCase().equals("AUSTRIA"));
+		assert country != null;
+		assert country.getCode().equals("AT")== true;
+		assert country.getName().toUpperCase().equals("AUSTRIA")== true;
 	}
 
 	// ***** (AU) - Australia
+	@Test
 	public void testAustralia() {
 		Country country = null;
 		country = countryFactory.findByCode("AU");
-		assertTrue(country.getCode().equals("AU"));
-		assertTrue(country.getName().toUpperCase().equals("AUSTRALIA"));
+		assert country != null;
+		assert country.getCode().equals("AU")== true;
+		assert country.getName().toUpperCase().equals("AUSTRALIA")== true;
 	}
 
 	// ***** (AW) - Aruba
+	@Test
 	public void testAruba() {
 		Country country = null;
 		country = countryFactory.findByCode("AW");
-		assertTrue(country.getCode().equals("AW"));
-		assertTrue(country.getName().toUpperCase().equals("ARUBA"));
+		assert country != null;
+		assert country.getCode().equals("AW")== true;
+		assert country.getName().toUpperCase().equals("ARUBA")== true;
 	}
 
 	// ***** (AX) - land Islands
+	@Test
 	public void testAlandIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("AX");
-		assertTrue(country.getCode().equals("AX"));
-		assertTrue(country.getName().toUpperCase().equals("\u00c5LAND ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("AX")== true;
+		assert country.getName().toUpperCase().equals("\u00c5LAND ISLANDS")== true;
 	}
 
 	// ***** (AZ) - Azerbaijan
+	@Test
 	public void testAzerbaijan() {
 		Country country = null;
 		country = countryFactory.findByCode("AZ");
-		assertTrue(country.getCode().equals("AZ"));
-		assertTrue(country.getName().toUpperCase().equals("AZERBAIJAN"));
+		assert country != null;
+		assert country.getCode().equals("AZ")== true;
+		assert country.getName().toUpperCase().equals("AZERBAIJAN")== true;
 	}
 
 	// ***** (BA) - Bosnia And Herzegovina
+	@Test
 	public void testBosniaAndHerzegovina() {
 		Country country = null;
 		country = countryFactory.findByCode("BA");
-		assertTrue(country.getCode().equals("BA"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"BOSNIA AND HERZEGOVINA"));
+		assert country != null;
+		assert country.getCode().equals("BA")== true;
+		assert country.getName().toUpperCase()
+				.equals("BOSNIA AND HERZEGOVINA")== true;
 	}
 
 	// ***** (BB) - Barbados
+	@Test
 	public void testBarbados() {
 		Country country = null;
 		country = countryFactory.findByCode("BB");
-		assertTrue(country.getCode().equals("BB"));
-		assertTrue(country.getName().toUpperCase().equals("BARBADOS"));
+		assert country != null;
+		assert country.getCode().equals("BB")== true;
+		assert country.getName().toUpperCase().equals("BARBADOS")== true;
 	}
 
 	// ***** (BD) - Bangladesh
+	@Test
 	public void testBangladesh() {
 		Country country = null;
 		country = countryFactory.findByCode("BD");
-		assertTrue(country.getCode().equals("BD"));
-		assertTrue(country.getName().toUpperCase().equals("BANGLADESH"));
+		assert country != null;
+		assert country.getCode().equals("BD")== true;
+		assert country.getName().toUpperCase().equals("BANGLADESH")== true;
 	}
 
 	// ***** (BE) - Belgium
+	@Test
 	public void testBelgium() {
 		Country country = null;
 		country = countryFactory.findByCode("BE");
-		assertTrue(country.getCode().equals("BE"));
-		assertTrue(country.getName().toUpperCase().equals("BELGIUM"));
+		assert country != null;
+		assert country.getCode().equals("BE")== true;
+		assert country.getName().toUpperCase().equals("BELGIUM")== true;
 	}
 
 	// ***** (BF) - Burkina Faso
+	@Test
 	public void testBurkinaFaso() {
 		Country country = null;
 		country = countryFactory.findByCode("BF");
-		assertTrue(country.getCode().equals("BF"));
-		assertTrue(country.getName().toUpperCase().equals("BURKINA FASO"));
+		assert country != null;
+		assert country.getCode().equals("BF")== true;
+		assert country.getName().toUpperCase().equals("BURKINA FASO")== true;
 	}
 
 	// ***** (BG) - Bulgaria
+	@Test
 	public void testBulgaria() {
 		Country country = null;
 		country = countryFactory.findByCode("BG");
-		assertTrue(country.getCode().equals("BG"));
-		assertTrue(country.getName().toUpperCase().equals("BULGARIA"));
+		assert country != null;
+		assert country.getCode().equals("BG")== true;
+		assert country.getName().toUpperCase().equals("BULGARIA")== true;
 	}
 
 	// ***** (BH) - Bahrain
+	@Test
 	public void testBahrain() {
 		Country country = null;
 		country = countryFactory.findByCode("BH");
-		assertTrue(country.getCode().equals("BH"));
-		assertTrue(country.getName().toUpperCase().equals("BAHRAIN"));
+		assert country != null;
+		assert country.getCode().equals("BH")== true;
+		assert country.getName().toUpperCase().equals("BAHRAIN")== true;
 	}
 
 	// ***** (BI) - Burundi
+	@Test
 	public void testBurundi() {
 		Country country = null;
 		country = countryFactory.findByCode("BI");
-		assertTrue(country.getCode().equals("BI"));
-		assertTrue(country.getName().toUpperCase().equals("BURUNDI"));
+		assert country != null;
+		assert country.getCode().equals("BI")== true;
+		assert country.getName().toUpperCase().equals("BURUNDI")== true;
 	}
 
 	// ***** (BJ) - Benin
+	@Test
 	public void testBenin() {
 		Country country = null;
 		country = countryFactory.findByCode("BJ");
-		assertTrue(country.getCode().equals("BJ"));
-		assertTrue(country.getName().toUpperCase().equals("BENIN"));
+		assert country != null;
+		assert country.getCode().equals("BJ")== true;
+		assert country.getName().toUpperCase().equals("BENIN")== true;
 	}
 
 	// ***** (BL) - Saint Barthelemy
+	@Test
 	public void testSaintBarthelemy() {
 		Country country = null;
 		country = countryFactory.findByCode("BL");
-		assertTrue(country.getCode().equals("BL"));
-		assertTrue(country.getName().toUpperCase().equals("SAINT BARTH\u00c9LEMY"));
+		assert country != null;
+		assert country.getCode().equals("BL")== true;
+		assert country.getName().toUpperCase()
+				.equals("SAINT BARTH\u00c9LEMY")== true;
 	}
 
 	// ***** (BM) - Bermuda
+	@Test
 	public void testBermuda() {
 		Country country = null;
 		country = countryFactory.findByCode("BM");
-		assertTrue(country.getCode().equals("BM"));
-		assertTrue(country.getName().toUpperCase().equals("BERMUDA"));
+		assert country != null;
+		assert country.getCode().equals("BM")== true;
+		assert country.getName().toUpperCase().equals("BERMUDA")== true;
 	}
 
 	// ***** (BN) - Brunei Darussalam
+	@Test
 	public void testBruneiDarussalam() {
 		Country country = null;
 		country = countryFactory.findByCode("BN");
-		assertTrue(country.getCode().equals("BN"));
-		assertTrue(country.getName().toUpperCase().equals("BRUNEI DARUSSALAM"));
+		assert country != null;
+		assert country.getCode().equals("BN")== true;
+		assert country.getName().toUpperCase().equals("BRUNEI DARUSSALAM")== true;
 	}
 
 	// ***** (BO) - Bolivia, Plurinational State Of
+	@Test
 	public void testBoliviaPlurinationalStateOf() {
 		Country country = null;
 		country = countryFactory.findByCode("BO");
-		assertTrue(country.getCode().equals("BO"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"BOLIVIA, PLURINATIONAL STATE OF"));
+		assert country != null;
+		assert country.getCode().equals("BO")== true;
+		assert country.getName().toUpperCase()
+				.equals("BOLIVIA, PLURINATIONAL STATE OF")== true;
 	}
 
 	// ***** (BR) - Brazil
+	@Test
 	public void testBrazil() {
 		Country country = null;
 		country = countryFactory.findByCode("BR");
-		assertTrue(country.getCode().equals("BR"));
-		assertTrue(country.getName().toUpperCase().equals("BRAZIL"));
+		assert country != null;
+		assert country.getCode().equals("BR")== true;
+		assert country.getName().toUpperCase().equals("BRAZIL")== true;
 	}
 
 	// ***** (BS) - Bahamas
+	@Test
 	public void testBahamas() {
 		Country country = null;
 		country = countryFactory.findByCode("BS");
-		assertTrue(country.getCode().equals("BS"));
-		assertTrue(country.getName().toUpperCase().equals("BAHAMAS"));
+		assert country != null;
+		assert country.getCode().equals("BS")== true;
+		assert country.getName().toUpperCase().equals("BAHAMAS")== true;
 	}
 
 	// ***** (BT) - Bhutan
+	@Test
 	public void testBhutan() {
 		Country country = null;
 		country = countryFactory.findByCode("BT");
-		assertTrue(country.getCode().equals("BT"));
-		assertTrue(country.getName().toUpperCase().equals("BHUTAN"));
+		assert country != null;
+		assert country.getCode().equals("BT")== true;
+		assert country.getName().toUpperCase().equals("BHUTAN")== true;
 	}
 
 	// ***** (BV) - Bouvet Island
+	@Test
 	public void testBouvetIsland() {
 		Country country = null;
 		country = countryFactory.findByCode("BV");
-		assertTrue(country.getCode().equals("BV"));
-		assertTrue(country.getName().toUpperCase().equals("BOUVET ISLAND"));
+		assert country != null;
+		assert country.getCode().equals("BV")== true;
+		assert country.getName().toUpperCase().equals("BOUVET ISLAND")== true;
 	}
 
 	// ***** (BW) - Botswana
+	@Test
 	public void testBotswana() {
 		Country country = null;
 		country = countryFactory.findByCode("BW");
-		assertTrue(country.getCode().equals("BW"));
-		assertTrue(country.getName().toUpperCase().equals("BOTSWANA"));
+		assert country != null;
+		assert country.getCode().equals("BW")== true;
+		assert country.getName().toUpperCase().equals("BOTSWANA")== true;
 	}
 
 	// ***** (BY) - Belarus
+	@Test
 	public void testBelarus() {
 		Country country = null;
 		country = countryFactory.findByCode("BY");
-		assertTrue(country.getCode().equals("BY"));
-		assertTrue(country.getName().toUpperCase().equals("BELARUS"));
+		assert country != null;
+		assert country.getCode().equals("BY")== true;
+		assert country.getName().toUpperCase().equals("BELARUS")== true;
 	}
 
 	// ***** (BZ) - Belize
+	@Test
 	public void testBelize() {
 		Country country = null;
 		country = countryFactory.findByCode("BZ");
-		assertTrue(country.getCode().equals("BZ"));
-		assertTrue(country.getName().toUpperCase().equals("BELIZE"));
+		assert country != null;
+		assert country.getCode().equals("BZ")== true;
+		assert country.getName().toUpperCase().equals("BELIZE")== true;
 	}
 
 	// ***** (CA) - Canada
+	@Test
 	public void testCanada() {
 		Country country = null;
 		country = countryFactory.findByCode("CA");
-		assertTrue(country.getCode().equals("CA"));
-		assertTrue(country.getName().toUpperCase().equals("CANADA"));
+		assert country != null;
+		assert country.getCode().equals("CA")== true;
+		assert country.getName().toUpperCase().equals("CANADA")== true;
 	}
 
 	// ***** (CC) - Cocos (Keeling) Islands
+	@Test
 	public void testCocosKeelingIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("CC");
-		assertTrue(country.getCode().equals("CC"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"COCOS (KEELING) ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("CC")== true;
+		assert country.getName().toUpperCase()
+				.equals("COCOS (KEELING) ISLANDS")== true;
 	}
 
 	// ***** (CD) - Congo, The Democratic Republic Of The
+	@Test
 	public void testCongoTheDemocraticRepublicOfThe() {
 		Country country = null;
 		country = countryFactory.findByCode("CD");
-		assertTrue(country.getCode().equals("CD"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"CONGO, THE DEMOCRATIC REPUBLIC OF THE"));
+		assert country != null;
+		assert country.getCode().equals("CD")== true;
+		assert country.getName().toUpperCase()
+				.equals("CONGO, THE DEMOCRATIC REPUBLIC OF THE")== true;
 	}
 
 	// ***** (CF) - Central African Republic
+	@Test
 	public void testCentralAfricanRepublic() {
 		Country country = null;
 		country = countryFactory.findByCode("CF");
-		assertTrue(country.getCode().equals("CF"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"CENTRAL AFRICAN REPUBLIC"));
+		assert country != null;
+		assert country.getCode().equals("CF")== true;
+		assert country.getName().toUpperCase()
+				.equals("CENTRAL AFRICAN REPUBLIC")== true;
 	}
 
 	// ***** (CG) - Congo
+	@Test
 	public void testCongo() {
 		Country country = null;
 		country = countryFactory.findByCode("CG");
-		assertTrue(country.getCode().equals("CG"));
-		assertTrue(country.getName().toUpperCase().equals("CONGO"));
+		assert country != null;
+		assert country.getCode().equals("CG")== true;
+		assert country.getName().toUpperCase().equals("CONGO")== true;
 	}
 
 	// ***** (CH) - Switzerland
+	@Test
 	public void testSwitzerland() {
 		Country country = null;
 		country = countryFactory.findByCode("CH");
-		assertTrue(country.getCode().equals("CH"));
-		assertTrue(country.getName().toUpperCase().equals("SWITZERLAND"));
+		assert country != null;
+		assert country.getCode().equals("CH")== true;
+		assert country.getName().toUpperCase().equals("SWITZERLAND")== true;
 	}
 
 	// ***** (CI) - Cote D'Ivoire
+	@Test
 	public void testCoteDIvoire() {
 		Country country = null;
 		country = countryFactory.findByCode("CI");
-		assertTrue(country.getCode().equals("CI"));
-		assertTrue(country.getName().toUpperCase().equals("C\u00d4TE D'IVOIRE"));
+		assert country != null;
+		assert country.getCode().equals("CI")== true;
+		assert country.getName().toUpperCase().equals("C\u00d4TE D'IVOIRE")== true;
 	}
 
 	// ***** (CK) - Cook Islands
+	@Test
 	public void testCookIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("CK");
-		assertTrue(country.getCode().equals("CK"));
-		assertTrue(country.getName().toUpperCase().equals("COOK ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("CK")== true;
+		assert country.getName().toUpperCase().equals("COOK ISLANDS")== true;
 	}
 
 	// ***** (CL) - Chile
+	@Test
 	public void testChile() {
 		Country country = null;
 		country = countryFactory.findByCode("CL");
-		assertTrue(country.getCode().equals("CL"));
-		assertTrue(country.getName().toUpperCase().equals("CHILE"));
+		assert country != null;
+		assert country.getCode().equals("CL")== true;
+		assert country.getName().toUpperCase().equals("CHILE")== true;
 	}
 
 	// ***** (CM) - Cameroon
+	@Test
 	public void testCameroon() {
 		Country country = null;
 		country = countryFactory.findByCode("CM");
-		assertTrue(country.getCode().equals("CM"));
-		assertTrue(country.getName().toUpperCase().equals("CAMEROON"));
+		assert country != null;
+		assert country.getCode().equals("CM")== true;
+		assert country.getName().toUpperCase().equals("CAMEROON")== true;
 	}
 
 	// ***** (CN) - China
+	@Test
 	public void testChina() {
 		Country country = null;
 		country = countryFactory.findByCode("CN");
-		assertTrue(country.getCode().equals("CN"));
-		assertTrue(country.getName().toUpperCase().equals("CHINA"));
+		assert country != null;
+		assert country.getCode().equals("CN")== true;
+		assert country.getName().toUpperCase().equals("CHINA")== true;
 	}
 
 	// ***** (CO) - Colombia
+	@Test
 	public void testColombia() {
 		Country country = null;
 		country = countryFactory.findByCode("CO");
-		assertTrue(country.getCode().equals("CO"));
-		assertTrue(country.getName().toUpperCase().equals("COLOMBIA"));
+		assert country != null;
+		assert country.getCode().equals("CO")== true;
+		assert country.getName().toUpperCase().equals("COLOMBIA")== true;
 	}
 
 	// ***** (CR) - Costa Rica
+	@Test
 	public void testCostaRica() {
 		Country country = null;
 		country = countryFactory.findByCode("CR");
-		assertTrue(country.getCode().equals("CR"));
-		assertTrue(country.getName().toUpperCase().equals("COSTA RICA"));
+		assert country != null;
+		assert country.getCode().equals("CR")== true;
+		assert country.getName().toUpperCase().equals("COSTA RICA")== true;
 	}
 
 	// ***** (CU) - Cuba
+	@Test
 	public void testCuba() {
 		Country country = null;
 		country = countryFactory.findByCode("CU");
-		assertTrue(country.getCode().equals("CU"));
-		assertTrue(country.getName().toUpperCase().equals("CUBA"));
+		assert country != null;
+		assert country.getCode().equals("CU")== true;
+		assert country.getName().toUpperCase().equals("CUBA")== true;
 	}
 
 	// ***** (CV) - Cape Verde
+	@Test
 	public void testCapeVerde() {
 		Country country = null;
 		country = countryFactory.findByCode("CV");
-		assertTrue(country.getCode().equals("CV"));
-		assertTrue(country.getName().toUpperCase().equals("CAPE VERDE"));
+		assert country != null;
+		assert country.getCode().equals("CV")== true;
+		assert country.getName().toUpperCase().equals("CAPE VERDE")== true;
 	}
 
 	// ***** (CX) - Christmas Island
+	@Test
 	public void testChristmasIsland() {
 		Country country = null;
 		country = countryFactory.findByCode("CX");
-		assertTrue(country.getCode().equals("CX"));
-		assertTrue(country.getName().toUpperCase().equals("CHRISTMAS ISLAND"));
+		assert country != null;
+		assert country.getCode().equals("CX")== true;
+		assert country.getName().toUpperCase().equals("CHRISTMAS ISLAND")== true;
 	}
 
 	// ***** (CY) - Cyprus
+	@Test
 	public void testCyprus() {
 		Country country = null;
 		country = countryFactory.findByCode("CY");
-		assertTrue(country.getCode().equals("CY"));
-		assertTrue(country.getName().toUpperCase().equals("CYPRUS"));
+		assert country != null;
+		assert country.getCode().equals("CY")== true;
+		assert country.getName().toUpperCase().equals("CYPRUS")== true;
 	}
 
 	// ***** (CZ) - Czech Republic
+	@Test
 	public void testCzechRepublic() {
 		Country country = null;
 		country = countryFactory.findByCode("CZ");
-		assertTrue(country.getCode().equals("CZ"));
-		assertTrue(country.getName().toUpperCase().equals("CZECH REPUBLIC"));
+		assert country != null;
+		assert country.getCode().equals("CZ")== true;
+		assert country.getName().toUpperCase().equals("CZECH REPUBLIC")== true;
 	}
 
 	// ***** (DE) - Germany
+	@Test
 	public void testGermany() {
 		Country country = null;
 		country = countryFactory.findByCode("DE");
-		assertTrue(country.getCode().equals("DE"));
-		assertTrue(country.getName().toUpperCase().equals("GERMANY"));
+		assert country != null;
+		assert country.getCode().equals("DE")== true;
+		assert country.getName().toUpperCase().equals("GERMANY")== true;
 	}
 
 	// ***** (DJ) - Djibouti
+	@Test
 	public void testDjibouti() {
 		Country country = null;
 		country = countryFactory.findByCode("DJ");
-		assertTrue(country.getCode().equals("DJ"));
-		assertTrue(country.getName().toUpperCase().equals("DJIBOUTI"));
+		assert country != null;
+		assert country.getCode().equals("DJ")== true;
+		assert country.getName().toUpperCase().equals("DJIBOUTI")== true;
 	}
 
 	// ***** (DK) - Denmark
+	@Test
 	public void testDenmark() {
 		Country country = null;
 		country = countryFactory.findByCode("DK");
-		assertTrue(country.getCode().equals("DK"));
-		assertTrue(country.getName().toUpperCase().equals("DENMARK"));
+		assert country != null;
+		assert country.getCode().equals("DK")== true;
+		assert country.getName().toUpperCase().equals("DENMARK")== true;
 	}
 
 	// ***** (DM) - Dominica
+	@Test
 	public void testDominica() {
 		Country country = null;
 		country = countryFactory.findByCode("DM");
-		assertTrue(country.getCode().equals("DM"));
-		assertTrue(country.getName().toUpperCase().equals("DOMINICA"));
+		assert country != null;
+		assert country.getCode().equals("DM")== true;
+		assert country.getName().toUpperCase().equals("DOMINICA")== true;
 	}
 
 	// ***** (DO) - Dominican Republic
+	@Test
 	public void testDominicanRepublic() {
 		Country country = null;
 		country = countryFactory.findByCode("DO");
-		assertTrue(country.getCode().equals("DO"));
-		assertTrue(country.getName().toUpperCase().equals("DOMINICAN REPUBLIC"));
+		assert country != null;
+		assert country.getCode().equals("DO")== true;
+		assert country.getName().toUpperCase().equals("DOMINICAN REPUBLIC")== true;
 	}
 
 	// ***** (DZ) - Algeria
+	@Test
 	public void testAlgeria() {
 		Country country = null;
 		country = countryFactory.findByCode("DZ");
-		assertTrue(country.getCode().equals("DZ"));
-		assertTrue(country.getName().toUpperCase().equals("ALGERIA"));
+		assert country != null;
+		assert country.getCode().equals("DZ")== true;
+		assert country.getName().toUpperCase().equals("ALGERIA")== true;
 	}
 
 	// ***** (EC) - Ecuador
+	@Test
 	public void testEcuador() {
 		Country country = null;
 		country = countryFactory.findByCode("EC");
-		assertTrue(country.getCode().equals("EC"));
-		assertTrue(country.getName().toUpperCase().equals("ECUADOR"));
+		assert country != null;
+		assert country.getCode().equals("EC")== true;
+		assert country.getName().toUpperCase().equals("ECUADOR")== true;
 	}
 
 	// ***** (EE) - Estonia
+	@Test
 	public void testEstonia() {
 		Country country = null;
 		country = countryFactory.findByCode("EE");
-		assertTrue(country.getCode().equals("EE"));
-		assertTrue(country.getName().toUpperCase().equals("ESTONIA"));
+		assert country != null;
+		assert country.getCode().equals("EE")== true;
+		assert country.getName().toUpperCase().equals("ESTONIA")== true;
 	}
 
 	// ***** (EG) - Egypt
+	@Test
 	public void testEgypt() {
 		Country country = null;
 		country = countryFactory.findByCode("EG");
-		assertTrue(country.getCode().equals("EG"));
-		assertTrue(country.getName().toUpperCase().equals("EGYPT"));
+		assert country != null;
+		assert country.getCode().equals("EG")== true;
+		assert country.getName().toUpperCase().equals("EGYPT")== true;
 	}
 
 	// ***** (EH) - Western Sahara
+	@Test
 	public void testWesternSahara() {
 		Country country = null;
 		country = countryFactory.findByCode("EH");
-		assertTrue(country.getCode().equals("EH"));
-		assertTrue(country.getName().toUpperCase().equals("WESTERN SAHARA"));
+		assert country != null;
+		assert country.getCode().equals("EH")== true;
+		assert country.getName().toUpperCase().equals("WESTERN SAHARA")== true;
 	}
 
 	// ***** (ER) - Eritrea
+	@Test
 	public void testEritrea() {
 		Country country = null;
 		country = countryFactory.findByCode("ER");
-		assertTrue(country.getCode().equals("ER"));
-		assertTrue(country.getName().toUpperCase().equals("ERITREA"));
+		assert country != null;
+		assert country.getCode().equals("ER")== true;
+		assert country.getName().toUpperCase().equals("ERITREA")== true;
 	}
 
 	// ***** (ES) - Spain
+	@Test
 	public void testSpain() {
 		Country country = null;
 		country = countryFactory.findByCode("ES");
-		assertTrue(country.getCode().equals("ES"));
-		assertTrue(country.getName().toUpperCase().equals("SPAIN"));
+		assert country != null;
+		assert country.getCode().equals("ES")== true;
+		assert country.getName().toUpperCase().equals("SPAIN")== true;
 	}
 
 	// ***** (ET) - Ethiopia
+	@Test
 	public void testEthiopia() {
 		Country country = null;
 		country = countryFactory.findByCode("ET");
-		assertTrue(country.getCode().equals("ET"));
-		assertTrue(country.getName().toUpperCase().equals("ETHIOPIA"));
+		assert country != null;
+		assert country.getCode().equals("ET")== true;
+		assert country.getName().toUpperCase().equals("ETHIOPIA")== true;
 	}
 
 	// ***** (FI) - Finland
+	@Test
 	public void testFinland() {
 		Country country = null;
 		country = countryFactory.findByCode("FI");
-		assertTrue(country.getCode().equals("FI"));
-		assertTrue(country.getName().toUpperCase().equals("FINLAND"));
+		assert country != null;
+		assert country.getCode().equals("FI")== true;
+		assert country.getName().toUpperCase().equals("FINLAND")== true;
 	}
 
 	// ***** (FJ) - Fiji
+	@Test
 	public void testFiji() {
 		Country country = null;
 		country = countryFactory.findByCode("FJ");
-		assertTrue(country.getCode().equals("FJ"));
-		assertTrue(country.getName().toUpperCase().equals("FIJI"));
+		assert country != null;
+		assert country.getCode().equals("FJ")== true;
+		assert country.getName().toUpperCase().equals("FIJI")== true;
 	}
 
 	// ***** (FK) - Falkland Islands (Malvinas)
+	@Test
 	public void testFalklandIslandsMalvinas() {
 		Country country = null;
 		country = countryFactory.findByCode("FK");
-		assertTrue(country.getCode().equals("FK"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"FALKLAND ISLANDS (MALVINAS)"));
+		assert country != null;
+		assert country.getCode().equals("FK")== true;
+		assert country.getName().toUpperCase()
+				.equals("FALKLAND ISLANDS (MALVINAS)")== true;
 	}
 
 	// ***** (FM) - Micronesia, Federated States Of
+	@Test
 	public void testMicronesiaFederatedStatesOf() {
 		Country country = null;
 		country = countryFactory.findByCode("FM");
-		assertTrue(country.getCode().equals("FM"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"MICRONESIA, FEDERATED STATES OF"));
+		assert country != null;
+		assert country.getCode().equals("FM")== true;
+		assert country.getName().toUpperCase()
+				.equals("MICRONESIA, FEDERATED STATES OF")== true;
 	}
 
 	// ***** (FO) - Faroe Islands
+	@Test
 	public void testFaroeIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("FO");
-		assertTrue(country.getCode().equals("FO"));
-		assertTrue(country.getName().toUpperCase().equals("FAROE ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("FO")== true;
+		assert country.getName().toUpperCase().equals("FAROE ISLANDS")== true;
 	}
 
 	// ***** (FR) - France
+	@Test
 	public void testFrance() {
 		Country country = null;
 		country = countryFactory.findByCode("FR");
-		assertTrue(country.getCode().equals("FR"));
-		assertTrue(country.getName().toUpperCase().equals("FRANCE"));
+		assert country != null;
+		assert country.getCode().equals("FR")== true;
+		assert country.getName().toUpperCase().equals("FRANCE")== true;
 	}
 
 	// ***** (GA) - Gabon
+	@Test
 	public void testGabon() {
 		Country country = null;
 		country = countryFactory.findByCode("GA");
-		assertTrue(country.getCode().equals("GA"));
-		assertTrue(country.getName().toUpperCase().equals("GABON"));
+		assert country != null;
+		assert country.getCode().equals("GA")== true;
+		assert country.getName().toUpperCase().equals("GABON")== true;
 	}
 
 	// ***** (GB) - United Kingdom
+	@Test
 	public void testUnitedKingdom() {
 		Country country = null;
 		country = countryFactory.findByCode("GB");
-		assertTrue(country.getCode().equals("GB"));
-		assertTrue(country.getName().toUpperCase().equals("UNITED KINGDOM"));
+		assert country != null;
+		assert country.getCode().equals("GB")== true;
+		assert country.getName().toUpperCase().equals("UNITED KINGDOM")== true;
 	}
 
 	// ***** (GD) - Grenada
+	@Test
 	public void testGrenada() {
 		Country country = null;
 		country = countryFactory.findByCode("GD");
-		assertTrue(country.getCode().equals("GD"));
-		assertTrue(country.getName().toUpperCase().equals("GRENADA"));
+		assert country != null;
+		assert country.getCode().equals("GD")== true;
+		assert country.getName().toUpperCase().equals("GRENADA")== true;
 	}
 
 	// ***** (GE) - Georgia
+	@Test
 	public void testGeorgia() {
 		Country country = null;
 		country = countryFactory.findByCode("GE");
-		assertTrue(country.getCode().equals("GE"));
-		assertTrue(country.getName().toUpperCase().equals("GEORGIA"));
+		assert country != null;
+		assert country.getCode().equals("GE")== true;
+		assert country.getName().toUpperCase().equals("GEORGIA")== true;
 	}
 
 	// ***** (GF) - French Guiana
+	@Test
 	public void testFrenchGuiana() {
 		Country country = null;
 		country = countryFactory.findByCode("GF");
-		assertTrue(country.getCode().equals("GF"));
-		assertTrue(country.getName().toUpperCase().equals("FRENCH GUIANA"));
+		assert country != null;
+		assert country.getCode().equals("GF")== true;
+		assert country.getName().toUpperCase().equals("FRENCH GUIANA")== true;
 	}
 
 	// ***** (GG) - Guernsey
+	@Test
 	public void testGuernsey() {
 		Country country = null;
 		country = countryFactory.findByCode("GG");
-		assertTrue(country.getCode().equals("GG"));
-		assertTrue(country.getName().toUpperCase().equals("GUERNSEY"));
+		assert country != null;
+		assert country.getCode().equals("GG")== true;
+		assert country.getName().toUpperCase().equals("GUERNSEY")== true;
 	}
 
 	// ***** (GH) - Ghana
+	@Test
 	public void testGhana() {
 		Country country = null;
 		country = countryFactory.findByCode("GH");
-		assertTrue(country.getCode().equals("GH"));
-		assertTrue(country.getName().toUpperCase().equals("GHANA"));
+		assert country != null;
+		assert country.getCode().equals("GH")== true;
+		assert country.getName().toUpperCase().equals("GHANA")== true;
 	}
 
 	// ***** (GI) - Gibraltar
+	@Test
 	public void testGibraltar() {
 		Country country = null;
 		country = countryFactory.findByCode("GI");
-		assertTrue(country.getCode().equals("GI"));
-		assertTrue(country.getName().toUpperCase().equals("GIBRALTAR"));
+		assert country != null;
+		assert country.getCode().equals("GI")== true;
+		assert country.getName().toUpperCase().equals("GIBRALTAR")== true;
 	}
 
 	// ***** (GL) - Greenland
+	@Test
 	public void testGreenland() {
 		Country country = null;
 		country = countryFactory.findByCode("GL");
-		assertTrue(country.getCode().equals("GL"));
-		assertTrue(country.getName().toUpperCase().equals("GREENLAND"));
+		assert country != null;
+		assert country.getCode().equals("GL")== true;
+		assert country.getName().toUpperCase().equals("GREENLAND")== true;
 	}
 
 	// ***** (GM) - Gambia
+	@Test
 	public void testGambia() {
 		Country country = null;
 		country = countryFactory.findByCode("GM");
-		assertTrue(country.getCode().equals("GM"));
-		assertTrue(country.getName().toUpperCase().equals("GAMBIA"));
+		assert country != null;
+		assert country.getCode().equals("GM")== true;
+		assert country.getName().toUpperCase().equals("GAMBIA")== true;
 	}
 
 	// ***** (GN) - Guinea
+	@Test
 	public void testGuinea() {
 		Country country = null;
 		country = countryFactory.findByCode("GN");
-		assertTrue(country.getCode().equals("GN"));
-		assertTrue(country.getName().toUpperCase().equals("GUINEA"));
+		assert country != null;
+		assert country.getCode().equals("GN")== true;
+		assert country.getName().toUpperCase().equals("GUINEA")== true;
 	}
 
 	// ***** (GP) - Guadeloupe
+	@Test
 	public void testGuadeloupe() {
 		Country country = null;
 		country = countryFactory.findByCode("GP");
-		assertTrue(country.getCode().equals("GP"));
-		assertTrue(country.getName().toUpperCase().equals("GUADELOUPE"));
+		assert country != null;
+		assert country.getCode().equals("GP")== true;
+		assert country.getName().toUpperCase().equals("GUADELOUPE")== true;
 	}
 
 	// ***** (GQ) - Equatorial Guinea
+	@Test
 	public void testEquatorialGuinea() {
 		Country country = null;
 		country = countryFactory.findByCode("GQ");
-		assertTrue(country.getCode().equals("GQ"));
-		assertTrue(country.getName().toUpperCase().equals("EQUATORIAL GUINEA"));
+		assert country != null;
+		assert country.getCode().equals("GQ")== true;
+		assert country.getName().toUpperCase().equals("EQUATORIAL GUINEA")== true;
 	}
 
 	// ***** (GR) - Greece
+	@Test
 	public void testGreece() {
 		Country country = null;
 		country = countryFactory.findByCode("GR");
-		assertTrue(country.getCode().equals("GR"));
-		assertTrue(country.getName().toUpperCase().equals("GREECE"));
+		assert country != null;
+		assert country.getCode().equals("GR")== true;
+		assert country.getName().toUpperCase().equals("GREECE")== true;
 	}
 
 	// ***** (GS) - South Georgia And The South Sandwich Islands
+	@Test
 	public void testSouthGeorgiaAndTheSouthSandwichIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("GS");
-		assertTrue(country.getCode().equals("GS"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("GS")== true;
+		assert country.getName().toUpperCase()
+				.equals("SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS")== true;
 	}
 
 	// ***** (GT) - Guatemala
+	@Test
 	public void testGuatemala() {
 		Country country = null;
 		country = countryFactory.findByCode("GT");
-		assertTrue(country.getCode().equals("GT"));
-		assertTrue(country.getName().toUpperCase().equals("GUATEMALA"));
+		assert country != null;
+		assert country.getCode().equals("GT")== true;
+		assert country.getName().toUpperCase().equals("GUATEMALA")== true;
 	}
 
 	// ***** (GU) - Guam
+	@Test
 	public void testGuam() {
 		Country country = null;
 		country = countryFactory.findByCode("GU");
-		assertTrue(country.getCode().equals("GU"));
-		assertTrue(country.getName().toUpperCase().equals("GUAM"));
+		assert country != null;
+		assert country.getCode().equals("GU")== true;
+		assert country.getName().toUpperCase().equals("GUAM")== true;
 	}
 
 	// ***** (GW) - Guinea-Bissau
+	@Test
 	public void testGuineaBissau() {
 		Country country = null;
 		country = countryFactory.findByCode("GW");
-		assertTrue(country.getCode().equals("GW"));
-		assertTrue(country.getName().toUpperCase().equals("GUINEA-BISSAU"));
+		assert country != null;
+		assert country.getCode().equals("GW")== true;
+		assert country.getName().toUpperCase().equals("GUINEA-BISSAU")== true;
 	}
 
 	// ***** (GY) - Guyana
+	@Test
 	public void testGuyana() {
 		Country country = null;
 		country = countryFactory.findByCode("GY");
-		assertTrue(country.getCode().equals("GY"));
-		assertTrue(country.getName().toUpperCase().equals("GUYANA"));
+		assert country != null;
+		assert country.getCode().equals("GY")== true;
+		assert country.getName().toUpperCase().equals("GUYANA")== true;
 	}
 
 	// ***** (HK) - Hong Kong
+	@Test
 	public void testHongKong() {
 		Country country = null;
 		country = countryFactory.findByCode("HK");
-		assertTrue(country.getCode().equals("HK"));
-		assertTrue(country.getName().toUpperCase().equals("HONG KONG"));
+		assert country != null;
+		assert country.getCode().equals("HK")== true;
+		assert country.getName().toUpperCase().equals("HONG KONG")== true;
 	}
 
 	// ***** (HM) - Heard Island And Mcdonald Islands
+	@Test
 	public void testHeardIslandAndMcdonaldIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("HM");
-		assertTrue(country.getCode().equals("HM"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"HEARD ISLAND AND MCDONALD ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("HM")== true;
+		assert country.getName().toUpperCase()
+				.equals("HEARD ISLAND AND MCDONALD ISLANDS")== true;
 	}
 
 	// ***** (HN) - Honduras
+	@Test
 	public void testHonduras() {
 		Country country = null;
 		country = countryFactory.findByCode("HN");
-		assertTrue(country.getCode().equals("HN"));
-		assertTrue(country.getName().toUpperCase().equals("HONDURAS"));
+		assert country != null;
+		assert country.getCode().equals("HN")== true;
+		assert country.getName().toUpperCase().equals("HONDURAS")== true;
 	}
 
 	// ***** (HR) - Croatia
+	@Test
 	public void testCroatia() {
 		Country country = null;
 		country = countryFactory.findByCode("HR");
-		assertTrue(country.getCode().equals("HR"));
-		assertTrue(country.getName().toUpperCase().equals("CROATIA"));
+		assert country != null;
+		assert country.getCode().equals("HR")== true;
+		assert country.getName().toUpperCase().equals("CROATIA")== true;
 	}
 
 	// ***** (HT) - Haiti
+	@Test
 	public void testHaiti() {
 		Country country = null;
 		country = countryFactory.findByCode("HT");
-		assertTrue(country.getCode().equals("HT"));
-		assertTrue(country.getName().toUpperCase().equals("HAITI"));
+		assert country != null;
+		assert country.getCode().equals("HT")== true;
+		assert country.getName().toUpperCase().equals("HAITI")== true;
 	}
 
 	// ***** (HU) - Hungary
+	@Test
 	public void testHungary() {
 		Country country = null;
 		country = countryFactory.findByCode("HU");
-		assertTrue(country.getCode().equals("HU"));
-		assertTrue(country.getName().toUpperCase().equals("HUNGARY"));
+		assert country != null;
+		assert country.getCode().equals("HU")== true;
+		assert country.getName().toUpperCase().equals("HUNGARY")== true;
 	}
 
 	// ***** (ID) - Indonesia
+	@Test
 	public void testIndonesia() {
 		Country country = null;
 		country = countryFactory.findByCode("ID");
-		assertTrue(country.getCode().equals("ID"));
-		assertTrue(country.getName().toUpperCase().equals("INDONESIA"));
+		assert country != null;
+		assert country.getCode().equals("ID")== true;
+		assert country.getName().toUpperCase().equals("INDONESIA")== true;
 	}
 
 	// ***** (IE) - Ireland
+	@Test
 	public void testIreland() {
 		Country country = null;
 		country = countryFactory.findByCode("IE");
-		assertTrue(country.getCode().equals("IE"));
-		assertTrue(country.getName().toUpperCase().equals("IRELAND"));
+		assert country != null;
+		assert country.getCode().equals("IE")== true;
+		assert country.getName().toUpperCase().equals("IRELAND")== true;
 	}
 
 	// ***** (IL) - Israel
+	@Test
 	public void testIsrael() {
 		Country country = null;
 		country = countryFactory.findByCode("IL");
-		assertTrue(country.getCode().equals("IL"));
-		assertTrue(country.getName().toUpperCase().equals("ISRAEL"));
+		assert country != null;
+		assert country.getCode().equals("IL")== true;
+		assert country.getName().toUpperCase().equals("ISRAEL")== true;
 	}
 
 	// ***** (IM) - Isle Of Man
+	@Test
 	public void testIsleOfMan() {
 		Country country = null;
 		country = countryFactory.findByCode("IM");
-		assertTrue(country.getCode().equals("IM"));
-		assertTrue(country.getName().toUpperCase().equals("ISLE OF MAN"));
+		assert country != null;
+		assert country.getCode().equals("IM")== true;
+		assert country.getName().toUpperCase().equals("ISLE OF MAN")== true;
 	}
 
 	// ***** (IN) - India
+	@Test
 	public void testIndia() {
 		Country country = null;
 		country = countryFactory.findByCode("IN");
-		assertTrue(country.getCode().equals("IN"));
-		assertTrue(country.getName().toUpperCase().equals("INDIA"));
+		assert country != null;
+		assert country.getCode().equals("IN")== true;
+		assert country.getName().toUpperCase().equals("INDIA")== true;
 	}
 
 	// ***** (IO) - British Indian Ocean Territory
+	@Test
 	public void testBritishIndianOceanTerritory() {
 		Country country = null;
 		country = countryFactory.findByCode("IO");
-		assertTrue(country.getCode().equals("IO"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"BRITISH INDIAN OCEAN TERRITORY"));
+		assert country != null;
+		assert country.getCode().equals("IO")== true;
+		assert country.getName().toUpperCase()
+				.equals("BRITISH INDIAN OCEAN TERRITORY")== true;
 	}
 
 	// ***** (IQ) - Iraq
+	@Test
 	public void testIraq() {
 		Country country = null;
 		country = countryFactory.findByCode("IQ");
-		assertTrue(country.getCode().equals("IQ"));
-		assertTrue(country.getName().toUpperCase().equals("IRAQ"));
+		assert country != null;
+		assert country.getCode().equals("IQ")== true;
+		assert country.getName().toUpperCase().equals("IRAQ")== true;
 	}
 
 	// ***** (IR) - Iran, Islamic Republic Of
+	@Test
 	public void testIranIslamicRepublicOf() {
 		Country country = null;
 		country = countryFactory.findByCode("IR");
-		assertTrue(country.getCode().equals("IR"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"IRAN, ISLAMIC REPUBLIC OF"));
+		assert country != null;
+		assert country.getCode().equals("IR")== true;
+		assert country.getName().toUpperCase()
+				.equals("IRAN, ISLAMIC REPUBLIC OF")== true;
 	}
 
 	// ***** (IS) - Iceland
+	@Test
 	public void testIceland() {
 		Country country = null;
 		country = countryFactory.findByCode("IS");
-		assertTrue(country.getCode().equals("IS"));
-		assertTrue(country.getName().toUpperCase().equals("ICELAND"));
+		assert country != null;
+		assert country.getCode().equals("IS")== true;
+		assert country.getName().toUpperCase().equals("ICELAND")== true;
 	}
 
 	// ***** (IT) - Italy
+	@Test
 	public void testItaly() {
 		Country country = null;
 		country = countryFactory.findByCode("IT");
-		assertTrue(country.getCode().equals("IT"));
-		assertTrue(country.getName().toUpperCase().equals("ITALY"));
+		assert country != null;
+		assert country.getCode().equals("IT")== true;
+		assert country.getName().toUpperCase().equals("ITALY")== true;
 	}
 
 	// ***** (JE) - Jersey
+	@Test
 	public void testJersey() {
 		Country country = null;
 		country = countryFactory.findByCode("JE");
-		assertTrue(country.getCode().equals("JE"));
-		assertTrue(country.getName().toUpperCase().equals("JERSEY"));
+		assert country != null;
+		assert country.getCode().equals("JE")== true;
+		assert country.getName().toUpperCase().equals("JERSEY")== true;
 	}
 
 	// ***** (JM) - Jamaica
+	@Test
 	public void testJamaica() {
 		Country country = null;
 		country = countryFactory.findByCode("JM");
-		assertTrue(country.getCode().equals("JM"));
-		assertTrue(country.getName().toUpperCase().equals("JAMAICA"));
+		assert country != null;
+		assert country.getCode().equals("JM")== true;
+		assert country.getName().toUpperCase().equals("JAMAICA")== true;
 	}
 
 	// ***** (JO) - Jordan
+	@Test
 	public void testJordan() {
 		Country country = null;
 		country = countryFactory.findByCode("JO");
-		assertTrue(country.getCode().equals("JO"));
-		assertTrue(country.getName().toUpperCase().equals("JORDAN"));
+		assert country != null;
+		assert country.getCode().equals("JO")== true;
+		assert country.getName().toUpperCase().equals("JORDAN")== true;
 	}
 
 	// ***** (JP) - Japan
+	@Test
 	public void testJapan() {
 		Country country = null;
 		country = countryFactory.findByCode("JP");
-		assertTrue(country.getCode().equals("JP"));
-		assertTrue(country.getName().toUpperCase().equals("JAPAN"));
+		assert country != null;
+		assert country.getCode().equals("JP")== true;
+		assert country.getName().toUpperCase().equals("JAPAN")== true;
 	}
 
 	// ***** (KE) - Kenya
+	@Test
 	public void testKenya() {
 		Country country = null;
 		country = countryFactory.findByCode("KE");
-		assertTrue(country.getCode().equals("KE"));
-		assertTrue(country.getName().toUpperCase().equals("KENYA"));
+		assert country != null;
+		assert country.getCode().equals("KE")== true;
+		assert country.getName().toUpperCase().equals("KENYA")== true;
 	}
 
 	// ***** (KG) - Kyrgyzstan
+	@Test
 	public void testKyrgyzstan() {
 		Country country = null;
 		country = countryFactory.findByCode("KG");
-		assertTrue(country.getCode().equals("KG"));
-		assertTrue(country.getName().toUpperCase().equals("KYRGYZSTAN"));
+		assert country != null;
+		assert country.getCode().equals("KG")== true;
+		assert country.getName().toUpperCase().equals("KYRGYZSTAN")== true;
 	}
 
 	// ***** (KH) - Cambodia
+	@Test
 	public void testCambodia() {
 		Country country = null;
 		country = countryFactory.findByCode("KH");
-		assertTrue(country.getCode().equals("KH"));
-		assertTrue(country.getName().toUpperCase().equals("CAMBODIA"));
+		assert country != null;
+		assert country.getCode().equals("KH")== true;
+		assert country.getName().toUpperCase().equals("CAMBODIA")== true;
 	}
 
 	// ***** (KI) - Kiribati
+	@Test
 	public void testKiribati() {
 		Country country = null;
 		country = countryFactory.findByCode("KI");
-		assertTrue(country.getCode().equals("KI"));
-		assertTrue(country.getName().toUpperCase().equals("KIRIBATI"));
+		assert country != null;
+		assert country.getCode().equals("KI")== true;
+		assert country.getName().toUpperCase().equals("KIRIBATI")== true;
 	}
 
 	// ***** (KM) - Comoros
+	@Test
 	public void testComoros() {
 		Country country = null;
 		country = countryFactory.findByCode("KM");
-		assertTrue(country.getCode().equals("KM"));
-		assertTrue(country.getName().toUpperCase().equals("COMOROS"));
+		assert country != null;
+		assert country.getCode().equals("KM")== true;
+		assert country.getName().toUpperCase().equals("COMOROS")== true;
 	}
 
 	// ***** (KN) - Saint Kitts And Nevis
+	@Test
 	public void testSaintKittsAndNevis() {
 		Country country = null;
 		country = countryFactory.findByCode("KN");
-		assertTrue(country.getCode().equals("KN"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"SAINT KITTS AND NEVIS"));
+		assert country != null;
+		assert country.getCode().equals("KN")== true;
+		assert country.getName().toUpperCase()
+				.equals("SAINT KITTS AND NEVIS")== true;
 	}
 
 	// ***** (KP) - Korea, Democratic People'S Republic Of
+	@Test
 	public void testKoreaDemocraticPeopleSRepublicOf() {
 		Country country = null;
 		country = countryFactory.findByCode("KP");
-		assertTrue(country.getCode().equals("KP"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF"));
+		assert country != null;
+		assert country.getCode().equals("KP")== true;
+		assert country.getName().toUpperCase()
+				.equals("KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF")== true;
 	}
 
 	// ***** (KR) - Korea, Republic Of
+	@Test
 	public void testKoreaRepublicOf() {
 		Country country = null;
 		country = countryFactory.findByCode("KR");
-		assertTrue(country.getCode().equals("KR"));
-		assertTrue(country.getName().toUpperCase().equals("KOREA, REPUBLIC OF"));
+		assert country != null;
+		assert country.getCode().equals("KR")== true;
+		assert country.getName().toUpperCase().equals("KOREA, REPUBLIC OF")== true;
 	}
 
 	// ***** (KW) - Kuwait
+	@Test
 	public void testKuwait() {
 		Country country = null;
 		country = countryFactory.findByCode("KW");
-		assertTrue(country.getCode().equals("KW"));
-		assertTrue(country.getName().toUpperCase().equals("KUWAIT"));
+		assert country != null;
+		assert country.getCode().equals("KW")== true;
+		assert country.getName().toUpperCase().equals("KUWAIT")== true;
 	}
 
 	// ***** (KY) - Cayman Islands
+	@Test
 	public void testCaymanIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("KY");
-		assertTrue(country.getCode().equals("KY"));
-		assertTrue(country.getName().toUpperCase().equals("CAYMAN ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("KY")== true;
+		assert country.getName().toUpperCase().equals("CAYMAN ISLANDS")== true;
 	}
 
 	// ***** (KZ) - Kazakhstan
+	@Test
 	public void testKazakhstan() {
 		Country country = null;
 		country = countryFactory.findByCode("KZ");
-		assertTrue(country.getCode().equals("KZ"));
-		assertTrue(country.getName().toUpperCase().equals("KAZAKHSTAN"));
+		assert country != null;
+		assert country.getCode().equals("KZ")== true;
+		assert country.getName().toUpperCase().equals("KAZAKHSTAN")== true;
 	}
 
 	// ***** (LA) - Lao People'S Democratic Republic
+	@Test
 	public void testLaoPeopleSDemocraticRepublic() {
 		Country country = null;
 		country = countryFactory.findByCode("LA");
-		assertTrue(country.getCode().equals("LA"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"LAO PEOPLE'S DEMOCRATIC REPUBLIC"));
+		assert country != null;
+		assert country.getCode().equals("LA")== true;
+		assert country.getName().toUpperCase()
+				.equals("LAO PEOPLE'S DEMOCRATIC REPUBLIC")== true;
 	}
 
 	// ***** (LB) - Lebanon
+	@Test
 	public void testLebanon() {
 		Country country = null;
 		country = countryFactory.findByCode("LB");
-		assertTrue(country.getCode().equals("LB"));
-		assertTrue(country.getName().toUpperCase().equals("LEBANON"));
+		assert country != null;
+		assert country.getCode().equals("LB")== true;
+		assert country.getName().toUpperCase().equals("LEBANON")== true;
 	}
 
 	// ***** (LC) - Saint Lucia
+	@Test
 	public void testSaintLucia() {
 		Country country = null;
 		country = countryFactory.findByCode("LC");
-		assertTrue(country.getCode().equals("LC"));
-		assertTrue(country.getName().toUpperCase().equals("SAINT LUCIA"));
+		assert country != null;
+		assert country.getCode().equals("LC")== true;
+		assert country.getName().toUpperCase().equals("SAINT LUCIA")== true;
 	}
 
 	// ***** (LI) - Liechtenstein
+	@Test
 	public void testLiechtenstein() {
 		Country country = null;
 		country = countryFactory.findByCode("LI");
-		assertTrue(country.getCode().equals("LI"));
-		assertTrue(country.getName().toUpperCase().equals("LIECHTENSTEIN"));
+		assert country != null;
+		assert country.getCode().equals("LI")== true;
+		assert country.getName().toUpperCase().equals("LIECHTENSTEIN")== true;
 	}
 
 	// ***** (LK) - Sri Lanka
+	@Test
 	public void testSriLanka() {
 		Country country = null;
 		country = countryFactory.findByCode("LK");
-		assertTrue(country.getCode().equals("LK"));
-		assertTrue(country.getName().toUpperCase().equals("SRI LANKA"));
+		assert country != null;
+		assert country.getCode().equals("LK")== true;
+		assert country.getName().toUpperCase().equals("SRI LANKA")== true;
 	}
 
 	// ***** (LR) - Liberia
+	@Test
 	public void testLiberia() {
 		Country country = null;
 		country = countryFactory.findByCode("LR");
-		assertTrue(country.getCode().equals("LR"));
-		assertTrue(country.getName().toUpperCase().equals("LIBERIA"));
+		assert country != null;
+		assert country.getCode().equals("LR")== true;
+		assert country.getName().toUpperCase().equals("LIBERIA")== true;
 	}
 
 	// ***** (LS) - Lesotho
+	@Test
 	public void testLesotho() {
 		Country country = null;
 		country = countryFactory.findByCode("LS");
-		assertTrue(country.getCode().equals("LS"));
-		assertTrue(country.getName().toUpperCase().equals("LESOTHO"));
+		assert country != null;
+		assert country.getCode().equals("LS")== true;
+		assert country.getName().toUpperCase().equals("LESOTHO")== true;
 	}
 
 	// ***** (LT) - Lithuania
+	@Test
 	public void testLithuania() {
 		Country country = null;
 		country = countryFactory.findByCode("LT");
-		assertTrue(country.getCode().equals("LT"));
-		assertTrue(country.getName().toUpperCase().equals("LITHUANIA"));
+		assert country != null;
+		assert country.getCode().equals("LT")== true;
+		assert country.getName().toUpperCase().equals("LITHUANIA")== true;
 	}
 
 	// ***** (LU) - Luxembourg
+	@Test
 	public void testLuxembourg() {
 		Country country = null;
 		country = countryFactory.findByCode("LU");
-		assertTrue(country.getCode().equals("LU"));
-		assertTrue(country.getName().toUpperCase().equals("LUXEMBOURG"));
+		assert country != null;
+		assert country.getCode().equals("LU")== true;
+		assert country.getName().toUpperCase().equals("LUXEMBOURG")== true;
 	}
 
 	// ***** (LV) - Latvia
+	@Test
 	public void testLatvia() {
 		Country country = null;
 		country = countryFactory.findByCode("LV");
-		assertTrue(country.getCode().equals("LV"));
-		assertTrue(country.getName().toUpperCase().equals("LATVIA"));
+		assert country != null;
+		assert country.getCode().equals("LV")== true;
+		assert country.getName().toUpperCase().equals("LATVIA")== true;
 	}
 
 	// ***** (LY) - Libyan Arab Jamahiriya
+	@Test
 	public void testLibyanArabJamahiriya() {
 		Country country = null;
 		country = countryFactory.findByCode("LY");
-		assertTrue(country.getCode().equals("LY"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"LIBYAN ARAB JAMAHIRIYA"));
+		assert country != null;
+		assert country.getCode().equals("LY")== true;
+		assert country.getName().toUpperCase()
+				.equals("LIBYAN ARAB JAMAHIRIYA")== true;
 	}
 
 	// ***** (MA) - Morocco
+	@Test
 	public void testMorocco() {
 		Country country = null;
 		country = countryFactory.findByCode("MA");
-		assertTrue(country.getCode().equals("MA"));
-		assertTrue(country.getName().toUpperCase().equals("MOROCCO"));
+		assert country != null;
+		assert country.getCode().equals("MA")== true;
+		assert country.getName().toUpperCase().equals("MOROCCO")== true;
 	}
 
 	// ***** (MC) - Monaco
+	@Test
 	public void testMonaco() {
 		Country country = null;
 		country = countryFactory.findByCode("MC");
-		assertTrue(country.getCode().equals("MC"));
-		assertTrue(country.getName().toUpperCase().equals("MONACO"));
+		assert country != null;
+		assert country.getCode().equals("MC")== true;
+		assert country.getName().toUpperCase().equals("MONACO")== true;
 	}
 
 	// ***** (MD) - Moldova, Republic Of
+	@Test
 	public void testMoldovaRepublicOf() {
 		Country country = null;
 		country = countryFactory.findByCode("MD");
-		assertTrue(country.getCode().equals("MD"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"MOLDOVA, REPUBLIC OF"));
+		assert country != null;
+		assert country.getCode().equals("MD")== true;
+		assert country.getName().toUpperCase()
+				.equals("MOLDOVA, REPUBLIC OF")== true;
 	}
 
 	// ***** (ME) - Montenegro
+	@Test
 	public void testMontenegro() {
 		Country country = null;
 		country = countryFactory.findByCode("ME");
-		assertTrue(country.getCode().equals("ME"));
-		assertTrue(country.getName().toUpperCase().equals("MONTENEGRO"));
+		assert country != null;
+		assert country.getCode().equals("ME")== true;
+		assert country.getName().toUpperCase().equals("MONTENEGRO")== true;
 	}
 
 	// ***** (MF) - Saint Martin
+	@Test
 	public void testSaintMartin() {
 		Country country = null;
 		country = countryFactory.findByCode("MF");
-		assertTrue(country.getCode().equals("MF"));
-		assertTrue(country.getName().toUpperCase().equals("SAINT MARTIN"));
+		assert country != null;
+		assert country.getCode().equals("MF")== true;
+		assert country.getName().toUpperCase().equals("SAINT MARTIN")== true;
 	}
 
 	// ***** (MG) - Madagascar
+	@Test
 	public void testMadagascar() {
 		Country country = null;
 		country = countryFactory.findByCode("MG");
-		assertTrue(country.getCode().equals("MG"));
-		assertTrue(country.getName().toUpperCase().equals("MADAGASCAR"));
+		assert country != null;
+		assert country.getCode().equals("MG")== true;
+		assert country.getName().toUpperCase().equals("MADAGASCAR")== true;
 	}
 
 	// ***** (MH) - Marshall Islands
+	@Test
 	public void testMarshallIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("MH");
-		assertTrue(country.getCode().equals("MH"));
-		assertTrue(country.getName().toUpperCase().equals("MARSHALL ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("MH")== true;
+		assert country.getName().toUpperCase().equals("MARSHALL ISLANDS")== true;
 	}
 
 	// ***** (MK) - Macedonia, The Former Yugoslav Republic Of
+	@Test
 	public void testMacedoniaTheFormerYugoslavRepublicOf() {
 		Country country = null;
 		country = countryFactory.findByCode("MK");
-		assertTrue(country.getCode().equals("MK"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"));
+		assert country != null;
+		assert country.getCode().equals("MK")== true;
+		assert country.getName().toUpperCase()
+				.equals("MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF")== true;
 	}
 
 	// ***** (ML) - Mali
+	@Test
 	public void testMali() {
 		Country country = null;
 		country = countryFactory.findByCode("ML");
-		assertTrue(country.getCode().equals("ML"));
-		assertTrue(country.getName().toUpperCase().equals("MALI"));
+		assert country != null;
+		assert country.getCode().equals("ML")== true;
+		assert country.getName().toUpperCase().equals("MALI")== true;
 	}
 
 	// ***** (MM) - Myanmar
+	@Test
 	public void testMyanmar() {
 		Country country = null;
 		country = countryFactory.findByCode("MM");
-		assertTrue(country.getCode().equals("MM"));
-		assertTrue(country.getName().toUpperCase().equals("MYANMAR"));
+		assert country != null;
+		assert country.getCode().equals("MM")== true;
+		assert country.getName().toUpperCase().equals("MYANMAR")== true;
 	}
 
 	// ***** (MN) - Mongolia
+	@Test
 	public void testMongolia() {
 		Country country = null;
 		country = countryFactory.findByCode("MN");
-		assertTrue(country.getCode().equals("MN"));
-		assertTrue(country.getName().toUpperCase().equals("MONGOLIA"));
+		assert country != null;
+		assert country.getCode().equals("MN")== true;
+		assert country.getName().toUpperCase().equals("MONGOLIA")== true;
 	}
 
 	// ***** (MO) - Macao
+	@Test
 	public void testMacao() {
 		Country country = null;
 		country = countryFactory.findByCode("MO");
-		assertTrue(country.getCode().equals("MO"));
-		assertTrue(country.getName().toUpperCase().equals("MACAO"));
+		assert country != null;
+		assert country.getCode().equals("MO")== true;
+		assert country.getName().toUpperCase().equals("MACAO")== true;
 	}
 
 	// ***** (MP) - Northern Mariana Islands
+	@Test
 	public void testNorthernMarianaIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("MP");
-		assertTrue(country.getCode().equals("MP"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"NORTHERN MARIANA ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("MP")== true;
+		assert country.getName().toUpperCase()
+				.equals("NORTHERN MARIANA ISLANDS")== true;
 	}
 
 	// ***** (MQ) - Martinique
+	@Test
 	public void testMartinique() {
 		Country country = null;
 		country = countryFactory.findByCode("MQ");
-		assertTrue(country.getCode().equals("MQ"));
-		assertTrue(country.getName().toUpperCase().equals("MARTINIQUE"));
+		assert country != null;
+		assert country.getCode().equals("MQ")== true;
+		assert country.getName().toUpperCase().equals("MARTINIQUE")== true;
 	}
 
 	// ***** (MR) - Mauritania
+	@Test
 	public void testMauritania() {
 		Country country = null;
 		country = countryFactory.findByCode("MR");
-		assertTrue(country.getCode().equals("MR"));
-		assertTrue(country.getName().toUpperCase().equals("MAURITANIA"));
+		assert country != null;
+		assert country.getCode().equals("MR")== true;
+		assert country.getName().toUpperCase().equals("MAURITANIA")== true;
 	}
 
 	// ***** (MS) - Montserrat
+	@Test
 	public void testMontserrat() {
 		Country country = null;
 		country = countryFactory.findByCode("MS");
-		assertTrue(country.getCode().equals("MS"));
-		assertTrue(country.getName().toUpperCase().equals("MONTSERRAT"));
+		assert country != null;
+		assert country.getCode().equals("MS")== true;
+		assert country.getName().toUpperCase().equals("MONTSERRAT")== true;
 	}
 
 	// ***** (MT) - Malta
+	@Test
 	public void testMalta() {
 		Country country = null;
 		country = countryFactory.findByCode("MT");
-		assertTrue(country.getCode().equals("MT"));
-		assertTrue(country.getName().toUpperCase().equals("MALTA"));
+		assert country != null;
+		assert country.getCode().equals("MT")== true;
+		assert country.getName().toUpperCase().equals("MALTA")== true;
 	}
 
 	// ***** (MU) - Mauritius
+	@Test
 	public void testMauritius() {
 		Country country = null;
 		country = countryFactory.findByCode("MU");
-		assertTrue(country.getCode().equals("MU"));
-		assertTrue(country.getName().toUpperCase().equals("MAURITIUS"));
+		assert country != null;
+		assert country.getCode().equals("MU")== true;
+		assert country.getName().toUpperCase().equals("MAURITIUS")== true;
 	}
 
 	// ***** (MV) - Maldives
+	@Test
 	public void testMaldives() {
 		Country country = null;
 		country = countryFactory.findByCode("MV");
-		assertTrue(country.getCode().equals("MV"));
-		assertTrue(country.getName().toUpperCase().equals("MALDIVES"));
+		assert country != null;
+		assert country.getCode().equals("MV")== true;
+		assert country.getName().toUpperCase().equals("MALDIVES")== true;
 	}
 
 	// ***** (MW) - Malawi
+	@Test
 	public void testMalawi() {
 		Country country = null;
 		country = countryFactory.findByCode("MW");
-		assertTrue(country.getCode().equals("MW"));
-		assertTrue(country.getName().toUpperCase().equals("MALAWI"));
+		assert country != null;
+		assert country.getCode().equals("MW")== true;
+		assert country.getName().toUpperCase().equals("MALAWI")== true;
 	}
 
 	// ***** (MX) - Mexico
+	@Test
 	public void testMexico() {
 		Country country = null;
 		country = countryFactory.findByCode("MX");
-		assertTrue(country.getCode().equals("MX"));
-		assertTrue(country.getName().toUpperCase().equals("MEXICO"));
+		assert country != null;
+		assert country.getCode().equals("MX")== true;
+		assert country.getName().toUpperCase().equals("MEXICO")== true;
 	}
 
 	// ***** (MY) - Malaysia
+	@Test
 	public void testMalaysia() {
 		Country country = null;
 		country = countryFactory.findByCode("MY");
-		assertTrue(country.getCode().equals("MY"));
-		assertTrue(country.getName().toUpperCase().equals("MALAYSIA"));
+		assert country != null;
+		assert country.getCode().equals("MY")== true;
+		assert country.getName().toUpperCase().equals("MALAYSIA")== true;
 	}
 
 	// ***** (MZ) - Mozambique
+	@Test
 	public void testMozambique() {
 		Country country = null;
 		country = countryFactory.findByCode("MZ");
-		assertTrue(country.getCode().equals("MZ"));
-		assertTrue(country.getName().toUpperCase().equals("MOZAMBIQUE"));
+		assert country != null;
+		assert country.getCode().equals("MZ")== true;
+		assert country.getName().toUpperCase().equals("MOZAMBIQUE")== true;
 	}
 
 	// ***** (NA) - Namibia
+	@Test
 	public void testNamibia() {
 		Country country = null;
 		country = countryFactory.findByCode("NA");
-		assertTrue(country.getCode().equals("NA"));
-		assertTrue(country.getName().toUpperCase().equals("NAMIBIA"));
+		assert country != null;
+		assert country.getCode().equals("NA")== true;
+		assert country.getName().toUpperCase().equals("NAMIBIA")== true;
 	}
 
 	// ***** (NC) - New Caledonia
+	@Test
 	public void testNewCaledonia() {
 		Country country = null;
 		country = countryFactory.findByCode("NC");
-		assertTrue(country.getCode().equals("NC"));
-		assertTrue(country.getName().toUpperCase().equals("NEW CALEDONIA"));
+		assert country != null;
+		assert country.getCode().equals("NC")== true;
+		assert country.getName().toUpperCase().equals("NEW CALEDONIA")== true;
 	}
 
 	// ***** (NE) - Niger
+	@Test
 	public void testNiger() {
 		Country country = null;
 		country = countryFactory.findByCode("NE");
-		assertTrue(country.getCode().equals("NE"));
-		assertTrue(country.getName().toUpperCase().equals("NIGER"));
+		assert country != null;
+		assert country.getCode().equals("NE")== true;
+		assert country.getName().toUpperCase().equals("NIGER")== true;
 	}
 
 	// ***** (NF) - Norfolk Island
+	@Test
 	public void testNorfolkIsland() {
 		Country country = null;
 		country = countryFactory.findByCode("NF");
-		assertTrue(country.getCode().equals("NF"));
-		assertTrue(country.getName().toUpperCase().equals("NORFOLK ISLAND"));
+		assert country != null;
+		assert country.getCode().equals("NF")== true;
+		assert country.getName().toUpperCase().equals("NORFOLK ISLAND")== true;
 	}
 
 	// ***** (NG) - Nigeria
+	@Test
 	public void testNigeria() {
 		Country country = null;
 		country = countryFactory.findByCode("NG");
-		assertTrue(country.getCode().equals("NG"));
-		assertTrue(country.getName().toUpperCase().equals("NIGERIA"));
+		assert country != null;
+		assert country.getCode().equals("NG")== true;
+		assert country.getName().toUpperCase().equals("NIGERIA")== true;
 	}
 
 	// ***** (NI) - Nicaragua
+	@Test
 	public void testNicaragua() {
 		Country country = null;
 		country = countryFactory.findByCode("NI");
-		assertTrue(country.getCode().equals("NI"));
-		assertTrue(country.getName().toUpperCase().equals("NICARAGUA"));
+		assert country != null;
+		assert country.getCode().equals("NI")== true;
+		assert country.getName().toUpperCase().equals("NICARAGUA")== true;
 	}
 
 	// ***** (NL) - Netherlands
+	@Test
 	public void testNetherlands() {
 		Country country = null;
 		country = countryFactory.findByCode("NL");
-		assertTrue(country.getCode().equals("NL"));
-		assertTrue(country.getName().toUpperCase().equals("NETHERLANDS"));
+		assert country != null;
+		assert country.getCode().equals("NL")== true;
+		assert country.getName().toUpperCase().equals("NETHERLANDS")== true;
 	}
 
 	// ***** (NO) - Norway
+	@Test
 	public void testNorway() {
 		Country country = null;
 		country = countryFactory.findByCode("NO");
-		assertTrue(country.getCode().equals("NO"));
-		assertTrue(country.getName().toUpperCase().equals("NORWAY"));
+		assert country != null;
+		assert country.getCode().equals("NO")== true;
+		assert country.getName().toUpperCase().equals("NORWAY")== true;
 	}
 
 	// ***** (NP) - Nepal
+	@Test
 	public void testNepal() {
 		Country country = null;
 		country = countryFactory.findByCode("NP");
-		assertTrue(country.getCode().equals("NP"));
-		assertTrue(country.getName().toUpperCase().equals("NEPAL"));
+		assert country != null;
+		assert country.getCode().equals("NP")== true;
+		assert country.getName().toUpperCase().equals("NEPAL")== true;
 	}
 
 	// ***** (NR) - Nauru
+	@Test
 	public void testNauru() {
 		Country country = null;
 		country = countryFactory.findByCode("NR");
-		assertTrue(country.getCode().equals("NR"));
-		assertTrue(country.getName().toUpperCase().equals("NAURU"));
+		assert country != null;
+		assert country.getCode().equals("NR")== true;
+		assert country.getName().toUpperCase().equals("NAURU")== true;
 	}
 
 	// ***** (NU) - Niue
+	@Test
 	public void testNiue() {
 		Country country = null;
 		country = countryFactory.findByCode("NU");
-		assertTrue(country.getCode().equals("NU"));
-		assertTrue(country.getName().toUpperCase().equals("NIUE"));
+		assert country != null;
+		assert country.getCode().equals("NU")== true;
+		assert country.getName().toUpperCase().equals("NIUE")== true;
 	}
 
 	// ***** (NZ) - New Zealand
+	@Test
 	public void testNewZealand() {
 		Country country = null;
 		country = countryFactory.findByCode("NZ");
-		assertTrue(country.getCode().equals("NZ"));
-		assertTrue(country.getName().toUpperCase().equals("NEW ZEALAND"));
+		assert country != null;
+		assert country.getCode().equals("NZ")== true;
+		assert country.getName().toUpperCase().equals("NEW ZEALAND")== true;
 	}
 
 	// ***** (OM) - Oman
+	@Test
 	public void testOman() {
 		Country country = null;
 		country = countryFactory.findByCode("OM");
-		assertTrue(country.getCode().equals("OM"));
-		assertTrue(country.getName().toUpperCase().equals("OMAN"));
+		assert country != null;
+		assert country.getCode().equals("OM")== true;
+		assert country.getName().toUpperCase().equals("OMAN")== true;
 	}
 
 	// ***** (PA) - Panama
+	@Test
 	public void testPanama() {
 		Country country = null;
 		country = countryFactory.findByCode("PA");
-		assertTrue(country.getCode().equals("PA"));
-		assertTrue(country.getName().toUpperCase().equals("PANAMA"));
+		assert country != null;
+		assert country.getCode().equals("PA")== true;
+		assert country.getName().toUpperCase().equals("PANAMA")== true;
 	}
 
 	// ***** (PE) - Peru
+	@Test
 	public void testPeru() {
 		Country country = null;
 		country = countryFactory.findByCode("PE");
-		assertTrue(country.getCode().equals("PE"));
-		assertTrue(country.getName().toUpperCase().equals("PERU"));
+		assert country != null;
+		assert country.getCode().equals("PE")== true;
+		assert country.getName().toUpperCase().equals("PERU")== true;
 	}
 
 	// ***** (PF) - French Polynesia
+	@Test
 	public void testFrenchPolynesia() {
 		Country country = null;
 		country = countryFactory.findByCode("PF");
-		assertTrue(country.getCode().equals("PF"));
-		assertTrue(country.getName().toUpperCase().equals("FRENCH POLYNESIA"));
+		assert country != null;
+		assert country.getCode().equals("PF")== true;
+		assert country.getName().toUpperCase().equals("FRENCH POLYNESIA")== true;
 	}
 
 	// ***** (PG) - Papua New Guinea
+	@Test
 	public void testPapuaNewGuinea() {
 		Country country = null;
 		country = countryFactory.findByCode("PG");
-		assertTrue(country.getCode().equals("PG"));
-		assertTrue(country.getName().toUpperCase().equals("PAPUA NEW GUINEA"));
+		assert country != null;
+		assert country.getCode().equals("PG")== true;
+		assert country.getName().toUpperCase().equals("PAPUA NEW GUINEA")== true;
 	}
 
 	// ***** (PH) - Philippines
+	@Test
 	public void testPhilippines() {
 		Country country = null;
 		country = countryFactory.findByCode("PH");
-		assertTrue(country.getCode().equals("PH"));
-		assertTrue(country.getName().toUpperCase().equals("PHILIPPINES"));
+		assert country != null;
+		assert country.getCode().equals("PH")== true;
+		assert country.getName().toUpperCase().equals("PHILIPPINES")== true;
 	}
 
 	// ***** (PK) - Pakistan
+	@Test
 	public void testPakistan() {
 		Country country = null;
 		country = countryFactory.findByCode("PK");
-		assertTrue(country.getCode().equals("PK"));
-		assertTrue(country.getName().toUpperCase().equals("PAKISTAN"));
+		assert country != null;
+		assert country.getCode().equals("PK")== true;
+		assert country.getName().toUpperCase().equals("PAKISTAN")== true;
 	}
 
 	// ***** (PL) - Poland
+	@Test
 	public void testPoland() {
 		Country country = null;
 		country = countryFactory.findByCode("PL");
-		assertTrue(country.getCode().equals("PL"));
-		assertTrue(country.getName().toUpperCase().equals("POLAND"));
+		assert country != null;
+		assert country.getCode().equals("PL")== true;
+		assert country.getName().toUpperCase().equals("POLAND")== true;
 	}
 
 	// ***** (PM) - Saint Pierre And Miquelon
+	@Test
 	public void testSaintPierreAndMiquelon() {
 		Country country = null;
 		country = countryFactory.findByCode("PM");
-		assertTrue(country.getCode().equals("PM"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"SAINT PIERRE AND MIQUELON"));
+		assert country != null;
+		assert country.getCode().equals("PM")== true;
+		assert country.getName().toUpperCase()
+				.equals("SAINT PIERRE AND MIQUELON")== true;
 	}
 
 	// ***** (PN) - Pitcairn
+	@Test
 	public void testPitcairn() {
 		Country country = null;
 		country = countryFactory.findByCode("PN");
-		assertTrue(country.getCode().equals("PN"));
-		assertTrue(country.getName().toUpperCase().equals("PITCAIRN"));
+		assert country != null;
+		assert country.getCode().equals("PN")== true;
+		assert country.getName().toUpperCase().equals("PITCAIRN")== true;
 	}
 
 	// ***** (PR) - Puerto Rico
+	@Test
 	public void testPuertoRico() {
 		Country country = null;
 		country = countryFactory.findByCode("PR");
-		assertTrue(country.getCode().equals("PR"));
-		assertTrue(country.getName().toUpperCase().equals("PUERTO RICO"));
+		assert country != null;
+		assert country.getCode().equals("PR")== true;
+		assert country.getName().toUpperCase().equals("PUERTO RICO")== true;
 	}
 
 	// ***** (PS) - Palestinian Territory, Occupied
+	@Test
 	public void testPalestinianTerritoryOccupied() {
 		Country country = null;
 		country = countryFactory.findByCode("PS");
-		assertTrue(country.getCode().equals("PS"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"PALESTINIAN TERRITORY, OCCUPIED"));
+		assert country != null;
+		assert country.getCode().equals("PS")== true;
+		assert country.getName().toUpperCase()
+				.equals("PALESTINIAN TERRITORY, OCCUPIED")== true;
 	}
 
 	// ***** (PT) - Portugal
+	@Test
 	public void testPortugal() {
 		Country country = null;
 		country = countryFactory.findByCode("PT");
-		assertTrue(country.getCode().equals("PT"));
-		assertTrue(country.getName().toUpperCase().equals("PORTUGAL"));
+		assert country != null;
+		assert country.getCode().equals("PT")== true;
+		assert country.getName().toUpperCase().equals("PORTUGAL")== true;
 	}
 
 	// ***** (PW) - Palau
+	@Test
 	public void testPalau() {
 		Country country = null;
 		country = countryFactory.findByCode("PW");
-		assertTrue(country.getCode().equals("PW"));
-		assertTrue(country.getName().toUpperCase().equals("PALAU"));
+		assert country != null;
+		assert country.getCode().equals("PW")== true;
+		assert country.getName().toUpperCase().equals("PALAU")== true;
 	}
 
 	// ***** (PY) - Paraguay
+	@Test
 	public void testParaguay() {
 		Country country = null;
 		country = countryFactory.findByCode("PY");
-		assertTrue(country.getCode().equals("PY"));
-		assertTrue(country.getName().toUpperCase().equals("PARAGUAY"));
+		assert country != null;
+		assert country.getCode().equals("PY")== true;
+		assert country.getName().toUpperCase().equals("PARAGUAY")== true;
 	}
 
 	// ***** (QA) - Qatar
+	@Test
 	public void testQatar() {
 		Country country = null;
 		country = countryFactory.findByCode("QA");
-		assertTrue(country.getCode().equals("QA"));
-		assertTrue(country.getName().toUpperCase().equals("QATAR"));
+		assert country != null;
+		assert country.getCode().equals("QA")== true;
+		assert country.getName().toUpperCase().equals("QATAR")== true;
 	}
 
 	// ***** (RE) - Reunion
 	public void eunion() {
 		Country country = null;
 		country = countryFactory.findByCode("RE");
-		assertTrue(country.getCode().equals("RE"));
-		assertTrue(country.getName().toUpperCase().equals("R\u00c9UNION"));
+		assert country != null;
+		assert country.getCode().equals("RE")== true;
+		assert country.getName().toUpperCase().equals("R\u00c9UNION")== true;
 	}
 
 	// ***** (RO) - Romania
+	@Test
 	public void testRomania() {
 		Country country = null;
 		country = countryFactory.findByCode("RO");
-		assertTrue(country.getCode().equals("RO"));
-		assertTrue(country.getName().toUpperCase().equals("ROMANIA"));
+		assert country != null;
+		assert country.getCode().equals("RO")== true;
+		assert country.getName().toUpperCase().equals("ROMANIA")== true;
 	}
 
 	// ***** (RS) - Serbia
+	@Test
 	public void testSerbia() {
 		Country country = null;
 		country = countryFactory.findByCode("RS");
-		assertTrue(country.getCode().equals("RS"));
-		assertTrue(country.getName().toUpperCase().equals("SERBIA"));
+		assert country != null;
+		assert country.getCode().equals("RS")== true;
+		assert country.getName().toUpperCase().equals("SERBIA")== true;
 	}
 
 	// ***** (RU) - Russian Federation
+	@Test
 	public void testRussianFederation() {
 		Country country = null;
 		country = countryFactory.findByCode("RU");
-		assertTrue(country.getCode().equals("RU"));
-		assertTrue(country.getName().toUpperCase().equals("RUSSIAN FEDERATION"));
+		assert country != null;
+		assert country.getCode().equals("RU")== true;
+		assert country.getName().toUpperCase().equals("RUSSIAN FEDERATION")== true;
 	}
 
 	// ***** (RW) - Rwanda
+	@Test
 	public void testRwanda() {
 		Country country = null;
 		country = countryFactory.findByCode("RW");
-		assertTrue(country.getCode().equals("RW"));
-		assertTrue(country.getName().toUpperCase().equals("RWANDA"));
+		assert country != null;
+		assert country.getCode().equals("RW")== true;
+		assert country.getName().toUpperCase().equals("RWANDA")== true;
 	}
 
 	// ***** (SA) - Saudi Arabia
+	@Test
 	public void testSaudiArabia() {
 		Country country = null;
 		country = countryFactory.findByCode("SA");
-		assertTrue(country.getCode().equals("SA"));
-		assertTrue(country.getName().toUpperCase().equals("SAUDI ARABIA"));
+		assert country != null;
+		assert country.getCode().equals("SA")== true;
+		assert country.getName().toUpperCase().equals("SAUDI ARABIA")== true;
 	}
 
 	// ***** (SB) - Solomon Islands
+	@Test
 	public void testSolomonIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("SB");
-		assertTrue(country.getCode().equals("SB"));
-		assertTrue(country.getName().toUpperCase().equals("SOLOMON ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("SB")== true;
+		assert country.getName().toUpperCase().equals("SOLOMON ISLANDS")== true;
 	}
 
 	// ***** (SC) - Seychelles
+	@Test
 	public void testSeychelles() {
 		Country country = null;
 		country = countryFactory.findByCode("SC");
-		assertTrue(country.getCode().equals("SC"));
-		assertTrue(country.getName().toUpperCase().equals("SEYCHELLES"));
+		assert country != null;
+		assert country.getCode().equals("SC")== true;
+		assert country.getName().toUpperCase().equals("SEYCHELLES")== true;
 	}
 
 	// ***** (SD) - Sudan
+	@Test
 	public void testSudan() {
 		Country country = null;
 		country = countryFactory.findByCode("SD");
-		assertTrue(country.getCode().equals("SD"));
-		assertTrue(country.getName().toUpperCase().equals("SUDAN"));
+		assert country != null;
+		assert country.getCode().equals("SD")== true;
+		assert country.getName().toUpperCase().equals("SUDAN")== true;
 	}
 
 	// ***** (SE) - Sweden
+	@Test
 	public void testSweden() {
 		Country country = null;
 		country = countryFactory.findByCode("SE");
-		assertTrue(country.getCode().equals("SE"));
-		assertTrue(country.getName().toUpperCase().equals("SWEDEN"));
+		assert country != null;
+		assert country.getCode().equals("SE")== true;
+		assert country.getName().toUpperCase().equals("SWEDEN")== true;
 	}
 
-	// ***** (see HOLY SEE) - Vatican City State
+	// ***** (HOLY SEE) - Vatican City State
+	@Test
 	public void testVaticanCityState() {
 		Country country = null;
-		country = countryFactory.findByCode("see HOLY SEE");
-		assertTrue(country.getCode().equals("see HOLY SEE"));
-		assertTrue(country.getName().toUpperCase().equals("VATICAN CITY STATE"));
+		country = countryFactory.findByCode("VA");
+		assert country != null;
+		assert country.getCode().equals("VA")== true;
+		assert country.getName().toUpperCase().equals("VATICAN CITY STATE")== true;
 	}
 
 	// ***** (SG) - Singapore
+	@Test
 	public void testSingapore() {
 		Country country = null;
 		country = countryFactory.findByCode("SG");
-		assertTrue(country.getCode().equals("SG"));
-		assertTrue(country.getName().toUpperCase().equals("SINGAPORE"));
+		assert country != null;
+		assert country.getCode().equals("SG")== true;
+		assert country.getName().toUpperCase().equals("SINGAPORE")== true;
 	}
 
 	// ***** (SH) - Saint Helena
+	@Test
 	public void testSaintHelena() {
 		Country country = null;
 		country = countryFactory.findByCode("SH");
-		assertTrue(country.getCode().equals("SH"));
-		assertTrue(country.getName().toUpperCase().equals("SAINT HELENA"));
+		assert country != null;
+		assert country.getCode().equals("SH")== true;
+		assert country.getName().toUpperCase().equals("SAINT HELENA")== true;
 	}
 
 	// ***** (SI) - Slovenia
+	@Test
 	public void testSlovenia() {
 		Country country = null;
 		country = countryFactory.findByCode("SI");
-		assertTrue(country.getCode().equals("SI"));
-		assertTrue(country.getName().toUpperCase().equals("SLOVENIA"));
+		assert country != null;
+		assert country.getCode().equals("SI")== true;
+		assert country.getName().toUpperCase().equals("SLOVENIA")== true;
 	}
 
 	// ***** (SJ) - Svalbard And Jan Mayen
+	@Test
 	public void testSvalbardAndJanMayen() {
 		Country country = null;
 		country = countryFactory.findByCode("SJ");
-		assertTrue(country.getCode().equals("SJ"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"SVALBARD AND JAN MAYEN"));
+		assert country != null;
+		assert country.getCode().equals("SJ")== true;
+		assert country.getName().toUpperCase()
+				.equals("SVALBARD AND JAN MAYEN")== true;
 	}
 
 	// ***** (SK) - Slovakia
+	@Test
 	public void testSlovakia() {
 		Country country = null;
 		country = countryFactory.findByCode("SK");
-		assertTrue(country.getCode().equals("SK"));
-		assertTrue(country.getName().toUpperCase().equals("SLOVAKIA"));
+		assert country != null;
+		assert country.getCode().equals("SK")== true;
+		assert country.getName().toUpperCase().equals("SLOVAKIA")== true;
 	}
 
 	// ***** (SL) - Sierra Leone
+	@Test
 	public void testSierraLeone() {
 		Country country = null;
 		country = countryFactory.findByCode("SL");
-		assertTrue(country.getCode().equals("SL"));
-		assertTrue(country.getName().toUpperCase().equals("SIERRA LEONE"));
+		assert country != null;
+		assert country.getCode().equals("SL")== true;
+		assert country.getName().toUpperCase().equals("SIERRA LEONE")== true;
 	}
 
 	// ***** (SM) - San Marino
+	@Test
 	public void testSanMarino() {
 		Country country = null;
 		country = countryFactory.findByCode("SM");
-		assertTrue(country.getCode().equals("SM"));
-		assertTrue(country.getName().toUpperCase().equals("SAN MARINO"));
+		assert country != null;
+		assert country.getCode().equals("SM")== true;
+		assert country.getName().toUpperCase().equals("SAN MARINO")== true;
 	}
 
 	// ***** (SN) - Senegal
+	@Test
 	public void testSenegal() {
 		Country country = null;
 		country = countryFactory.findByCode("SN");
-		assertTrue(country.getCode().equals("SN"));
-		assertTrue(country.getName().toUpperCase().equals("SENEGAL"));
+		assert country != null;
+		assert country.getCode().equals("SN")== true;
+		assert country.getName().toUpperCase().equals("SENEGAL")== true;
 	}
 
 	// ***** (SO) - Somalia
+	@Test
 	public void testSomalia() {
 		Country country = null;
 		country = countryFactory.findByCode("SO");
-		assertTrue(country.getCode().equals("SO"));
-		assertTrue(country.getName().toUpperCase().equals("SOMALIA"));
+		assert country != null;
+		assert country.getCode().equals("SO")== true;
+		assert country.getName().toUpperCase().equals("SOMALIA")== true;
 	}
 
 	// ***** (SR) - Suriname
+	@Test
 	public void testSuriname() {
 		Country country = null;
 		country = countryFactory.findByCode("SR");
-		assertTrue(country.getCode().equals("SR"));
-		assertTrue(country.getName().toUpperCase().equals("SURINAME"));
+		assert country != null;
+		assert country.getCode().equals("SR")== true;
+		assert country.getName().toUpperCase().equals("SURINAME")== true;
 	}
 
 	// ***** (ST) - Sao Tome And Principe
+	@Test
 	public void testSaoTomeAndPrincipe() {
 		Country country = null;
 		country = countryFactory.findByCode("ST");
-		assertTrue(country.getCode().equals("ST"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"SAO TOME AND PRINCIPE"));
+		assert country != null;
+		assert country.getCode().equals("ST")== true;
+		assert country.getName().toUpperCase()
+				.equals("SAO TOME AND PRINCIPE")== true;
 	}
 
 	// ***** (SV) - El Salvador
+	@Test
 	public void testElSalvador() {
 		Country country = null;
 		country = countryFactory.findByCode("SV");
-		assertTrue(country.getCode().equals("SV"));
-		assertTrue(country.getName().toUpperCase().equals("EL SALVADOR"));
+		assert country != null;
+		assert country.getCode().equals("SV")== true;
+		assert country.getName().toUpperCase().equals("EL SALVADOR")== true;
 	}
 
 	// ***** (SY) - Syrian Arab Republic
+	@Test
 	public void testSyrianArabRepublic() {
 		Country country = null;
 		country = countryFactory.findByCode("SY");
-		assertTrue(country.getCode().equals("SY"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"SYRIAN ARAB REPUBLIC"));
+		assert country != null;
+		assert country.getCode().equals("SY")== true;
+		assert country.getName().toUpperCase()
+				.equals("SYRIAN ARAB REPUBLIC")== true;
 	}
 
 	// ***** (SZ) - Swaziland
+	@Test
 	public void testSwaziland() {
 		Country country = null;
 		country = countryFactory.findByCode("SZ");
-		assertTrue(country.getCode().equals("SZ"));
-		assertTrue(country.getName().toUpperCase().equals("SWAZILAND"));
+		assert country != null;
+		assert country.getCode().equals("SZ")== true;
+		assert country.getName().toUpperCase().equals("SWAZILAND")== true;
 	}
 
 	// ***** (TC) - Turks And Caicos Islands
+	@Test
 	public void testTurksAndCaicosIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("TC");
-		assertTrue(country.getCode().equals("TC"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"TURKS AND CAICOS ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("TC")== true;
+		assert country.getName().toUpperCase()
+				.equals("TURKS AND CAICOS ISLANDS")== true;
 	}
 
 	// ***** (TD) - Chad
+	@Test
 	public void testChad() {
 		Country country = null;
 		country = countryFactory.findByCode("TD");
-		assertTrue(country.getCode().equals("TD"));
-		assertTrue(country.getName().toUpperCase().equals("CHAD"));
+		assert country != null;
+		assert country.getCode().equals("TD")== true;
+		assert country.getName().toUpperCase().equals("CHAD")== true;
 	}
 
 	// ***** (TF) - French Southern Territories
+	@Test
 	public void testFrenchSouthernTerritories() {
 		Country country = null;
 		country = countryFactory.findByCode("TF");
-		assertTrue(country.getCode().equals("TF"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"FRENCH SOUTHERN TERRITORIES"));
+		assert country != null;
+		assert country.getCode().equals("TF")== true;
+		assert country.getName().toUpperCase()
+				.equals("FRENCH SOUTHERN TERRITORIES")== true;
 	}
 
 	// ***** (TG) - Togo
+	@Test
 	public void testTogo() {
 		Country country = null;
 		country = countryFactory.findByCode("TG");
-		assertTrue(country.getCode().equals("TG"));
-		assertTrue(country.getName().toUpperCase().equals("TOGO"));
+		assert country != null;
+		assert country.getCode().equals("TG")== true;
+		assert country.getName().toUpperCase().equals("TOGO")== true;
 	}
 
 	// ***** (TH) - Thailand
+	@Test
 	public void testThailand() {
 		Country country = null;
 		country = countryFactory.findByCode("TH");
-		assertTrue(country.getCode().equals("TH"));
-		assertTrue(country.getName().toUpperCase().equals("THAILAND"));
+		assert country != null;
+		assert country.getCode().equals("TH")== true;
+		assert country.getName().toUpperCase().equals("THAILAND")== true;
 	}
 
 	// ***** (TJ) - Tajikistan
+	@Test
 	public void testTajikistan() {
 		Country country = null;
 		country = countryFactory.findByCode("TJ");
-		assertTrue(country.getCode().equals("TJ"));
-		assertTrue(country.getName().toUpperCase().equals("TAJIKISTAN"));
+		assert country != null;
+		assert country.getCode().equals("TJ")== true;
+		assert country.getName().toUpperCase().equals("TAJIKISTAN")== true;
 	}
 
 	// ***** (TK) - Tokelau
+	@Test
 	public void testTokelau() {
 		Country country = null;
 		country = countryFactory.findByCode("TK");
-		assertTrue(country.getCode().equals("TK"));
-		assertTrue(country.getName().toUpperCase().equals("TOKELAU"));
+		assert country != null;
+		assert country.getCode().equals("TK")== true;
+		assert country.getName().toUpperCase().equals("TOKELAU")== true;
 	}
 
 	// ***** (TL) - Timor-Leste
+	@Test
 	public void testTimorLeste() {
 		Country country = null;
 		country = countryFactory.findByCode("TL");
-		assertTrue(country.getCode().equals("TL"));
-		assertTrue(country.getName().toUpperCase().equals("TIMOR-LESTE"));
+		assert country != null;
+		assert country.getCode().equals("TL")== true;
+		assert country.getName().toUpperCase().equals("TIMOR-LESTE")== true;
 	}
 
 	// ***** (TM) - Turkmenistan
+	@Test
 	public void testTurkmenistan() {
 		Country country = null;
 		country = countryFactory.findByCode("TM");
-		assertTrue(country.getCode().equals("TM"));
-		assertTrue(country.getName().toUpperCase().equals("TURKMENISTAN"));
+		assert country != null;
+		assert country.getCode().equals("TM")== true;
+		assert country.getName().toUpperCase().equals("TURKMENISTAN")== true;
 	}
 
 	// ***** (TN) - Tunisia
+	@Test
 	public void testTunisia() {
 		Country country = null;
 		country = countryFactory.findByCode("TN");
-		assertTrue(country.getCode().equals("TN"));
-		assertTrue(country.getName().toUpperCase().equals("TUNISIA"));
+		assert country != null;
+		assert country.getCode().equals("TN")== true;
+		assert country.getName().toUpperCase().equals("TUNISIA")== true;
 	}
 
 	// ***** (TO) - Tonga
+	@Test
 	public void testTonga() {
 		Country country = null;
 		country = countryFactory.findByCode("TO");
-		assertTrue(country.getCode().equals("TO"));
-		assertTrue(country.getName().toUpperCase().equals("TONGA"));
+		assert country != null;
+		assert country.getCode().equals("TO")== true;
+		assert country.getName().toUpperCase().equals("TONGA")== true;
 	}
 
 	// ***** (TR) - Turkey
+	@Test
 	public void testTurkey() {
 		Country country = null;
 		country = countryFactory.findByCode("TR");
-		assertTrue(country.getCode().equals("TR"));
-		assertTrue(country.getName().toUpperCase().equals("TURKEY"));
+		assert country != null;
+		assert country.getCode().equals("TR")== true;
+		assert country.getName().toUpperCase().equals("TURKEY")== true;
 	}
 
 	// ***** (TT) - Trinidad And Tobago
+	@Test
 	public void testTrinidadAndTobago() {
 		Country country = null;
 		country = countryFactory.findByCode("TT");
-		assertTrue(country.getCode().equals("TT"));
-		assertTrue(country.getName().toUpperCase()
-				.equals("TRINIDAD AND TOBAGO"));
+		assert country != null;
+		assert country.getCode().equals("TT")== true;
+		assert country.getName().toUpperCase()
+				.equals("TRINIDAD AND TOBAGO")== true;
 	}
 
 	// ***** (TV) - Tuvalu
+	@Test
 	public void testTuvalu() {
 		Country country = null;
 		country = countryFactory.findByCode("TV");
-		assertTrue(country.getCode().equals("TV"));
-		assertTrue(country.getName().toUpperCase().equals("TUVALU"));
+		assert country != null;
+		assert country.getCode().equals("TV")== true;
+		assert country.getName().toUpperCase().equals("TUVALU")== true;
 	}
 
 	// ***** (TW) - Taiwan, Province Of China
+	@Test
 	public void testTaiwanProvinceOfChina() {
 		Country country = null;
 		country = countryFactory.findByCode("TW");
-		assertTrue(country.getCode().equals("TW"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"TAIWAN, PROVINCE OF CHINA"));
+		assert country != null;
+		assert country.getCode().equals("TW")== true;
+		assert country.getName().toUpperCase()
+				.equals("TAIWAN, PROVINCE OF CHINA")== true;
 	}
 
 	// ***** (TZ) - Tanzania, United Republic Of
+	@Test
 	public void testTanzaniaUnitedRepublicOf() {
 		Country country = null;
 		country = countryFactory.findByCode("TZ");
-		assertTrue(country.getCode().equals("TZ"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"TANZANIA, UNITED REPUBLIC OF"));
+		assert country != null;
+		assert country.getCode().equals("TZ")== true;
+		assert country.getName().toUpperCase()
+				.equals("TANZANIA, UNITED REPUBLIC OF")== true;
 	}
 
 	// ***** (UA) - Ukraine
+	@Test
 	public void testUkraine() {
 		Country country = null;
 		country = countryFactory.findByCode("UA");
-		assertTrue(country.getCode().equals("UA"));
-		assertTrue(country.getName().toUpperCase().equals("UKRAINE"));
+		assert country != null;
+		assert country.getCode().equals("UA")== true;
+		assert country.getName().toUpperCase().equals("UKRAINE")== true;
 	}
 
 	// ***** (UG) - Uganda
+	@Test
 	public void testUganda() {
 		Country country = null;
 		country = countryFactory.findByCode("UG");
-		assertTrue(country.getCode().equals("UG"));
-		assertTrue(country.getName().toUpperCase().equals("UGANDA"));
+		assert country != null;
+		assert country.getCode().equals("UG")== true;
+		assert country.getName().toUpperCase().equals("UGANDA")== true;
 	}
 
 	// ***** (UM) - United States Minor Outlying Islands
+	@Test
 	public void testUnitedStatesMinorOutlyingIslands() {
 		Country country = null;
 		country = countryFactory.findByCode("UM");
-		assertTrue(country.getCode().equals("UM"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"UNITED STATES MINOR OUTLYING ISLANDS"));
+		assert country != null;
+		assert country.getCode().equals("UM")== true;
+		assert country.getName().toUpperCase()
+				.equals("UNITED STATES MINOR OUTLYING ISLANDS")== true;
 	}
 
 	// ***** (US) - United States
+	@Test
 	public void testUnitedStates() {
 		Country country = null;
 		country = countryFactory.findByCode("US");
-		assertTrue(country.getCode().equals("US"));
-		assertTrue(country.getName().toUpperCase().equals("UNITED STATES"));
+		assert country != null;
+		assert country.getCode().equals("US")== true;
+		assert country.getName().toUpperCase().equals("UNITED STATES")== true;
 	}
 
 	// ***** (UY) - Uruguay
+	@Test
 	public void testUruguay() {
 		Country country = null;
 		country = countryFactory.findByCode("UY");
-		assertTrue(country.getCode().equals("UY"));
-		assertTrue(country.getName().toUpperCase().equals("URUGUAY"));
+		assert country != null;
+		assert country.getCode().equals("UY")== true;
+		assert country.getName().toUpperCase().equals("URUGUAY")== true;
 	}
 
 	// ***** (UZ) - Uzbekistan
+	@Test
 	public void testUzbekistan() {
 		Country country = null;
 		country = countryFactory.findByCode("UZ");
-		assertTrue(country.getCode().equals("UZ"));
-		assertTrue(country.getName().toUpperCase().equals("UZBEKISTAN"));
+		assert country != null;
+		assert country.getCode().equals("UZ")== true;
+		assert country.getName().toUpperCase().equals("UZBEKISTAN")== true;
 	}
 
-	// ***** (VA) - Holy See (Vatican City State)
+	// ***** (VA) - Vatican City State
+	@Test
 	public void testHolySeeVaticanCityState() {
 		Country country = null;
 		country = countryFactory.findByCode("VA");
-		assertTrue(country.getCode().equals("VA"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"HOLY SEE (VATICAN CITY STATE)"));
+		assert country != null;
+		assert country.getCode().equals("VA")== true;
+		assert country.getName().toUpperCase()
+				.equals("VATICAN CITY STATE")== true;
 	}
 
 	// ***** (VC) - Saint Vincent And The Grenadines
+	@Test
 	public void testSaintVincentAndTheGrenadines() {
 		Country country = null;
 		country = countryFactory.findByCode("VC");
-		assertTrue(country.getCode().equals("VC"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"SAINT VINCENT AND THE GRENADINES"));
+		assert country != null;
+		assert country.getCode().equals("VC")== true;
+		assert country.getName().toUpperCase()
+				.equals("SAINT VINCENT AND THE GRENADINES")== true;
 	}
 
 	// ***** (VE) - Venezuela, Bolivarian Republic Of
+	@Test
 	public void testVenezuelaBolivarianRepublicOf() {
 		Country country = null;
 		country = countryFactory.findByCode("VE");
-		assertTrue(country.getCode().equals("VE"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"VENEZUELA, BOLIVARIAN REPUBLIC OF"));
+		assert country != null;
+		assert country.getCode().equals("VE")== true;
+		assert country.getName().toUpperCase()
+				.equals("VENEZUELA, BOLIVARIAN REPUBLIC OF")== true;
 	}
 
 	// ***** (VG) - Virgin Islands, British
+	@Test
 	public void testVirginIslandsBritish() {
 		Country country = null;
 		country = countryFactory.findByCode("VG");
-		assertTrue(country.getCode().equals("VG"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"VIRGIN ISLANDS, BRITISH"));
+		assert country != null;
+		assert country.getCode().equals("VG")== true;
+		assert country.getName().toUpperCase()
+				.equals("VIRGIN ISLANDS, BRITISH")== true;
 	}
 
 	// ***** (VI) - Virgin Islands, U.S.
+	@Test
 	public void testVirginIslandsUS() {
 		Country country = null;
 		country = countryFactory.findByCode("VI");
-		assertTrue(country.getCode().equals("VI"));
-		assertTrue(country.getName().toUpperCase().equals(
-				"VIRGIN ISLANDS, U.S."));
+		assert country != null;
+		assert country.getCode().equals("VI")== true;
+		assert country.getName().toUpperCase()
+				.equals("VIRGIN ISLANDS, U.S.")== true;
 	}
 
 	// ***** (VN) - Viet Nam
+	@Test
 	public void testVietNam() {
 		Country country = null;
 		country = countryFactory.findByCode("VN");
-		assertTrue(country.getCode().equals("VN"));
-		assertTrue(country.getName().toUpperCase().equals("VIET NAM"));
+		assert country != null;
+		assert country.getCode().equals("VN")== true;
+		assert country.getName().toUpperCase().equals("VIET NAM")== true;
 	}
 
 	// ***** (VU) - Vanuatu
+	@Test
 	public void testVanuatu() {
 		Country country = null;
 		country = countryFactory.findByCode("VU");
-		assertTrue(country.getCode().equals("VU"));
-		assertTrue(country.getName().toUpperCase().equals("VANUATU"));
+		assert country != null;
+		assert country.getCode().equals("VU")== true;
+		assert country.getName().toUpperCase().equals("VANUATU")== true;
 	}
 
 	// ***** (WF) - Wallis And Futuna
+	@Test
 	public void testWallisAndFutuna() {
 		Country country = null;
 		country = countryFactory.findByCode("WF");
-		assertTrue(country.getCode().equals("WF"));
-		assertTrue(country.getName().toUpperCase().equals("WALLIS AND FUTUNA"));
+		assert country != null;
+		assert country.getCode().equals("WF")== true;
+		assert country.getName().toUpperCase().equals("WALLIS AND FUTUNA")== true;
 	}
 
 	// ***** (WS) - Samoa
+	@Test
 	public void testSamoa() {
 		Country country = null;
 		country = countryFactory.findByCode("WS");
-		assertTrue(country.getCode().equals("WS"));
-		assertTrue(country.getName().toUpperCase().equals("SAMOA"));
+		assert country != null;
+		assert country.getCode().equals("WS")== true;
+		assert country.getName().toUpperCase().equals("SAMOA")== true;
 	}
 
 	// ***** (YE) - Yemen
+	@Test
 	public void testYemen() {
 		Country country = null;
 		country = countryFactory.findByCode("YE");
-		assertTrue(country.getCode().equals("YE"));
-		assertTrue(country.getName().toUpperCase().equals("YEMEN"));
+		assert country != null;
+		assert country.getCode().equals("YE")== true;
+		assert country.getName().toUpperCase().equals("YEMEN")== true;
 	}
 
 	// ***** (YT) - Mayotte
+	@Test
 	public void testMayotte() {
 		Country country = null;
 		country = countryFactory.findByCode("YT");
-		assertTrue(country.getCode().equals("YT"));
-		assertTrue(country.getName().toUpperCase().equals("MAYOTTE"));
+		assert country != null;
+		assert country.getCode().equals("YT")== true;
+		assert country.getName().toUpperCase().equals("MAYOTTE")== true;
 	}
 
 	// ***** (ZA) - South Africa
+	@Test
 	public void testSouthAfrica() {
 		Country country = null;
 		country = countryFactory.findByCode("ZA");
-		assertTrue(country.getCode().equals("ZA"));
-		assertTrue(country.getName().toUpperCase().equals("SOUTH AFRICA"));
+		assert country != null;
+		assert country.getCode().equals("ZA")== true;
+		assert country.getName().toUpperCase().equals("SOUTH AFRICA")== true;
 	}
 
 	// ***** (ZM) - Zambia
+	@Test
 	public void testZambia() {
 		Country country = null;
 		country = countryFactory.findByCode("ZM");
-		assertTrue(country.getCode().equals("ZM"));
-		assertTrue(country.getName().toUpperCase().equals("ZAMBIA"));
+		assert country != null;
+		assert country.getCode().equals("ZM")== true;
+		assert country.getName().toUpperCase().equals("ZAMBIA")== true;
 	}
 
 	// ***** (ZW) - Zimbabwe
+	@Test
 	public void testZimbabwe() {
 		Country country = null;
 		country = countryFactory.findByCode("ZW");
-		assertTrue(country.getCode().equals("ZW"));
-		assertTrue(country.getName().toUpperCase().equals("ZIMBABWE"));
+		assert country != null;
+		assert country.getCode().equals("ZW")== true;
+		assert country.getName().toUpperCase().equals("ZIMBABWE")== true;
 	}
 }
