@@ -1,0 +1,13 @@
+com/wildstartech/wfa/logistics/ltl/pricemodel/PriceModelFactoryImpl.class
+com/wildstartech/wfa/location/EvaluateHaversineAlgorithm.class
+com/wildstartech/wfa/ticketing/RequestIdGeneratorOne.class
+com/wildstartech/wfa/logistics/ltl/pricemodel/PriceModelImpl.class
+com/wildstartech/wfa/logistics/ltl/pricemodel/CubeDistancePriceModelImpl.class
+com/wildstartech/wfa/location/GeoPointTest.class
+com/wildstartech/wfa/location/spi/DistanceServiceProviderTest.class
+com/wildstartech/wfa/location/spi/DistanceServiceProviderFactoryTest.class
+com/wildstartech/wfa/country/TestCountryFactory.class
+com/wildstartech/wfa/logistics/ltl/pricemodel/CubeDistancePriceModelTest.class
+com/wildstartech/wfa/ticketing/RequestIdGeneratorLongNumber.class
+com/wildstartech/wfa/location/address/us/ZipCodeFactoryTest.class
+com/wildstartech/wfa/ticketing/RequestIdGeneratorTest.class

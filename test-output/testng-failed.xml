@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest">
+        <methods>
+          <include name="getInstanceTest"/>
+          <include name="get93619ClovisCA"/>
+        </methods>
+      </class> <!-- com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

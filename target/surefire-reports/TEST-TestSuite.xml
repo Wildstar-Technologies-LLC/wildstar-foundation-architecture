@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="268" failures="0" name="TestSuite" time="0.147" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.66-b17"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture"/>
+    <property name="java.runtime.version" value="1.8.0_66-b17"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/8y/tt80p40n5_778y4j5g18gfy00000gp/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/apache-maven/apache-maven-3.3.3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/derekberube/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.11.3"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/derekberube"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="derekberube"/>
+    <property name="java.class.path" value="/usr/local/apache-maven/apache-maven-3.3.3/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_66"/>
+    <property name="java.ext.dirs" value="/Users/derekberube/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/local/apache-maven/apache-maven-3.3.3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="com.wildstartech.wfa.logistics.ltl.pricemodel.CubeDistancePriceModelTest" name="testCalculation" time="0.009"/>
+  <testcase classname="com.wildstartech.wfa.location.spi.DistanceServiceProviderTest" name="calculateDistanceGeoPointGeoPointTest" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.GeoPointTest" name="calculateDistanceDefaultUnitsTest" time="0.104"/>
+  <testcase classname="com.wildstartech.wfa.location.GeoPointTest" name="calculateDistanceKilometersTest" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.GeoPointTest" name="calculateDistanceNauticalMilesTest" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.GeoPointTest" name="calculateDistanceTest" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.ticketing.RequestIdGeneratorTest" name="baseLineTest" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.ticketing.RequestIdGeneratorTest" name="largePrefixWithException" time="0.013"/>
+  <testcase classname="com.wildstartech.wfa.ticketing.RequestIdGeneratorTest" name="longNumberWithException" time="0.002"/>
+  <testcase classname="com.wildstartech.wfa.ticketing.RequestIdGeneratorTest" name="shorterMaximumLength" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAfghanistan" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAlandIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAlbania" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAlgeria" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAmericanSamoa" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAndorra" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAngola" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAnguilla" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAntarctica" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAntiguaAndBarbuda" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testArgentina" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testArmenia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAruba" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAustralia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAustria" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testAzerbaijan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBahamas" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBahrain" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBangladesh" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBarbados" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBelarus" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBelgium" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBelize" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBenin" time="0.002"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBermuda" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBhutan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBoliviaPlurinationalStateOf" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBosniaAndHerzegovina" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBotswana" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBouvetIsland" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBrazil" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBritishIndianOceanTerritory" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBruneiDarussalam" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBulgaria" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBurkinaFaso" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testBurundi" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCambodia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCameroon" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCanada" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCapeVerde" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCaymanIslands" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCentralAfricanRepublic" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testChad" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testChile" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testChina" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testChristmasIsland" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCocosKeelingIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testColombia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testComoros" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCongo" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCongoTheDemocraticRepublicOfThe" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCookIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCostaRica" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCoteDIvoire" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCroatia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCuba" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCyprus" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testCzechRepublic" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testDenmark" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testDjibouti" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testDominica" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testDominicanRepublic" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testEcuador" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testEgypt" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testElSalvador" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testEquatorialGuinea" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testEritrea" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testEstonia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testEthiopia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testFalklandIslandsMalvinas" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testFaroeIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testFiji" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testFinland" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testFrance" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testFrenchGuiana" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testFrenchPolynesia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testFrenchSouthernTerritories" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGabon" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGambia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGeorgia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGermany" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGhana" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGibraltar" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGreece" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGreenland" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGrenada" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGuadeloupe" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGuam" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGuatemala" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGuernsey" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGuinea" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGuineaBissau" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testGuyana" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testHaiti" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testHeardIslandAndMcdonaldIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testHolySeeVaticanCityState" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testHonduras" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testHongKong" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testHungary" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testIceland" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testIndia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testIndonesia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testIranIslamicRepublicOf" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testIraq" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testIreland" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testIsleOfMan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testIsrael" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testItaly" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testJamaica" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testJapan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testJersey" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testJordan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testKazakhstan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testKenya" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testKiribati" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testKoreaDemocraticPeopleSRepublicOf" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testKoreaRepublicOf" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testKuwait" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testKyrgyzstan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testLaoPeopleSDemocraticRepublic" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testLatvia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testLebanon" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testLesotho" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testLiberia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testLibyanArabJamahiriya" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testLiechtenstein" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testLithuania" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testLuxembourg" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMacao" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMacedoniaTheFormerYugoslavRepublicOf" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMadagascar" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMalawi" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMalaysia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMaldives" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMali" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMalta" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMarshallIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMartinique" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMauritania" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMauritius" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMayotte" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMexico" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMicronesiaFederatedStatesOf" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMoldovaRepublicOf" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMonaco" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMongolia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMontenegro" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMontserrat" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMorocco" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMozambique" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testMyanmar" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNamibia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNauru" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNepal" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNetherlands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNetherlandsAntilles" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNewCaledonia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNewZealand" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNicaragua" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNiger" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNigeria" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNiue" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNorfolkIsland" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNorthernMarianaIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testNorway" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testOman" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPakistan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPalau" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPalestinianTerritoryOccupied" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPanama" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPapuaNewGuinea" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testParaguay" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPeru" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPhilippines" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPitcairn" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPoland" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPortugal" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testPuertoRico" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testQatar" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testRomania" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testRussianFederation" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testRwanda" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSaintBarthelemy" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSaintHelena" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSaintKittsAndNevis" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSaintLucia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSaintMartin" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSaintPierreAndMiquelon" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSaintVincentAndTheGrenadines" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSamoa" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSanMarino" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSaoTomeAndPrincipe" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSaudiArabia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSenegal" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSerbia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSeychelles" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSierraLeone" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSingapore" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSlovakia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSlovenia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSolomonIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSomalia" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSouthAfrica" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSouthGeorgiaAndTheSouthSandwichIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSpain" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSriLanka" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSudan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSuriname" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSvalbardAndJanMayen" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSwaziland" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSweden" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSwitzerland" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testSyrianArabRepublic" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTaiwanProvinceOfChina" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTajikistan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTanzaniaUnitedRepublicOf" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testThailand" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTimorLeste" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTogo" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTokelau" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTonga" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTrinidadAndTobago" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTunisia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTurkey" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTurkmenistan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTurksAndCaicosIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testTuvalu" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testUganda" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testUkraine" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testUnitedArabEmirates" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testUnitedKingdom" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testUnitedStates" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testUnitedStatesMinorOutlyingIslands" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testUruguay" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testUzbekistan" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testVanuatu" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testVaticanCityState" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testVenezuelaBolivarianRepublicOf" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testVietNam" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testVirginIslandsBritish" time="0.001"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testVirginIslandsUS" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testWallisAndFutuna" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testWesternSahara" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testYemen" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testZambia" time="0"/>
+  <testcase classname="com.wildstartech.wfa.country.TestCountryFactory" name="testZimbabwe" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest" name="getInstanceTest" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.spi.DistanceServiceProviderFactoryTest" name="getInstance" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.spi.DistanceServiceProviderFactoryTest" name="getService" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest" name="get92010CarlsbadCA" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest" name="get92011CarlsbadCA" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest" name="get93619ClovisCA" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest" name="get94505DiscoveryBayCA" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest" name="get94582SanRamonCA" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest" name="get97086HappyValleyOR" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest" name="getFLPanamaCityBeachTest" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest" name="getGAAtlanta30332Test" time="0"/>
+  <testcase classname="com.wildstartech.wfa.location.address.us.ZipCodeFactoryTest" name="getGASandySprings30328Test" time="0"/>
+</testsuite>

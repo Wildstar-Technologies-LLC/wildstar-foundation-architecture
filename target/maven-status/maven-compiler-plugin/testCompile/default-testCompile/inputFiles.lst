@@ -1,0 +1,13 @@
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/country/TestCountryFactory.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/ticketing/RequestIdGeneratorTest.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/logistics/ltl/pricemodel/PriceModelImpl.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/logistics/ltl/pricemodel/CubeDistancePriceModelImpl.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/location/GeoPointTest.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/location/EvaluateHaversineAlgorithm.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/location/spi/DistanceServiceProviderTest.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/location/spi/DistanceServiceProviderFactoryTest.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/ticketing/RequestIdGeneratorOne.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/logistics/ltl/pricemodel/PriceModelFactoryImpl.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/logistics/ltl/pricemodel/CubeDistancePriceModelTest.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/location/address/us/ZipCodeFactoryTest.java
+/Users/derekberube/Documents/Programming/Java/Wildstar Foundation Architecture/src/test/java/com/wildstartech/wfa/ticketing/RequestIdGeneratorLongNumber.java
