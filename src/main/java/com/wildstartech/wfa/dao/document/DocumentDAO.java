@@ -49,13 +49,21 @@ import com.wildstartech.wfa.dao.*;
 import java.util.List;
 
 import com.wildstartech.wfa.document.Document;
-import com.wildstartech.wfa.document.IdentifiableDocument;
 
 public interface DocumentDAO 
 extends WildDAO<Document, PersistentDocument> {
 	/**
 	 * Find an instance of the <code>Document</code> object by it's name.
 	 */
-	public List<IdentifiableDocument<String>> findByName(String name, 
+	public List<PersistentDocument> findByName(String name, 
 			UserContext ctx) throws DAOException;
+	
+	/**
+	 * Returns {@code Document} instances that are related to the specified
+	 * identifier. 
+	 */
+	public List<PersistentDocument> findByRelatedIdentifier(
+	      String kind,
+	      String identifier,
+	      UserContext ctx);
 }

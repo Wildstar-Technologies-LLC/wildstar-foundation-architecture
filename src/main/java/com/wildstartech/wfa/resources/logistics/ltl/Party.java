@@ -51,7 +51,7 @@ public class Party extends ListResourceBundle {
     static final Object[][] contents = {
         // BEGIN TEXT LOCALIZATION
         {"InvalidPartyTypeException",
-            "The specifie object type, {1}, is not a valid {2} type."
+         "The specifie object type, {1}, is not a valid {2} type."
         }
     // END TEXT LOCALIZATION
     };

@@ -47,10 +47,10 @@ package com.wildstartech.wfa.document;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.wildstartech.wfa.WFAException;
+import com.wildstartech.wfa.WFARuntimeException;
 import com.wildstartech.wfa.dao.document.DocumentResources;
 
-public class DocumentNameTooLongException extends WFAException {
+public class DocumentNameTooLongException extends WFARuntimeException {
 	private static final String _CLASS=
 		DocumentNameTooLongException.class.getName();
     private static final Logger logger=Logger.getLogger(_CLASS);

@@ -47,7 +47,6 @@ package com.wildstartech.wfa.location;
 import java.util.logging.Logger;
 
 import com.wildstartech.wfa.location.spi.DistanceServiceProvider;
-import com.wildstartech.wfa.location.spi.DistanceServiceProviderFactory;
 
 public class GeoPoint {
   private static final String _CLASS=GeoPoint.class.getName();

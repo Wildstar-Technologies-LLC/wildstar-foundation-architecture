@@ -44,5 +44,8 @@
  */
 package com.wildstartech.wfa.dao;
 
-public class UserDAOFactory extends WildDAOFactory <UserDAO,User,User>{
+import com.wildstartech.wfa.user.User;
+
+public class UserDAOFactory 
+extends WildDAOFactory <UserDAO, User,PersistentUser>{
 }

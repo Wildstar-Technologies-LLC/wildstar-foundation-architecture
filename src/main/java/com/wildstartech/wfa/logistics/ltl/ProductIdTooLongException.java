@@ -59,11 +59,11 @@ public class ProductIdTooLongException extends WFAException {
     private static String RESOURCE_BUNDLE_KEY =
             WorkOrderResources.class.getName();
 
-    public ProductIdTooLongException(String id) {
+    public ProductIdTooLongException(String id, int length) {
         super(RESOURCE_BUNDLE_KEY);
         localizeMessage("ProductIdTooLongException", new Object[]{
                     id,
-                    WorkOrderLineItem.MAX_PRODUCT_ID_LENGTH
+                    length
                 });
     }
 }

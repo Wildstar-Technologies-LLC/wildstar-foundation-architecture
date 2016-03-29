@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2015 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -44,35 +44,97 @@
  */
 package com.wildstartech.wfa.dto;
 
+import java.util.logging.Logger;
+
 /**
- * @versoin 0.1, 2013-07-21
- * @author Derek Berube
+ * @version 0.2, 2015-08-02
+ * @author Derek Berube, Wildstar Technologies, LLC.
  */
 public class Value<K> implements java.io.Serializable {
-    // Instance field to hold reference to the actual object.
-    private K valueObject; 
-    /**
-     * Returns the class of object contained in this <code>Object</code>.
-     * 
-     * <p>In the case of primitives, their object-equivalent classes will be
-     * returned.
-     * @return 
-     */
-    public Class getDataType() {
-        return valueObject.getClass();
-    }
-    /**
-     * Returns the value contained in this <code>Object</code>.
-     * @return 
-     */
-    public K getValue() {
-        return valueObject;
-    }
-    /**
-     * Stores the specified value.
-     * @param valueObject 
-     */
-    public void setValue(K valueObject) {
-        this.valueObject=valueObject;
-    }
+   /** Used in object serialization. */
+   private static final long serialVersionUID = -155009771711454543L;
+   private static final String _CLASS = Value.class.getName();
+   private static final Logger logger = Logger.getLogger(_CLASS);
+   // Instance field to hold reference to the actual object.
+   private K valueObject;
+
+   /**
+    * Default, no-argument constructor.
+    */
+   public Value() {
+      logger.entering(_CLASS,"Value()");
+      logger.exiting(_CLASS,"Value()");
+   }
+   
+   /**
+    * Constructor taking a value as a parameter.
+    * <p>
+    * The value passed as the <code>valueObject</code> parameter.
+    * </p>
+    * 
+    * @param valueObject
+    */
+   public Value(K valueObject) {
+      logger.entering(_CLASS, "Value(K)", valueObject);
+      this.valueObject = valueObject;
+      logger.exiting(_CLASS, "Value(K)", valueObject);
+   }
+
+   /**
+    * Returns the class of object contained in this <code>Object</code>.
+    * 
+    * <p>
+    * In the case of primitives, their object-equivalent classes will be
+    * returned.
+    * 
+    * @return
+    */
+   public Class<?> getDataType() {
+      logger.entering(_CLASS, "getDataType()");
+      Class<?> result = null;
+      result = valueObject.getClass();
+      logger.exiting(_CLASS, "getDataType()", result);
+      return result;
+   }
+
+   /**
+    * Returns the value contained in this <code>Object</code>.
+    * 
+    * @return
+    */
+   public K getValue() {
+      logger.entering(_CLASS, "getValue()");
+      logger.exiting(_CLASS, "getValue()", this.valueObject);
+      return this.valueObject;
+   }
+
+   /**
+    * Stores the specified value.
+    * 
+    * @param valueObject
+    */
+   public void setValue(K valueObject) {
+      logger.entering(_CLASS, "setValue(K)", valueObject);
+      this.valueObject = valueObject;
+      logger.entering(_CLASS, "setValue(K)");
+   }
+   
+   /**
+    * Return a string representation of the object.
+    */
+   public String toString() {
+      logger.entering(_CLASS,"toString()");
+      String result=null;
+      StringBuilder sb=null;
+      
+      sb=new StringBuilder(40);
+      sb.append("Value [dataType=");
+      sb.append(getDataType().getCanonicalName());
+      sb.append(", valueObject=");
+      sb.append(getValue());
+      sb.append("]");
+      result=sb.toString();
+      logger.exiting(_CLASS,"toString()",result);
+      return result;
+   }
 }

@@ -66,10 +66,10 @@ public interface SimplePerson extends Person {
      * Set the person's first name.
      * @param java.lan.String The value to be used as the person's
      * name.
-     * @throws NameTooLongException If the specified value exceeds the 
+     * @throws PersonNameTooLongException If the specified value exceeds the 
      * allowable length of a person's last name.
      */
-    public void setFirstName(String firstName) throws NameTooLongException;
+    public void setFirstName(String firstName) throws PersonNameTooLongException;
     //********** gender
     /**
      * Return's the person's gender.
@@ -91,8 +91,8 @@ public interface SimplePerson extends Person {
     /**
      * Set the value to be used as the person's last name.
      * @return java.lan.String The person's last name.
-     * @throws NameTooLongException If the specified value exceeds the 
+     * @throws PersonNameTooLongException If the specified value exceeds the 
      * allowable length of a person's last name.
      */
-    public void setLastName(String lastName) throws NameTooLongException;    
+    public void setLastName(String lastName) throws PersonNameTooLongException;    
 }

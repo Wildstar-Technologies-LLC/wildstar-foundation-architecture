@@ -44,10 +44,10 @@
  */
 package com.wildstartech.wfa.dao.logistics.ltl;
 
-import com.wildstartech.wfa.dao.WildObject;
 import com.wildstartech.wfa.logistics.ltl.QuoteLineItem;
 
-public interface PersistentQuoteLineItem extends QuoteLineItem, WildObject {
+public interface PersistentQuoteLineItem 
+extends PersistentEditableCommodityLineItem, QuoteLineItem {
   /**
    * Returns the identifier of the quote with which the object is associated.
    * @return The unique identifier of the quote with which the line item is

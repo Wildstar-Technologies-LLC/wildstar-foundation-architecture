@@ -70,5 +70,5 @@ public interface WildObject extends Identifiable<String> {
 	/**
 	 * Returns the unique identifier for the <code>WildObject</code>.
 	 */
-	public String getIdentifier();
+	public String getIdentifier();	
 }

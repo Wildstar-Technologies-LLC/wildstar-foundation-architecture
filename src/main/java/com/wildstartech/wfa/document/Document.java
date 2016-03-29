@@ -45,27 +45,32 @@
 package com.wildstartech.wfa.document;
 
 import java.io.InputStream;
-import java.io.OutputStream;
 
 public interface Document {
-    /** Return the name of the document. */
-    public String getName();
+   /** Returns the content type identifier for the document. */
+   public String getContentType();
 
-    /** Set the name of the document. */
-    public void setName(String name) throws DocumentNameTooLongException;
+   /** Identify the content type of the document. */
+   public void setContentType(String contentType);
 
-    /** Returns the Mime-Type of the document. */
-    public String getMimeType();
+   /** Return hash of the document. */
+   public String getHash();
+   
+   /** Sets the hash of the document. */
+   public void setHash(String hash);
+   
+   /** Return the name of the document. */
+   public String getName();
 
-    /** Identify the content type of the document. */
-    public void setMimeType(String mimeType);
+   /** Set the name of the document. */
+   public void setName(String name);
 
-    /** Return the size of the document. */
-    public int getSize();
+   /** Return the size of the document. */
+   public long getSize();
 
-    /** OutputStream used to write the content of the file. */
-    public OutputStream getOutputStream();
+   /** Set the size of the document. */
+   public void setSize(long size);   
 
-    /** Obtain the InputStream used to read data from the file. */
-    public InputStream getInputStream();
+   /** Obtain the InputStream used to read the contents of the document. */
+   public InputStream getInputStream();
 }

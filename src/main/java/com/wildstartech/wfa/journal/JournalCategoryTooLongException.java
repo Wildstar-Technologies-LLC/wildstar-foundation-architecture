@@ -44,10 +44,10 @@
  */
 package com.wildstartech.wfa.journal;
 
-import com.wildstartech.wfa.WFAException;
+import com.wildstartech.wfa.WFARuntimeException;
 import com.wildstartech.wfa.dao.journal.JournalResources;
 
-public class JournalCategoryTooLongException extends WFAException {
+public class JournalCategoryTooLongException extends WFARuntimeException {
     /**
      * Unique version identifier used in object serialization/deserialization.
      */

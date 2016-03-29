@@ -89,7 +89,19 @@ public class ZipCodeFactoryTest {
      assert city.getName().equals("Clovis");
      assert city.getStateAbbreviation().equals("CA");
   }
-  //***** 94505 Discovery Bay, CA (37.808, -121.906
+  //***** 93730 Fresno, CA (36.903166,-119.754900)
+  @Test(dependsOnMethods ={"getInstanceTest"})
+  public void get93730FresnoCA() {
+     City city=null;
+     PostalCodeFactory factory=null;
+     
+     factory=PostalCodeFactory.getInstance();
+     city=factory.getCity("93730");
+     assert city != null;
+     assert city.getName().equals("Fresno");
+     assert city.getStateAbbreviation().equals("CA");
+  }
+  //***** 94505 Discovery Bay, CA (37.808, -121.906)
   @Test(dependsOnMethods = { "getInstanceTest" })
   public void get94505DiscoveryBayCA() {
      City city=null;

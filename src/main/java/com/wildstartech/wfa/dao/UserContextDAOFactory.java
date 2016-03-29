@@ -44,7 +44,81 @@
  */
 package com.wildstartech.wfa.dao;
 
+import java.util.logging.Logger;
+
 public class UserContextDAOFactory 
 extends WildDAOFactory<UserContextDAO,UserContext, UserContext> {
+  private static final String _CLASS=UserContextDAOFactory.class.getName();
+  private static final Logger logger=Logger.getLogger(_CLASS);
   
+   /**
+    * Provides a convenient mechanism for authenticating.
+    * 
+    * <p>The <code>authenticate(String,String)</code> method of the 
+    * <code>UserContextDAOFactory</code> is a convenience method that allows 
+    * users of the API to obtain an authenticated <code>UserContext</code>
+    * with a minimum number of steps.  Without this method, users would have
+    * to do something similar to the following to "log in".</p>
+    * <pre>
+    * UserContext ctx=null;
+    * UserContextDAO dao=null;
+    * UserContextDAOFactory factory=null;
+    * 
+    * factory=new UserContextDAOFactory();
+    * dao=factory.getDAO();
+    * ctx=dao.create();
+    * ctx.setUserName("MyName");
+    * ctx.setPassword("SecretPassword");
+    * ctx.authenticate();
+    * </pre>
+    * <p>Rather than have to write the nine lines of code listed above, this
+    * method allows users to obtain an authenticated <code>UserContext</code> in
+    * four lines of code.</p>
+    * <pre>
+    * UserContext ctx=null;
+    * UserContextDAOFactory factory=null;
+    * 
+    * factory=new UserContextDAOFactory();
+    * ctx=factory.authenticate("MyName","SecretPassword");
+    * </pre> 
+    * 
+    * @param name The user name that should be used when accessing the 
+    * persistent datastore.
+    * @param password The password for the account identified by the value 
+    * passed to the name parameter.
+    * @return An authenticated <code>UserContext</code> if the specified
+    * credentials are valid.  Otherwise, a <code>null</code> value is returned.
+    * @throws DAOException
+    */
+   public static UserContext authenticate(String name, String password) 
+       throws DAOException {
+     logger.entering(_CLASS,"authenticate(String,String",
+         new Object[] {name,password});
+     boolean authenticated=false;
+     String msg=null;
+     UserContext ctx=null;
+     UserContextDAO dao=null;
+     UserContextDAOFactory factory=null;
+     
+     factory=new UserContextDAOFactory();
+     dao=factory.getDAO();
+     if ((name != null) && (name.length() > 0)) {
+       ctx=dao.create();
+       ctx.setUserName(name);
+       ctx.setPassword(password);
+       authenticated=ctx.authenticate();
+       if (!authenticated) {
+         msg="Authentication failed.";
+         logger.severe(msg);
+         ctx=null;
+         throw new AuthenticationException("Authentication failed.");
+       }
+     } else {
+       msg="The username was null or blank.";
+       logger.severe(msg);
+       throw new AuthenticationException("The username was null or blank.");
+     }
+     logger.exiting(_CLASS, "authenticate(String,String)",ctx);
+     return ctx;
+   }
 }

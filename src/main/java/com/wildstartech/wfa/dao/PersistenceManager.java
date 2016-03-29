@@ -64,7 +64,7 @@ public interface PersistenceManager {
 	 * @param authId
 	 * @return
 	 */
-	public User getUser(String authId);
+	public PersistentUser getUser(String authId);
 	/**
 	 * Validates the specified authentication ID is a valid ID.
 	 */

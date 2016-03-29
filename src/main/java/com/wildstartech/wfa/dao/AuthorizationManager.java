@@ -48,5 +48,5 @@ public interface AuthorizationManager<K> {
 	/**
 	 * Indicates if a user is authorized to access the specified URI.
 	 */
-	public boolean isUserAuthorized(User user, String uri);	
+	public boolean isUserAuthorized(PersistentUser user, String uri);	
 }

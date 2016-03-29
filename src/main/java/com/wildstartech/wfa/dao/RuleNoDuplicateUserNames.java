@@ -10,7 +10,7 @@ public class RuleNoDuplicateUserNames implements Rule<PersistentUser> {
   private static final Logger logger=Logger.getLogger(_CLASS);
   
   @Override
-  public PersistentUser apply(PersistentUser user) {
+  public void apply(PersistentUser user) {
     logger.entering(_CLASS,"apply(User)",user);
     PersistentUser updatedUser=null;
     UserDAO dao=null;
@@ -26,8 +26,6 @@ public class RuleNoDuplicateUserNames implements Rule<PersistentUser> {
           "userName",
           "User parameter object is null.");
     } // END if (user != null)
-    logger.exiting(_CLASS,"apply(User)",updatedUser);
-    return updatedUser;
+    logger.exiting(_CLASS,"apply(User)");
   }
-
 }

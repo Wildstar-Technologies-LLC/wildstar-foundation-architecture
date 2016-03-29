@@ -6,6 +6,7 @@ package com.wildstartech.wfa.logistics.ltl.pricemodel;
 import java.util.logging.Logger;
 
 import com.wildstartech.wfa.logistics.ltl.Quote;
+import com.wildstartech.wfa.logistics.ltl.WorkOrder;
 import com.wildstartech.wfa.logistics.ltl.pricemodels.CubeDistancePriceModel;
 
 public class CubeDistancePriceModelImpl extends PriceModelImpl 
@@ -234,4 +235,10 @@ implements CubeDistancePriceModel {
     logger.entering(_CLASS,"getType()",CubeDistancePriceModel.TYPE);
     return CubeDistancePriceModel.TYPE;
   }
+
+@Override
+public double calculateTotalCharges(WorkOrder workOrder) {
+   // TODO Auto-generated method stub
+   return 0;
+}
 }

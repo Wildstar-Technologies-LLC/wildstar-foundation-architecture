@@ -52,6 +52,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.wildstartech.wfa.logistics.ltl.Quote;
+import com.wildstartech.wfa.logistics.ltl.WorkOrder;
 
 /**
  *  
@@ -93,6 +94,15 @@ public abstract class FuelSurchargeModelFactory {
    */
   public abstract FuelSurchargeModel getModel(Quote quote);
   
+  /**
+   * Returns a <code>FuelSurchargeModel</code> for the specified work order.
+   * 
+   */
+  public abstract FuelSurchargeModel getModel(WorkOrder workOrder);
+  
+  /**
+   * Returns a <code>FuelSurchrgeModel
+   */
   /**
    * Returns a list of names of available <code>FuelSurchargeModel</code> names.
    */

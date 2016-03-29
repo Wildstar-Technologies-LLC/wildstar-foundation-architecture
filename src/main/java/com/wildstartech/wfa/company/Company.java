@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2015 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -44,23 +44,13 @@
  */
 package com.wildstartech.wfa.company;
 
+import com.wildstartech.wfa.party.Party;
+
 /**
  * Used to store information about companies.
  * 
- * @version    1.0 15 Aug 2002
- * @author     Derek Berube
+ * @version    0.2 2015-05-01
+ * @author     Derek Berube, Wildstar Technologies, LLC.
  */
-public interface Company {
-    /**
-     * Returns the companyName.
-     * @return String
-     */
-    public String getName();
-
-    /**
-     * Sets the companyName.
-     * @param companyName The companyName to set
-     * @throws NameTooLongException
-     */
-    public void setName(String name) throws CompanyNameTooLongException;
+public interface Company extends Party<CompanyNameTooLongException> {
 }

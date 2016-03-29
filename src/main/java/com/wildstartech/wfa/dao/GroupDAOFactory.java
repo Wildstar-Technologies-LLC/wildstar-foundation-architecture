@@ -44,5 +44,8 @@
  */
 package com.wildstartech.wfa.dao;
 
-public class GroupDAOFactory extends WildDAOFactory<GroupDAO, Group, Group> {
+import com.wildstartech.wfa.group.Group;
+
+public class GroupDAOFactory 
+extends WildDAOFactory<GroupDAO, Group, PersistentGroup> {
 }

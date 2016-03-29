@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2015 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -54,5 +54,4 @@ import com.wildstartech.wfa.logistics.ltl.Quote;
  */
 public class QuoteDAOFactory 
 extends WildDAOFactory<QuoteDAO, Quote, PersistentQuote> {
-
 }

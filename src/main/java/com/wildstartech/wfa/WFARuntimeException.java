@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2015 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -49,6 +49,8 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
+import javax.annotation.PostConstruct;
+
 public abstract class WFARuntimeException extends java.lang.RuntimeException {
 	// Static reference to the class name for use in logging.
 	private static final String _CLASS=WFARuntimeException.class.getName();
@@ -60,13 +62,14 @@ public abstract class WFARuntimeException extends java.lang.RuntimeException {
     private String message = null;
     // The resource bundle used to obtain the message text.
     private ResourceBundle resourceBundle = null;
+    
     /**
      * Default, no-argument constructor.
      */
     public WFARuntimeException() {
         super();
         logger.entering(_CLASS,"WFARuntimeException()");
-    	logger.exiting(_CLASS,"WFARuntimeException()");
+        logger.exiting(_CLASS,"WFARuntimeException()");
     }
     /**
      * Constructor taking a resource bundle identifier as a parameter.
@@ -74,8 +77,7 @@ public abstract class WFARuntimeException extends java.lang.RuntimeException {
      */
     public WFARuntimeException(String resourceBundleKey) {
     	logger.entering(_CLASS,"WFARuntimeException(String)");
-    	// Load the specified resource bundle using the default locale.
-        this.resourceBundle = ResourceBundle.getBundle(resourceBundleKey);
+    	
         logger.exiting(_CLASS,"WFARuntimeException(String)");    	
     }
 
@@ -90,6 +92,30 @@ public abstract class WFARuntimeException extends java.lang.RuntimeException {
     			ResourceBundle.getBundle(resourceBundleKey, locale);
         logger.exiting(_CLASS,"WFARuntimeException(String, Locale)");    	
     }
+    /**
+     * Return resource bundle key.
+     */
+    @SuppressWarnings("rawtypes")
+    @PostConstruct
+    private void loadResourceBundle() {
+      logger.entering(_CLASS,"loadResourceBundle()");
+      // Load the specified resource bundle using the default locale.
+      Class thisClass=null;
+      String resourceBundleKey=null;
+      StringBuilder sb=null;
+      if (this.resourceBundle == null) {
+        sb=new StringBuilder(80);
+        thisClass=this.getClass();
+        sb.append(this.getClass().getPackage().getName());
+        sb.append(".resource.");
+        sb.append(thisClass.getSimpleName());
+        resourceBundleKey=sb.toString();
+        this.resourceBundle = ResourceBundle.getBundle(resourceBundleKey);
+      } // END if (this.resourceBundle == null)
+      logger.exiting(_CLASS,"loadResourceBundle()");      
+    }
+    
+    //***** message
     /**
      * Returns the message text for the exception.
      * @return java.lang.String The message text.

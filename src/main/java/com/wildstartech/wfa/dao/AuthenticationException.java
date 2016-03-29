@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2015 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -45,11 +45,9 @@
 package com.wildstartech.wfa.dao;
 
 public class AuthenticationException extends DAOException {
-	/**
-	 * Object Serialization version identifier 
-	 */
+	/** Used in object serialization. */
 	private static final long serialVersionUID = 4544742688777398792L;
-	public AuthenticationException() {
-		super(1);
+	public AuthenticationException(String userName) {
+		super(DAOExceptionConstants.AUTH_NOT_AUTHENTICATED);
 	}
 }

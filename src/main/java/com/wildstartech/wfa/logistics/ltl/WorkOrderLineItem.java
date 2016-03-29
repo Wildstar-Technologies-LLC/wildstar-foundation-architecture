@@ -44,58 +44,11 @@
  */
 package com.wildstartech.wfa.logistics.ltl;
 
-public interface WorkOrderLineItem {
-    /**
-     * Indicates the maximum allowable length for a line item's description.
-     */
-    public static final int MAX_DESCRIPTION_LENGTH = 255;
-    /**
-     * Indicates the maximum allowable length for a line item's product ID.
-     */
-    public static final int MAX_PRODUCT_ID_LENGTH = 25;
-    //********** itemNumber
-    public int getItemNumber();
-
-    public void setItemNumber(int num);
-    //********** description
-    public String getDescription();
-
-    public void setDescription(String desc) throws DescriptionTooLongException;
-    //********** productId
-    public String getProductId();
-
-    public void setProductId(String productId) throws ProductIdTooLongException;
-    //********** quantity
-    public int getQuantity();
-
-    public void setQuantity(int qty);
-    //********** length
-    public float getLength();
-
-    public void setLength(float length) throws InvalidDimensionException;
-    //********** width
-    public float getWidth();
-
-    public void setWidth(float width) throws InvalidDimensionException;
-    //********** height
-    public float getHeight();
-
-    public void setHeight(float width) throws InvalidDimensionException;
-    //********** weight
-    public float getWeight();
-
-    public void setWeight(float weight) throws InvalidDimensionException;
+public interface WorkOrderLineItem extends EditableCommodityLineItem {
     //********** price
     public float getPrice();
-
     public void setPrice(float price);
+    
     //********** totalPrice
     public float getTotalPrice();
-
-    public void setTotalPrice(float totalPrice);
-
-    /**
-     * Return a reference to the WorkOrder to which this object is associated.
-     */
-    public WorkOrder getWorkOrder();
 }

@@ -55,15 +55,4 @@ public interface TransferrableEntity {
      * Returns a set of properties that have been modified.
      */
     public Set<Property> getModifiedProperties();
-    /**
-     * Returns the properties contained in this object.
-     * @return 
-     */
-    public Set<Property> getProperties();
-    /**
-     * Returns the names of properties contained in this object.
-     * @return 
-     */
-    public Set<String> getPropertyNames();
-    
 }

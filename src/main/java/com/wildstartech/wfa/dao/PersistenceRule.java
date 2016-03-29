@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001, 2006, 2008-2013 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2015 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -44,8 +44,12 @@
  */
 package com.wildstartech.wfa.dao;
 
-import com.wildstartech.wfa.rules.Rule;
-
-public interface PersistenceRule<W extends WildObject> extends Rule<W> {
-	
+public interface PersistenceRule<D extends WildDAO<T, W>, T, W extends WildObject> {
+  /**
+   * Apply the the rule against the specified <code>WildObject</code>.
+   * 
+   * @param ctx The <code>UserContext</code> under which the current rule should
+   * be applied.
+   */
+  public void apply(PersistenceRuleSet<D, T, W> ruleSet, UserContext ctx, W wildObject);
 }

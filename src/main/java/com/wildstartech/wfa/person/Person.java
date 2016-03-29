@@ -44,23 +44,9 @@
  */
 package com.wildstartech.wfa.person;
 
-public interface Person {
-	public static final String RESOURCE_BUNDLE_KEY=
-		PersonResources.class.getName();
-	//********** name
-	/**
-	 * Returns the value used as the display-name for the person.
-	 * @return java.lang.String The value currently assigned as the displayable 
-	 * name for the Person.
-	 */
-	public String getName();
+import com.wildstartech.wfa.party.Party;
 
-	/**
-	 * Sets the value to be used as the display name for the person.
-	 * @param displayName The value to be used as the display name for the 
-	 * person.
-	 * @throws NameTooLongException If the specified value exceeds the 
-	 * allowable length of a person's display name.
-	 */
-	public void setName(String name) throws NameTooLongException;
+public interface Person extends Party<PersonNameTooLongException>{
+	public static final String RESOURCE_BUNDLE_KEY=
+		PersonResources.class.getName();	
 }

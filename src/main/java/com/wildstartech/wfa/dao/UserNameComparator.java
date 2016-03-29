@@ -47,13 +47,13 @@ package com.wildstartech.wfa.dao;
 import java.io.Serializable;
 import java.util.Comparator;
 
-public class UserNameComparator implements Comparator<User>, Serializable {
+public class UserNameComparator implements Comparator<PersistentUser>, Serializable {
 	private static final long serialVersionUID = -1161346132249017387L;
 	
 	/**
 	 * Compare two instances of the <code>User</code> class.
 	 */
-	public int compare(User user1, User user2) {
+	public int compare(PersistentUser user1, PersistentUser user2) {
 		int comparison;
 		String msg=null;
 		if ((user1 == null) || (user2 == null)) {

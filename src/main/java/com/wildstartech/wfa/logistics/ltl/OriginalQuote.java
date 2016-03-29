@@ -46,7 +46,7 @@ package com.wildstartech.wfa.logistics.ltl;
 
 import java.util.Date;
 
-import com.wildstartech.wfa.address.us.Address;
+import com.wildstartech.wfa.location.address.Address;
 
 public interface OriginalQuote {
 	public static enum DELIVERYTYPE {

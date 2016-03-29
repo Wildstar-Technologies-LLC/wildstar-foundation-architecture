@@ -96,8 +96,8 @@ public interface UserContext extends WildObject {
 	public String getUserName();
 	public void setUserName(String userName);
 	//***** user
-	public User getUser();
-	public void setUser(User user);
+	public PersistentUser getUser();
+	public void setUser(PersistentUser user);
 	//***** currencyFormat
 	public NumberFormat getCurrencyFormat();
 	//***** currentDateTime

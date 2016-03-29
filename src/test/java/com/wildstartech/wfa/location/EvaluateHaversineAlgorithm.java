@@ -3,7 +3,6 @@ package com.wildstartech.wfa.location;
 import org.testng.annotations.Test;
 
 import com.wildstartech.wfa.location.spi.DistanceServiceProvider;
-import com.wildstartech.wfa.location.spi.DistanceServiceProviderFactory;
 
 public class EvaluateHaversineAlgorithm {
   @Test

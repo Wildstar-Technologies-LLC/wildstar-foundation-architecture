@@ -55,4 +55,8 @@ public interface Charge {
     public BigDecimal getAmount();
 
     public void setAmount(BigDecimal amount);
+    
+    public void setAmount(int amount);
+    
+    public void setAmount(double amount);
 }

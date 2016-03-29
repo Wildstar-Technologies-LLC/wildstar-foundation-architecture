@@ -49,7 +49,11 @@ import com.wildstartech.wfa.WFAException;
 public class GroupNameTooLongException extends WFAException {
     /* Used in object serialization. */
 	private static final long serialVersionUID = -2702441994141529811L;
-	/** Identifies the message to be used during localization. */
+	/**
+     * Identifies the resource bundle used to format the message.
+     * This field should be over-ridden by all subclassing object identifying a 
+     * valid ResourceBundle key.
+     */
     public static final String _resourceKey = 
            GroupResources.class.getName();
     public GroupNameTooLongException(String name, int maxLength) {

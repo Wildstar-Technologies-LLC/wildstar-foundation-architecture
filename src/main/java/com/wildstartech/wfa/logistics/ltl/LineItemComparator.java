@@ -48,6 +48,8 @@ import java.io.Serializable;
 import java.util.Comparator;
 import java.util.logging.Logger;
 
+import com.wildstartech.wfa.BaseComparator;
+
 /**
  * Sorts <code>LineItem</code> objects by <code>lineItemNumber</code>.
  * @author Derek Berube, Wildstar Technologies, LLC.
@@ -55,6 +57,7 @@ import java.util.logging.Logger;
  *
  */
 public class LineItemComparator<T extends LineItem>
+extends BaseComparator<T>
 implements Comparator<T>, Serializable {
    /** Used in object serialization. */
    private static final long serialVersionUID = -8673175973854685664L;

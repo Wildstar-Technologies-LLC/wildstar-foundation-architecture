@@ -44,16 +44,15 @@
  */
 package com.wildstartech.wfa.journal;
 
-import java.util.List;
-
 public interface Journalizable {
     /**
      * Create a new Journal entry associated with the source object.
      */
-    public JournalEntry createJournalEntry();
-
+    public JournalEntry getNewJournalEntry();
+    
     /**
-     * Produce a list of currently associated <code>JournalEntry</code> objects.
+     * Replaces the journal entry associated with an object with the specified
+     * object.
      */
-    public List<JournalEntry> getJournalEntries();
+    public void setNewJournalEntry(JournalEntry entry);
 }

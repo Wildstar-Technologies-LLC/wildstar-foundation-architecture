@@ -44,9 +44,10 @@
  */
 package com.wildstartech.wfa.dao.logistics.ltl;
 
-import com.wildstartech.wfa.dao.WildObject;
+import com.wildstartech.wfa.dao.ticketing.PersistentBasicTicket;
 import com.wildstartech.wfa.logistics.ltl.WorkOrder;
 
-public interface PersistentWorkOrder extends WorkOrder, WildObject {
-
+public interface PersistentWorkOrder 
+extends WorkOrder, PersistentBasicTicket<WorkOrder> {
+   public void updateFromObject(WorkOrder workOrder);
 }

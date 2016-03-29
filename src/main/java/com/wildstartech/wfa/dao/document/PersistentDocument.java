@@ -45,8 +45,9 @@
 package com.wildstartech.wfa.dao.document;
 
 import com.wildstartech.wfa.dao.WildObject;
-import com.wildstartech.wfa.document.Document;
+import com.wildstartech.wfa.document.EditableDocument;
 
-public interface PersistentDocument extends Document, WildObject {
-
+public interface PersistentDocument extends EditableDocument, WildObject {
+   public String getRelatedIdentifier();
+   public void setRelatedIdentifier(String relatedIdentifier);
 }

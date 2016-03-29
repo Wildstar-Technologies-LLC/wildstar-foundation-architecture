@@ -1,8 +1,8 @@
 package com.wildstartech.wfa.dao;
 
-import com.wildstartech.wfa.relationship.Relationship;
+import com.wildstartech.wfa.associations.Association;
 
 public interface PersistentRelationship <P,S>
-extends Relationship<P,S>, WildObject {
+extends Association<P,S>, WildObject {
 	
 }

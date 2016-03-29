@@ -44,6 +44,8 @@
  */
 package com.wildstartech.wfa.dao;
 
+import com.wildstartech.wfa.user.User;
+
 /**
  * Data Access Object for managing User objects in the persistent data store.
  * 
@@ -54,13 +56,13 @@ package com.wildstartech.wfa.dao;
  * associated with <code>User</code> objects <em>MUST BE</em> unique.</p>
  * 
  * @author Derek Berube, Wildstar Technologies, LLC.
- * @version 1.0, 2103-12-18
+ * @version 1.1, 2105-06-23
  *
  */
-public interface UserDAO extends WildDAO<User, User> {
+public interface UserDAO extends WildDAO<User, PersistentUser> {
 	/**
 	 * Find the instance of the <code>User</code> using its name.
 	 */
-	public User findByName(String name, UserContext ctx) 
+	public PersistentUser findByName(String name, UserContext ctx) 
 	throws DAOException;	
 }

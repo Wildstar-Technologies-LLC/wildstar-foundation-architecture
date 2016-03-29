@@ -58,11 +58,11 @@ public class DescriptionTooLongException extends WFAException {
      */
     private static String RESOURCE_BUNDLE_KEY =
         com.wildstartech.wfa.resources.logistics.ltl.WorkOrderLineItem.class.getName();
-    public DescriptionTooLongException(String name) {
+    public DescriptionTooLongException(String name, int length) {
         super(RESOURCE_BUNDLE_KEY);
         localizeMessage("DescriptionTooLongException", new Object[]{
                     name,
-                    WorkOrderLineItem.MAX_DESCRIPTION_LENGTH
+                    length
                 });
     }
 }

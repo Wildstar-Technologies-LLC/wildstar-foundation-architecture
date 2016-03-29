@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2016 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -52,6 +52,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.wildstartech.wfa.logistics.ltl.Quote;
+import com.wildstartech.wfa.logistics.ltl.WorkOrder;
 
 /**
  * Provides a mechanism to obtain an instance of a PriceModel.
@@ -98,6 +99,12 @@ public abstract class PriceModelFactory {
    * 
    */
   public abstract PriceModel getModel(Quote quote);
+  
+  /**
+   * Returns the <code>PriceModel</code> appropriate for the specified 
+   * work order.
+   */
+  public abstract PriceModel getModel(WorkOrder workOrder);
   
   /**
    * Returns a list of names for available <code>PriceModel</code> instances.

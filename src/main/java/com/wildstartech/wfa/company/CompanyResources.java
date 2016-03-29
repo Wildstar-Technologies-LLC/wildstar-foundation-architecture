@@ -51,8 +51,9 @@ public class CompanyResources extends ListResourceBundle {
     static final Object[][] contents = {
         // BEGIN TEXT LOCALIZATION
         {"CompanyNameTooLongException",
-    "The specifie value, {1}, exceeds the maximum allowable length of a company name ({2} characters)."
-},
+         "The specifie value, {1}, exceeds the maximum allowable length of a " +
+         "company name ({2} characters)."
+        },
         {"FieldLabel", "Company"} // END TEXT LOCALIZATION
     };
 

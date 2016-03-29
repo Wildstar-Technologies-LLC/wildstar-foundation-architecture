@@ -44,26 +44,9 @@
  */
 package com.wildstartech.wfa.dao.person;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.wildstartech.wfa.dao.WildDAOFactory;
 import com.wildstartech.wfa.person.Person;
 
 public class PersonDAOFactory 
 extends WildDAOFactory<PersonDAO, Person, PersistentPerson> {
-	// Stores the name of the class and used in logging
-	private static final String _CLASS=PersonDAOFactory.class.getName();
-	// A reference to the Logger
-	private static final Logger logger=Logger.getLogger(_CLASS);
-
-	/**
-	 * Default, no-argument constructor.
-	 */
-	public PersonDAOFactory() {
-		if (logger.isLoggable(Level.FINEST)) {
-			logger.entering(_CLASS, "PersonDAOFactory())");
-			logger.exiting(_CLASS, "PersonDAOFactory())");
-		} // END if (logger.isLoggable(Level.FINEST))
-	}
 }

@@ -20,7 +20,7 @@ import java.util.logging.Logger;
  * 	 <td>A description of the relative severity of the exception.</td>
  *  </tr>
  * 	 <td>propertyName</td>
- *   <td>A <code>RuleSet</code> is evaluated against an object as a whole.  As
+ *   <td>A <code>RuleSet</code> is evaluated against an object as a whole. As
  *   such, the <code>propertyName</code> indicates which of the objects 
  *   properties with which the exception is associated.</td>
  *  </tr>

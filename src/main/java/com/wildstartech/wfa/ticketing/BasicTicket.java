@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001, 2006, 2008-2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2015 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -44,48 +44,86 @@
  */
 package com.wildstartech.wfa.ticketing;
 
-import java.util.Date;
+import java.util.List;
 
 public interface BasicTicket {
-	/**
-	 * Returns the unique identifier for the ticket.
-	 * @return String value used to uniquely identify the ticket.
-	 */
-	public String getId();
-	
-	/**
-	 * Returns the ticket's title or a brief, one-line description.
-	 */
-	public String getTitle();
-	/**
-	 * Sets a brief one-line description of the ticket.
-	 * @param title The value to be used as the one-line description of the
-	 * ticket.
-	 */
-	public void setTitle(String title);
-	/**
-	 * A name of the individual who initially created the ticket.
-	 * @return A <code>String</code> value that indicates the name of the 
-	 * individual who initially created the ticket.
-	 */
-	public String getCreatedBy();
-	/**
-	 * The date the ticket was initially created.
-	 * @return A <code>Date</code> object that indicates when the ticket was
-	 * originally created.
-	 */
-	public Date getDateCreated();
-	/**
-	 * The date the ticket was last modified.
-	 * @return A <code>Date</code> object that indicates when the ticket was 
-	 * last modified by the person identified by the <code>ModifiedBy</code>
-	 * field.
-	 */
-	public Date getDateModified();
-	/**
-	 * The name of the person who last modified the ticket.
-	 * @return A <code>String</code> value that indicates the name of the 
-	 * individual who last changed the ticket.
-	 */
-	public String getModifiedBy();
+   /**
+    * Returns the unique identifier for the ticket.
+    * 
+    * @return String value used to uniquely identify the ticket.
+    */
+   public String getRequestId();
+   /**
+    * Sets the unique identifier for the ticket.
+    * <table>
+    * <tr>
+    * <td><strong>NOTE:</strong></td>
+    * <td>
+    * There is an implicit contract that the value for the 
+    * <code>requestId</code> property is a unique identifier for a given ticket
+    * in a given context.  Implementations of this method should ensure this 
+    * contract is maintained.
+    * </td>
+    * </tr>
+    * </table>
+    * 
+    */
+   public void setRequestId(String requestId);
+   
+   // ***** shortDescription
+   /**
+    * Returns a brief, natural language narrative describing the ticket.
+    */
+   public String getShortDescription();
+
+   /**
+    * Sets a brief, natural language narrative describing the ticket.
+    */
+   public void setShortDescription(String shortDescription);
+
+   // ***** statusReason
+   /**
+    * Returns a list of values available for the 'Status Reason' field.
+    */
+   public List<String> getAvailableStatusReasons();
+
+   /**
+    * Returns the current status reason assigned to the ticket.
+    */
+   public String getStatusReason();
+
+   /**
+    * Stores the current status reason assigned to the ticket.
+    */
+   public void setStatusReason(String statusReason);
+
+   // ***** statusState
+   /**
+    * Returns a list of available status states.
+    */
+   public List<String> getAvailableStatusStates();
+
+   /**
+    * Returns the current status of the ticket.
+    */
+   public String getStatusState();
+
+   /**
+    * Stores the current point in the ticket's lifecycle.
+    */
+   public void setStatusState(String statusState);
+
+   // ***** title
+   /**
+    * Returns the ticket's title or a brief, one-line description.
+    */
+   public String getTitle();
+
+   /**
+    * Sets a brief one-line description of the ticket.
+    * 
+    * @param title
+    *           The value to be used as the one-line description of the ticket.
+    */
+   public void setTitle(String title);
 }

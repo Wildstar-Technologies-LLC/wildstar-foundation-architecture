@@ -2,6 +2,7 @@ package com.wildstartech.wfa.location.spi;
 
 import org.testng.annotations.Test;
 
+import com.wildstartech.wfa.location.DistanceServiceProviderFactory;
 import com.wildstartech.wfa.location.spi.haversine.DistanceServiceProviderImpl;
 
 public class DistanceServiceProviderFactoryTest {

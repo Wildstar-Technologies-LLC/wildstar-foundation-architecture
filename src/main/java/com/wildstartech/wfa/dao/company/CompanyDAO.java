@@ -52,7 +52,7 @@ import com.wildstartech.wfa.dao.UserContext;
 import com.wildstartech.wfa.dao.WildDAO;
 
 
-public interface CompanyDAO<K> extends WildDAO<Company,PersistentCompany> {
+public interface CompanyDAO extends WildDAO<Company,PersistentCompany> {
 	/**
 	 * Find an instance of the <code>Company</code> object by it's name.
 	 */

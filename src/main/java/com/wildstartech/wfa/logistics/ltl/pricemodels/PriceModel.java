@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2016 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -45,6 +45,7 @@
 package com.wildstartech.wfa.logistics.ltl.pricemodels;
 
 import com.wildstartech.wfa.logistics.ltl.Quote;
+import com.wildstartech.wfa.logistics.ltl.WorkOrder;
 
 /**
  * Pricing model for use in determining shipping rates.
@@ -114,5 +115,21 @@ public interface PriceModel {
    * an appropriate price to charge.
    * @return The amount of money to charge for the quote.
    */
-  public double calculateTotalCharges(Quote quote);  
+  public double calculateTotalCharges(Quote quote);
+  
+  /**
+   * Returns the total amount to charge for the specified quote.
+   * 
+   * <p>A given <code>PriceModel</code> will be responsible for inspecting a 
+   * quote and applying <em>all</em> necessary logic in order to determine an 
+   * appropriate price to charge.   The <code>PriceModel</code> will be  
+   * responsible for updating the various charge-related field's on the quote  
+   * (e.g., <code>lineItemCharges</code>, <code>insuranceCharges</code>, 
+   * etc.</p>
+   * 
+   * @param quote The <code>WorkOrder</code> to be examined in order to 
+   * determine an appropriate price to charge.
+   * @return The amount of money to charge for the quote. 
+   */
+  public double calculateTotalCharges(WorkOrder workOrder);
 }

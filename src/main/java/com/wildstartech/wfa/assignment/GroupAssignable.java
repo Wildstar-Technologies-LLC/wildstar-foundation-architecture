@@ -55,10 +55,10 @@ public interface GroupAssignable extends Assignable {
      * Returns the <code>Group</code> to which the object was assigned.
      * @return Group The group to which the object was assigned.
      */
-    public Group getAssigneeGroup();
+    public Group getAssignedGroup();
     /**
      * Sets the <code>Group</code> to which the object is assigned.
-     * @param Group The group to which the object is assigned.
+     * @param PersistentGroup The group to which the object is assigned.
      */
-    public void setAssigneeGroup(Group group);
+    public void setAssignedGroup(Group group);
 }

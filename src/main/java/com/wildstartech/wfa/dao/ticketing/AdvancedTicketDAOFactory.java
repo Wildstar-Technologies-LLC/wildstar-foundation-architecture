@@ -4,7 +4,7 @@ import com.wildstartech.wfa.dao.WildDAOFactory;
 import com.wildstartech.wfa.ticketing.AdvancedTicket;
 
 public class AdvancedTicketDAOFactory 
-extends WildDAOFactory<AdvancedTicketDAO<AdvancedTicket, PersistentAdvancedTicket>, 
+extends WildDAOFactory<AdvancedTicketDAO<AdvancedTicket, PersistentAdvancedTicket<?>>, 
                        AdvancedTicket, 
-                       PersistentAdvancedTicket> {
+                       PersistentAdvancedTicket<?>> {
 }

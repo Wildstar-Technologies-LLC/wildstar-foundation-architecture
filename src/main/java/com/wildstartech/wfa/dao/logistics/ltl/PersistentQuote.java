@@ -44,8 +44,10 @@
  */
 package com.wildstartech.wfa.dao.logistics.ltl;
 
-import com.wildstartech.wfa.dao.WildObject;
+import com.wildstartech.wfa.dao.ticketing.PersistentBasicTicket;
 import com.wildstartech.wfa.logistics.ltl.Quote;
 
-public interface PersistentQuote extends Quote, WildObject {
+public interface PersistentQuote 
+extends Quote, PersistentBasicTicket<Quote> {
+  public void updateFromObject(Quote quote);
 }

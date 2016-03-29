@@ -46,3 +46,5 @@ Change Log
 2015-08-24 Added San Ramon, CA 94582 (37.672, -121.889)
 2015-08-24 Added San Ramon, CA 94583 (37.672, -121.889)
 2015-12-01 Added Discovery Bay, CA 94505 (37.867, -121.586)
+2016-01-04 Added San Francisco, CA 94158 (37.769363, -122.386704)
+2016-03-26 Added Fresno, CA 93730 (36.903166, -119.754900)

@@ -48,6 +48,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Date;
 
+import javax.activation.MimeType;
+
 public interface JournalEntry {
     /** 
      * Returns the <code>Category</code> of journal entry.
@@ -57,11 +59,9 @@ public interface JournalEntry {
     /**
      * Identifies the type of journal entry.
      */
-    public void setCategory(String category)
-            throws JournalCategoryTooLongException;
+    public void setCategory(String category);
     /**
-     * Returns the content of the <code>JournalEntry</code> as an
-     * <code>InputStream</code>.
+     * Returns the content as an <code>InputStream</code>
      * @return java.io.InputStream
      */
     public InputStream getContentAsInputStream();
@@ -70,14 +70,21 @@ public interface JournalEntry {
      */
     public OutputStream getContentAsOutputStream();
     /**
+     * Returns the content as a <code>String</code>.
+     */
+    public String getContent();
+    /**
+     * Sets a <code>String</code> as the content.
+     */
+    public void setContent(String content);
+    /**
      * Return the short description of the journal entry.
      */
     public String getDescription();
     /**
      * Set the specified string as the description of the entry.
      */
-    public void setDescription(String description)
-            throws JournalDescriptionTooLongException;
+    public void setDescription(String description);
     /**
      * Returns the date/time the journal entry was created.
      */
@@ -89,10 +96,10 @@ public interface JournalEntry {
     /**
      * Set the MIME type of the content of the <code>JournalEntry</code>.
      */
-    public void setMimeType(String mimeType);
+    public void setMimeType(MimeType mimeType);
 
     /**
      * Return the MIME Type of the journal content.
      */
-    public String getMimeType();
+    public MimeType getMimeType();
 }

@@ -98,10 +98,10 @@ public interface Contact extends SimplePerson {
     /**
      * Sets the value to be used as the prefix of the person's name.
      * @param prefix The value to be usedd as the prefix of the person's name.
-     * @throws NameTooLongException If the specified value exceeds the 
+     * @throws PersonNameTooLongException If the specified value exceeds the 
      * allowable length of a prefix for a person's name.
      */
-    public void setPrefix(String prefix) throws NameTooLongException;
+    public void setPrefix(String prefix) throws PersonNameTooLongException;
     //********** suffix
     /**
      * Returns the current suffix for the person's name.
@@ -113,8 +113,8 @@ public interface Contact extends SimplePerson {
      * Sets the value to be used as the suffix of the person's name.
      * @param sufix The value to be used as the suffix portion of the person's 
      * name.
-     * @throws NameTooLongException If the specified value exceeds the 
+     * @throws PersonNameTooLongException If the specified value exceeds the 
      * allowable length of a suffix for a person's name.
      */
-    public void setSuffix(String suffix) throws NameTooLongException;
+    public void setSuffix(String suffix) throws PersonNameTooLongException;
 }

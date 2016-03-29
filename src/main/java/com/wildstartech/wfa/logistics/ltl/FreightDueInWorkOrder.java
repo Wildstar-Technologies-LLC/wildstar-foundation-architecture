@@ -196,6 +196,10 @@ public interface FreightDueInWorkOrder extends BasicTicket {
    public String getPurchaseOrder();
    public void setPurchaseOrder(String purchaseOrder);
    
+   //***** quoteRequestId
+   public String getQuoteRequestId();
+   public void setQuoteRequestId(String requestId);
+   
    //***** referenceIdentifier
    public String getReferenceIdentifier();
    public void setReferenceIdentifier(String referenceIdentifier);

@@ -44,9 +44,23 @@
  */
 package com.wildstartech.wfa.dao.journal;
 
+import java.util.List;
+
 import com.wildstartech.wfa.dao.*;
 import com.wildstartech.wfa.journal.JournalEntry;
 
 public interface JournalDAO 
-extends WildDAO<JournalEntry,PersistentJournalEntry> {	
+extends WildDAO<JournalEntry,PersistentJournalEntry> {
+  /**
+   * Return a list of journal entries associated with a given object.
+   * @param type The type of parent object.
+   * @param key The identifier of the object with which the journal entries are
+   * associated.
+   * @param ctx The <code>UserContext</code> that should be assocaited.
+   * @return
+   */
+  public List<PersistentJournalEntry> findEntries(
+      String type, 
+      String requestId, 
+      UserContext ctx);
 }

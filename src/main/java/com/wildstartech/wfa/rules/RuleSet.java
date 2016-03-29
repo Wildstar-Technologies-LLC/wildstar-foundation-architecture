@@ -53,30 +53,30 @@ public class RuleSet<K> {
 	 * <p>If the object passed as a parameter to the <code>evaluate</code>
 	 * method is <code>null</code> then none of the rules will be evaluated.</p>
 	 */
-	public List<RuleException> evaluate(K object) {
+	public Result evaluate(K object) {
 		logger.entering(_CLASS,"evaluate(K)",object);
-		List<RuleException> exceptions=null;
+		Result result=null;;
 		RuleException exception=null;
 		
-		exceptions=new ArrayList<RuleException>();
+		result=new Result();
 		if (object == null) {
 			// The object passed to the RuleSet is null.
 			exception = new RuleException(
 					RuleException.Level.ERROR,
 					"",
 					"A null value was passed to the RuleSet.");
-			exceptions.add(exception);
+			result.addException(exception);
 		} else {
 			for (Rule<K> rule: this.rules) {
 				try {
 					rule.apply(object);
 				} catch (RuleException ex) {
 					logger.log(Level.INFO,"RuleException thrown.",ex);
-					exceptions.add(ex);
+					result.addException(ex);
 				} // END try/catch
 			} // END for (Rule<User> rule: this.rules)
 		} // END if (object == null) 
-		logger.exiting(_CLASS,"evaluate(K)",exceptions);
-		return exceptions;
+		logger.exiting(_CLASS,"evaluate(K)",result);
+		return result;
 	}
 }

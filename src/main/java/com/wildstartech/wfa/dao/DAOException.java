@@ -44,43 +44,48 @@
  */
 package com.wildstartech.wfa.dao;
 
+import java.util.logging.Logger;
+
 import com.wildstartech.wfa.WFARuntimeException;
 
 public class DAOException extends WFARuntimeException {
-	/** Unique class version identifier used in object serialization. */
-	private static final long serialVersionUID = -2088437267229725259L;
-	/**
-	 * Identifies the resource bundle used to format the message.
-	 * This field should be over-ridden by all subclassing object identifying a 
-	 * valid ResourceBundle key.
-	 */
-	private static String RESOURCE_BUNDLE_KEY=
-		"com.wildstartech.wfa.dao.resources.WildDAO";
-	/**
-	 * Message number assocaited with the exception.
-	 */
-	private int errorMessageNumber;	
-	/**
-	 * Constructor taking a message identifier as a parameter.
-	 */
-	public DAOException(int errorNumber) {
-		super(RESOURCE_BUNDLE_KEY);
-		errorMessageNumber=errorNumber;
-		localizeMessage(String.valueOf(errorNumber));
-	}
-	/**
-	 * Constructor taking msg identifier and parameter list.
-	 */
-	public DAOException(int errorNumber, Object[] params) {
-		super(RESOURCE_BUNDLE_KEY);
-		errorMessageNumber=errorNumber;
-		localizeMessage(String.valueOf(errorNumber),params);
-	}
-	/**
-	 * Returns the numerical identifier associated with the error message.
-	 * @return int
-	 */
-	public int getErrorMessageNumber() {
-		return errorMessageNumber;
-	}
+  /** Unique class version identifier used in object serialization. */
+  private static final long serialVersionUID = -2088437267229725259L;
+  private static final String _CLASS = DAOException.class.getName();
+  private static final Logger logger = Logger.getLogger(_CLASS);
+
+  /** Message number associated with the exception. */
+  private int errorMessageNumber;
+
+  /**
+   * Constructor taking a message identifier as a parameter.
+   */
+  public DAOException(int errorNumber) {
+    logger.entering(_CLASS, "DAOException(int)", errorNumber);
+    errorMessageNumber = errorNumber;
+    localizeMessage(String.valueOf(errorNumber));
+    logger.exiting(_CLASS, "DAOException(int)");
+  }
+
+  /**
+   * Constructor taking msg identifier and parameter list.
+   */
+  public DAOException(int errorNumber, Object[] params) {
+    logger.entering(_CLASS, "DAOException(int,Object[])", 
+        new Object[] {errorNumber,params});    
+    errorMessageNumber = errorNumber;
+    localizeMessage(String.valueOf(errorNumber), params);
+    logger.exiting(_CLASS, "DAOException(int,Object[])");
+  }
+
+  /**
+   * Returns the numerical identifier associated with the error message.
+   * 
+   * @return int
+   */
+  public int getErrorMessageNumber() {
+    logger.entering(_CLASS, "getErrorMessageNumber()");
+    logger.exiting(_CLASS, "getErrorMessageNumber()",this.errorMessageNumber);
+    return this.errorMessageNumber;
+  }
 }

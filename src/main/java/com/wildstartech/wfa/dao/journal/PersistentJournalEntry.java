@@ -48,5 +48,5 @@ import com.wildstartech.wfa.dao.WildObject;
 import com.wildstartech.wfa.journal.JournalEntry;
 
 public interface PersistentJournalEntry  extends JournalEntry, WildObject {
-
+   public String getRelatedIdentifier();
 }

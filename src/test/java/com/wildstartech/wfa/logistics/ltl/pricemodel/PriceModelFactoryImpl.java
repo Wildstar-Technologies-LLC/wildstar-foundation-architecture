@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.wildstartech.wfa.logistics.ltl.Quote;
+import com.wildstartech.wfa.logistics.ltl.WorkOrder;
 import com.wildstartech.wfa.logistics.ltl.pricemodels.CubeDistancePriceModel;
 import com.wildstartech.wfa.logistics.ltl.pricemodels.PriceModel;
 import com.wildstartech.wfa.logistics.ltl.pricemodels.PriceModelFactory;
@@ -92,4 +93,10 @@ public class PriceModelFactoryImpl extends PriceModelFactory {
     logger.exiting(_CLASS, "getModelTypes()",PriceModelFactoryImpl.types);
     return PriceModelFactoryImpl.types;
   }
+
+@Override
+public PriceModel getModel(WorkOrder workOrder) {
+   // TODO Auto-generated method stub
+   return null;
+}
 }

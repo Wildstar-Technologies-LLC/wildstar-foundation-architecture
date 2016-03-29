@@ -46,6 +46,5 @@ package com.wildstartech.wfa.dao;
 
 public interface UserContextDAO 
 extends WildDAO<UserContext, UserContext> {
-	public UserContext findByEmailAddress(String emailAddress);
-	public UserContext authenticate(String userName, String password);
+	public UserContext findByUserName(String userName, UserContext ctx);
 }

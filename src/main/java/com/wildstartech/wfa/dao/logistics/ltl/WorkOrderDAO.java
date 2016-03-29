@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2016 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -45,31 +45,25 @@
 package com.wildstartech.wfa.dao.logistics.ltl;
 
 import com.wildstartech.wfa.dao.*;
+import com.wildstartech.wfa.dao.ticketing.BasicTicketDAO;
 import com.wildstartech.wfa.logistics.ltl.WorkOrder;
-import com.wildstartech.wfa.logistics.ltl.WorkOrderListElement;
 
 import java.util.List;
 
-public interface WorkOrderDAO 
-extends WildDAO<WorkOrder, PersistentWorkOrder> {
-	/**
-	 * Locate an instance of the <code>WorkOrder</code> by it's ID.
-	 */
-	public WorkOrder findByWorkOrderId(String workOrderId, UserContext ctx)
-	throws DAOException;
-	/**
-	 * Return a list of open WorkOrders.
-	 */
-	public List<WorkOrderListElement> findAllOpen(UserContext ctx)
-	throws DAOException;
+public interface WorkOrderDAO
+extends BasicTicketDAO<WorkOrder, PersistentWorkOrder> {
+	
 	/**
 	 * Return a list of work orders matching the specified customer order id.
 	 */
-	public List<WorkOrderListElement> searchByCustomerOrderId(
-		String customerOrderId, UserContext ctx) throws DAOException;
+	public List<PersistentWorkOrder> findByCustomerOrderId(
+		String customerOrderId, UserContext ctx) throws DAOException;	
+	
 	/**
-	 * Return a list of work orders matching the specified work order id.
-	 */
-	public List<WorkOrderListElement> searchByWorkOrderId(
-		String workOrderId, UserContext ctx) throws DAOException;
+    * Locate an instance of the <code>WorkOrder</code> by it's ID.
+    */
+   public PersistentWorkOrder findByWorkOrderId(
+         String workOrderId, 
+         UserContext ctx)
+   throws DAOException;
 }

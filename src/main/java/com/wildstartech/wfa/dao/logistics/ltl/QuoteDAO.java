@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2015 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -44,9 +44,37 @@
  */
 package com.wildstartech.wfa.dao.logistics.ltl;
 
+import java.util.Date;
+import java.util.List;
+
+import com.wildstartech.wfa.dao.UserContext;
 import com.wildstartech.wfa.dao.WildDAO;
 import com.wildstartech.wfa.logistics.ltl.Quote;
 
 public interface QuoteDAO 
 extends WildDAO<Quote, PersistentQuote> {
+  public Quote findByRequestId(String requestId, UserContext ctx);
+  
+  /** 
+   * Returns a list of all quotes that are in an "Active" status state and
+   * are not in a "Resolved" status state.
+   * 
+   * @param ctx
+   * @return
+   */
+  public List<PersistentQuote> findAllActive(UserContext ctx);
+  
+  public List<PersistentQuote> findActionable(UserContext ctx);
+  
+  /**
+   * Returns a list of quotes with a given status and status reason.
+   * @param status
+   * @param statusReason
+   * @param minDate
+   * @param ctx
+   * @return The list of quotes matching the specified status, status reason, '
+   * and minimum date values specified.
+   */
+  public List<PersistentQuote> findByStatus(
+      String status, String statusReason, Date minDate, UserContext ctx);
 }

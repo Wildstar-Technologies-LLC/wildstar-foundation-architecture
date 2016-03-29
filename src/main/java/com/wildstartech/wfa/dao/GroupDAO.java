@@ -44,10 +44,12 @@
  */
 package com.wildstartech.wfa.dao;
 
-public interface GroupDAO extends WildDAO<Group,Group> {
+import com.wildstartech.wfa.group.Group;
+
+public interface GroupDAO extends WildDAO<Group, PersistentGroup> {
 	/**
 	 * Find an instance of the <code>Group</code> object by name.
 	 */
-	public Group findByName(String name, UserContext ctx) 
+	public PersistentGroup findByName(String name, UserContext ctx) 
 	throws DAOException;	
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001, 2006, 2008-2013 Wildstar Technologies, LLC.
+ * Copyright (c) 2001, 2006, 2008-2014 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -45,5 +45,5 @@
 package com.wildstartech.wfa.rules;
 
 public interface Rule<K extends Object> {
-	public K apply(K target);	
+	public void apply(K target);	
 }

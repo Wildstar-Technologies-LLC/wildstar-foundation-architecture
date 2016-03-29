@@ -44,8 +44,10 @@
  */
 package com.wildstartech.wfa.customer;
 
+import com.wildstartech.wfa.party.Party;
 
-public interface Customer {
+
+public interface Customer extends Party<CustomerNameTooLongException>{
     //***** accountNumber
     public String getAccountNumber();
 
@@ -54,15 +56,5 @@ public interface Customer {
     //***** customer
     public Party getCustomer();
 
-    public void setCustomer(Party party);
-    //***** customerName
-    /**
-     * Convenience method used to retrieve the name of the customer.
-     */
-    public String getName();
-    //***** isCompany
-    /**
-     * Indicates whether or not the <code>Customer</code> is a company.
-     */
-    public boolean isCompany();
+    public void setCustomer(Party party);    
 }
