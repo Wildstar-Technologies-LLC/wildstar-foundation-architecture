@@ -63,7 +63,7 @@ extends WildDAO<Document, PersistentDocument> {
 	 * identifier. 
 	 */
 	public List<PersistentDocument> findByRelatedIdentifier(
-	      String kind,
+	      String type,
 	      String identifier,
 	      UserContext ctx);
 }

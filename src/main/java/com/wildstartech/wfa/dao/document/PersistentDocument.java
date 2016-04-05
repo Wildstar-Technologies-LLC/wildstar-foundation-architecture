@@ -48,6 +48,9 @@ import com.wildstartech.wfa.dao.WildObject;
 import com.wildstartech.wfa.document.EditableDocument;
 
 public interface PersistentDocument extends EditableDocument, WildObject {
+   public String getRelatedType();
+   public void setRelatedType(String type);
+   
    public String getRelatedIdentifier();
    public void setRelatedIdentifier(String relatedIdentifier);
 }
