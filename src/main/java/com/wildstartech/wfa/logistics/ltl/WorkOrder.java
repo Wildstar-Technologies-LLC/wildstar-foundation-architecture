@@ -65,7 +65,7 @@ public interface WorkOrder extends BasicTicket, Journalizable {
    public double getAdjustmentAmount();
    public void setAdjustmentAmount(double amount);
    
-   //***** adjustmetnType
+   //***** adjustmentType
    public AdjustmentType getAdjustmentType();
    public void setAdjustmentType(AdjustmentType type);
    
