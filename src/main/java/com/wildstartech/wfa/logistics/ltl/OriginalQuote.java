@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001, 2006, 2008-2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2016 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -36,7 +36,7 @@
  *
  *      Wildstar Technologies, LLC.
  *      63 The Greenway Loop
- *      Panama City Beacn, FL 32413
+ *      Panama City Beach, FL 32413
  *      USA
  *
  *      derek.berube@wildstartech.com

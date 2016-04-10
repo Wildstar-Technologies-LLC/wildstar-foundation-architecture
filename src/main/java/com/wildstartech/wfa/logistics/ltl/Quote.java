@@ -44,7 +44,6 @@
  */
 package com.wildstartech.wfa.logistics.ltl;
 
-import java.util.Date;
 import java.util.List;
 
 import com.wildstartech.wfa.journal.Journalizable;

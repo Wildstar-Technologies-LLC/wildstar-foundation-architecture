@@ -1,6 +1,5 @@
-package com.wildstartech.wfa.dao;
 /*
- * Copyright (c) 2001 - 2014 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2016 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -43,6 +42,8 @@ package com.wildstartech.wfa.dao;
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
+package com.wildstartech.wfa.dao;
+
 public interface DAOExceptionConstants {
   public static final int AUTH_NOT_AUTHENTICATED=1;
 }

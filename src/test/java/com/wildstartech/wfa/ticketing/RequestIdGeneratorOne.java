@@ -1,5 +1,6 @@
 /*
- * Copyright (c) 2001 - 2015 Wildstar Technologies, LLC.
+/*
+ * Copyright (c) 2001 - 2016 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
