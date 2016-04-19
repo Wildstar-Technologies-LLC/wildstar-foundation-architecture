@@ -91,7 +91,9 @@ public interface ReceiverWorkOrder extends BasicTicket, Journalizable {
    
    //***** lineItems
    public List<ReceiverWorkOrderLineItem> getLineItems();
-   public void addLineItem(ReceiverWorkOrderLineItem lineItem);
+   public ReceiverWorkOrderLineItem addLineItem(
+         ReceiverWorkOrderLineItem lineItem);
+   public ReceiverWorkOrderLineItem removeLineItem(ReceiverWorkOrderLineItem lineItem);
    
    //***** purchaseOrderNumber
    /**

@@ -42,12 +42,88 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.ticketing;
 
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+import java.util.List;
 
-public interface PersistentReceiverWorkOrderLineItem
-extends PersistentEditableCommodityLineItem, ReceiverWorkOrderLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
+import com.wildstartech.wfa.MockObject;
+
+public class MockBasicTicket extends MockObject implements BasicTicket {
+
+   private List<String> availableStatusReasons=null;
+   private List<String> availableStatusStates=null;
+   private String requestId="";
+   private String shortDescription="";
+   private String statusReason="";
+   private String statusState="";
+   private String title="";
+   
+   
+   @Override
+   public String getRequestId() {
+      return this.requestId;
+   }
+
+   @Override
+   public void setRequestId(String requestId) {
+      this.requestId=requestId;
+   }
+
+   @Override
+   public String getShortDescription() {
+      return this.shortDescription;
+   }
+
+   @Override
+   public void setShortDescription(String shortDescription) {
+      this.shortDescription=shortDescription;
+   }
+
+   @Override
+   public List<String> getAvailableStatusReasons() {
+      return this.availableStatusReasons;
+   }
+   
+   public void setAvailableStatusReasons(List<String> statusReasons) {
+      this.availableStatusReasons=statusReasons;
+   }
+
+   @Override
+   public String getStatusReason() {
+      return this.statusReason;
+   }
+
+   @Override
+   public void setStatusReason(String statusReason) {
+      this.statusReason=statusReason;
+   }
+
+   @Override
+   public List<String> getAvailableStatusStates() {
+      return this.availableStatusStates;
+   }
+   
+   public void setAvailableStatusStates(List<String> statusStates) {
+      this.availableStatusStates=statusStates;
+   }
+
+   @Override
+   public String getStatusState() {
+      return this.statusState;
+   }
+
+   @Override
+   public void setStatusState(String statusState) {
+      this.statusState=statusState;
+   }
+
+   @Override
+   public String getTitle() {
+      return this.title;
+   }
+
+   @Override
+   public void setTitle(String title) {
+      this.title=title;
+   }
 }

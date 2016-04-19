@@ -44,10 +44,12 @@
  */
 package com.wildstartech.wfa.dao.logistics.ltl;
 
+import com.wildstartech.wfa.dao.WildDAOFactory;
 import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
 
-public interface PersistentReceiverWorkOrderLineItem
-extends PersistentEditableCommodityLineItem, ReceiverWorkOrderLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
+public class ReceiverWorkOrderLineItemDAOFactory 
+extends WildDAOFactory<ReceiverWorkOrderLineItemDAO, 
+                       ReceiverWorkOrderLineItem, 
+                       PersistentReceiverWorkOrderLineItem> {
+
 }

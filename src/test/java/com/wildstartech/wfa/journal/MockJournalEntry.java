@@ -42,12 +42,87 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.journal;
 
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Date;
 
-public interface PersistentReceiverWorkOrderLineItem
-extends PersistentEditableCommodityLineItem, ReceiverWorkOrderLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
+import javax.activation.MimeType;
+
+import com.wildstartech.wfa.journal.JournalEntry;
+
+public class MockJournalEntry implements JournalEntry {
+
+   private String caregory="";
+   
+   @Override
+   public String getCategory() {
+      return this.caregory;
+   }
+
+   @Override
+   public void setCategory(String category) {
+      this.caregory=category;
+   }
+
+   @Override
+   public InputStream getContentAsInputStream() {
+      return null;
+   }
+
+   @Override
+   public OutputStream getContentAsOutputStream() {
+      // TODO Auto-generated method stub
+      return null;
+   }
+
+   @Override
+   public String getContent() {
+      // TODO Auto-generated method stub
+      return null;
+   }
+
+   @Override
+   public void setContent(String content) {
+      // TODO Auto-generated method stub
+
+   }
+
+   @Override
+   public String getDescription() {
+      // TODO Auto-generated method stub
+      return null;
+   }
+
+   @Override
+   public void setDescription(String description) {
+      // TODO Auto-generated method stub
+
+   }
+
+   @Override
+   public Date getEntryDate() {
+      // TODO Auto-generated method stub
+      return null;
+   }
+
+   @Override
+   public void setEntryDate(Date entryDate) {
+      // TODO Auto-generated method stub
+
+   }
+
+   @Override
+   public void setMimeType(MimeType mimeType) {
+      // TODO Auto-generated method stub
+
+   }
+
+   @Override
+   public MimeType getMimeType() {
+      // TODO Auto-generated method stub
+      return null;
+   }
+
 }

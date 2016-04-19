@@ -42,12 +42,30 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa;
 
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-public interface PersistentReceiverWorkOrderLineItem
-extends PersistentEditableCommodityLineItem, ReceiverWorkOrderLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
+public class MockObject {
+ //********** Utility methods
+   /**
+    * Parses a string value to return a {@code Date}
+    * @param parseableDate A string that represents a date expressed using the
+    * following format pattern: "MM/dd/yyyy hh:mm a".
+    * @return A {@code Date} object that corresponds to the {@code String} 
+    * value passed as a parameter.
+    */
+   public Date parseDate(String parseableDate) {
+      Date returnDate=null;
+      DateFormat fmt=new SimpleDateFormat("MM/dd/yyyy hh:mm a");
+      try {
+         returnDate=fmt.parse(parseableDate);
+      } catch (ParseException ex) {
+         
+      } // END try/catch
+      return returnDate;
+   }
 }

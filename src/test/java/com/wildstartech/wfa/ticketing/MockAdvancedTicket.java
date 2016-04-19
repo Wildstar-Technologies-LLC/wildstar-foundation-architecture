@@ -42,12 +42,9 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.ticketing;
 
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+public class MockAdvancedTicket extends MockBasicTicket
+      implements AdvancedTicket {
 
-public interface PersistentReceiverWorkOrderLineItem
-extends PersistentEditableCommodityLineItem, ReceiverWorkOrderLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
 }
