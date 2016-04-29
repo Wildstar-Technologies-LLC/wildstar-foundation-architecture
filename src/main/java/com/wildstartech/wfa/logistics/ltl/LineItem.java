@@ -47,4 +47,8 @@ package com.wildstartech.wfa.logistics.ltl;
 public interface LineItem {
    public int getLineItemNumber();
    public void setLineItemNumber(int lineItem);
+   
+   //***** description
+   public String getDescription();
+   public void setDescription(String description);
 }

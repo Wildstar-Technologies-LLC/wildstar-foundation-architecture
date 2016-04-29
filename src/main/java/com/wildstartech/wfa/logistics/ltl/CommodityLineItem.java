@@ -59,10 +59,6 @@ public interface CommodityLineItem extends LineItem {
     */
    public int getCube();
    
-   //***** description
-   public String getDescription();
-   public void setDescription(String description);
-
    //***** height
    public int getHeight();
    public void setHeight(int height);
