@@ -52,18 +52,18 @@ import com.wildstartech.wfa.ticketing.BasicTicket;
 
 public interface ReceiverWorkOrder extends BasicTicket, Journalizable {
    
-   //***** carrier
+   //***** inboundCarrier
    /** 
     * Return the carrier on which the product arrives at the warehouse.
     * @return
     */
-   public String getCarrier();
+   public String getInboundCarrier();
    /**
     * Stores the carrier on which the product arrived at the warehouse.
     * @param carrier The name of the carrier responsible for conveying the 
     * product to the warehouse.
     */
-   public void setCarrier(String carrier);
+   public void setInboundCarrier(String carrier);
    //***** billOfLading
    /**
     * Returns the bill of lading associated with the sales order. 

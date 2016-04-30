@@ -42,19 +42,39 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.location;
+package com.wildstartech.wfa.dao.logistics;
 
-import java.util.logging.Logger;
+import com.wildstartech.wfa.location.Location;
 
-import com.wildstartech.wfa.location.spi.DistanceServiceProvider;
-
-public interface GeoPoint {
-  public double getLatitude();
-  public String getLatitudeAsString();
-  public void setLatitude(String latitude);
-  
-  //***** longitude
-  public double getLongitude();
-  public String getLongitudeAsString();
-  public void setLongitude(String longitude);  
+/**
+ * Identifies a given location in a warehouse.
+ * 
+ * <p>This data structure is intended to model the storage of items in a 
+ * warehouse that is comprised of aisles of multi-level racks.  Each rack is
+ * divided into smaller sections into which goods are placed. The following
+ * is a hierchal list of location attributes going from most general to most
+ * specific.</p>
+ * <ul>
+ * <li>Aisle</li>
+ * <li>Level</li>
+ * <li>Bay</li>
+ * <li>Position</li>
+ * </ul>
+ * 
+ * @author Derek Berube, Wildstar Technologies, LLC.
+ * @version 0.1, 2016-04-29
+ *
+ */
+public interface WarehouseLocation extends Location {
+   public String getAisle();
+   public void setAisle(String aisle);
+   
+   public String getBay();
+   public void setBay(String bay);
+   
+   public String getLevel();
+   public void setLevel(String level);
+   
+   public String getPosition();
+   public void setPosition(String position);
 }

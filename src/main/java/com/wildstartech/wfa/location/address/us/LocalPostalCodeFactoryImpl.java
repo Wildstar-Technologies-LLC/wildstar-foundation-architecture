@@ -210,7 +210,7 @@ if (row == 40219) {
          } // END if (postalCode != null)
       } // END if (zipCode != null)
       if (centroid == null) {
-         centroid = new GeoPoint("0", "0");
+         centroid = new GeoPointImpl("0", "0");
       } // END if (centroid == null)
 
       logger.exiting(_CLASS, "getCentroid(String)", centroid);

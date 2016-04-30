@@ -89,7 +89,7 @@ public class USPostalCode implements PostalCode {
     city.setName(cityName);
     city.setStateAbbreviation(stateCode);
     this.city=city;
-    this.centroid=new GeoPoint(latitude, longitude);
+    this.centroid=new GeoPointImpl(latitude, longitude);
     setTimeZone(timeZone);
     setDST(isDST);
     logger.exiting(_CLASS,
