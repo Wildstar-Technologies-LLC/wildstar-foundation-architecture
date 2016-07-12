@@ -107,7 +107,7 @@ public abstract class WFARuntimeException extends java.lang.RuntimeException {
         sb=new StringBuilder(80);
         thisClass=this.getClass();
         sb.append(this.getClass().getPackage().getName());
-        sb.append(".resource.");
+        sb.append(".resources.");
         sb.append(thisClass.getSimpleName());
         resourceBundleKey=sb.toString();
         this.resourceBundle = ResourceBundle.getBundle(resourceBundleKey);
@@ -145,7 +145,21 @@ public abstract class WFARuntimeException extends java.lang.RuntimeException {
      */
     protected void localizeMessage(String key) {
     	logger.entering(_CLASS,"localizeMessage(String)",key);
-    	setMessage((String) resourceBundle.getObject(key));
+    	String message="";
+    	StringBuilder msg=null;
+    	
+    	if (this.resourceBundle == null) {
+    		loadResourceBundle();    		
+    	} // END if (this.resourceBundle == null)
+    	
+    	message=(String)resourceBundle.getObject(key);
+    	if (message != null) {
+    		setMessage(message); 
+    	} else {
+    		msg=new StringBuilder(80);
+    		msg.append("Unable to locate message for specified key: ").append(key);
+    		setMessage(msg.toString());
+    	} // END if (message != null)
         logger.exiting(_CLASS,"localizeMessage(String)");    	
     }
 

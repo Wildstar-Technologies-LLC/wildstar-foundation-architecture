@@ -42,12 +42,12 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.pricemodels.weightZone;
 
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
-
-public interface PersistentReceiverWorkOrderLineItem
-extends PersistentLineItem, ReceiverWorkOrderLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
+public interface WeightRangePrice {
+   public double getRate();
+   public void setRate(double rate);
+   
+   public int getMinimumWeight();
+   public void setMinimumWeight(int weight);
 }

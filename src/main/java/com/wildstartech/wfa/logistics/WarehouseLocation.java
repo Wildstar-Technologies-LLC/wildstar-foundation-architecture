@@ -42,7 +42,7 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics;
+package com.wildstartech.wfa.logistics;
 
 import com.wildstartech.wfa.location.Location;
 

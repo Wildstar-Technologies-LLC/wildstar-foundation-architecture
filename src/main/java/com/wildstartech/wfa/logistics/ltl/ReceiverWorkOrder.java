@@ -52,17 +52,6 @@ import com.wildstartech.wfa.ticketing.BasicTicket;
 
 public interface ReceiverWorkOrder extends BasicTicket, Journalizable {
    
-   //***** inboundCarrier
-   /** 
-    * Return the carrier on which the product arrives at the warehouse.
-    * @return
-    */
-   public String getInboundCarrier();
-   /**
-    * Stores the carrier on which the product arrived at the warehouse.
-    * @param carrier The name of the carrier responsible for conveying the 
-    * product to the warehouse.
-    */
    public void setInboundCarrier(String carrier);
    //***** billOfLading
    /**
@@ -88,6 +77,30 @@ public interface ReceiverWorkOrder extends BasicTicket, Journalizable {
     * @param dateReceived
     */
    public void setDateReceived(Date dateReceived);
+   
+   //***** depot
+   /**
+    * Returns the name of the depot into which the product was received.
+    * @return The name of the depot into which the product was received.
+    */
+   public String getDepot();
+   /**
+    * Stores the name of the depot into which the product was received.
+    * @param string The name of the depot into which the product was received.
+    */
+   public void setDepot(String string);
+   
+   //***** inboundCarrier
+   /** 
+    * Return the carrier on which the product arrives at the warehouse.
+    * @return
+    */
+   public String getInboundCarrier();
+   /**
+    * Stores the carrier on which the product arrived at the warehouse.
+    * @param carrier The name of the carrier responsible for conveying the 
+    * product to the warehouse.
+    */
    
    //***** lineItems
    public List<ReceiverWorkOrderLineItem> getLineItems();

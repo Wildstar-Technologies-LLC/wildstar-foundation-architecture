@@ -51,7 +51,9 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.wildstartech.wfa.logistics.ltl.QuickQuote;
 import com.wildstartech.wfa.logistics.ltl.Quote;
+import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
 import com.wildstartech.wfa.logistics.ltl.WorkOrder;
 
 /**
@@ -98,7 +100,17 @@ public abstract class PriceModelFactory {
    * Returns an the <code>PriceModel</code> appropriate for the specified quote.
    * 
    */
+  public abstract PriceModel getModel(QuickQuote quote);
+  /**
+   * Returns an the <code>PriceModel</code> appropriate for the specified quote.
+   * 
+   */
   public abstract PriceModel getModel(Quote quote);
+  /**
+   * Returns an the <code>PriceModel</code> appropriate for the specified quote.
+   * 
+   */
+  public abstract PriceModel getModel(SimpleQuote quote);
   
   /**
    * Returns the <code>PriceModel</code> appropriate for the specified 

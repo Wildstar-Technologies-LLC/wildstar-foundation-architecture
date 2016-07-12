@@ -44,10 +44,41 @@
  */
 package com.wildstartech.wfa.dao.logistics.ltl;
 
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+import java.util.Date;
+import java.util.List;
 
-public interface PersistentReceiverWorkOrderLineItem
-extends PersistentLineItem, ReceiverWorkOrderLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
+import com.wildstartech.wfa.dao.UserContext;
+import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.logistics.ltl.QuickQuote;
+
+public interface QuickQuoteDAO<T extends QuickQuote, W extends PersistentQuickQuote> 
+extends WildDAO<T, W> {
+	public QuickQuote findByRequestId(String requestId, UserContext ctx);
+
+	/**
+	 * Returns a list of all quotes that are in an "Active" status state and are
+	 * not in a "Resolved" status state.
+	 * 
+	 * @param ctx
+	 * @return
+	 */
+	public List<PersistentQuickQuote> findAllActive(UserContext ctx);
+
+	public List<PersistentQuickQuote> findActionable(UserContext ctx);
+
+	/**
+	 * Returns a list of quotes with a given status and status reason.
+	 * 
+	 * @param status
+	 * @param statusReason
+	 * @param minDate
+	 * @param ctx
+	 * @return The list of quotes matching the specified status, status reason,
+	 *         ' and minimum date values specified.
+	 */
+	public List<PersistentQuote> findByStatus(
+			String status, 
+			String statusReason, 
+			Date minDate, 
+			UserContext ctx);
 }

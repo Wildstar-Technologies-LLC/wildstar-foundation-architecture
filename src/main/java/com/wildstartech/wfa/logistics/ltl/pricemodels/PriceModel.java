@@ -44,7 +44,9 @@
  */
 package com.wildstartech.wfa.logistics.ltl.pricemodels;
 
+import com.wildstartech.wfa.logistics.ltl.QuickQuote;
 import com.wildstartech.wfa.logistics.ltl.Quote;
+import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
 import com.wildstartech.wfa.logistics.ltl.WorkOrder;
 
 /**
@@ -82,7 +84,7 @@ public interface PriceModel {
    * Returns the label assigned to this <code>PriceModel</code>.
    * <p>Price models can be customized and tailored to meet different situations
    * and customers.  When tailoring a price model, a unique name is assigned
-   * to the  
+   * to the pricing model.</p>
    * 
    * <p>The names assigned to a price model must be unique.</p>
    * @return
@@ -111,7 +113,39 @@ public interface PriceModel {
    * (e.g., <code>lineItemCharges</code>, <code>insuranceCharges</code>, 
    * etc.</p>
    * 
-   * @param quote The <code>Quote</code> to be examined in order to determine
+   * @param quote The <code>QuickQuote</code> to be examined in order to determine
+   * an appropriate price to charge.
+   * @return The amount of money to charge for the quote.
+   */
+  public double calculateTotalCharges(QuickQuote quote);
+  
+  /**
+   * Returns the total amount to charge for the specified quote.
+   * 
+   * <p>A given <code>PriceModel</code> will be responsible for inspecting a 
+   * quote and applying <em>all</em> necessary logic in order to determine an 
+   * appropriate price to charge.   The <code>PriceModel</code> will be  
+   * responsible for updating the various charge-related field's on the quote  
+   * (e.g., <code>lineItemCharges</code>, <code>insuranceCharges</code>, 
+   * etc.</p>
+   * 
+   * @param quote The <code>QuickQuote</code> to be examined in order to determine
+   * an appropriate price to charge.
+   * @return The amount of money to charge for the quote.
+   */
+  public double calculateTotalCharges(SimpleQuote quote);
+  
+  /**
+   * Returns the total amount to charge for the specified quote.
+   * 
+   * <p>A given <code>PriceModel</code> will be responsible for inspecting a 
+   * quote and applying <em>all</em> necessary logic in order to determine an 
+   * appropriate price to charge.   The <code>PriceModel</code> will be  
+   * responsible for updating the various charge-related field's on the quote  
+   * (e.g., <code>lineItemCharges</code>, <code>insuranceCharges</code>, 
+   * etc.</p>
+   * 
+   * @param quote The <code>QuickQuote</code> to be examined in order to determine
    * an appropriate price to charge.
    * @return The amount of money to charge for the quote.
    */

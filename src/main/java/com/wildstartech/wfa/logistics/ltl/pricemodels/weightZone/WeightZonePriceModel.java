@@ -42,12 +42,33 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.pricemodels.weightZone;
 
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+import com.wildstartech.wfa.logistics.ltl.Quote;
+import com.wildstartech.wfa.logistics.ltl.WorkOrder;
+import com.wildstartech.wfa.logistics.ltl.pricemodels.PriceModel;
 
-public interface PersistentReceiverWorkOrderLineItem
-extends PersistentLineItem, ReceiverWorkOrderLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
+public interface WeightZonePriceModel extends PriceModel {
+   // ***** beyondCharge
+   public boolean isBeyondZip(String zip);
+
+   // ***** ratePerUnitWeight
+   public double calculateRatePerUnitWeight(String originZip, String destinationZip,
+         int weight);
+
+   // ***** minimumCharge
+   public double getMinimumCharge(String originZip, String destinationZip);
+
+   public double calculateTotalCharges(Quote quote);
+
+   public double calculateTotalCharges(WorkOrder workOrder);
+
+   /**
+    * Apply the price model based upon the provided constraints.
+    * 
+    * @return
+    */
+   public double calculateCharge(String originZip, String destinationZip,
+         int numberOfPieces, int weight, String serviceLevel);
+
 }

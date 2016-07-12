@@ -42,12 +42,11 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics;
 
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+import com.wildstartech.wfa.dao.WildObject;
+import com.wildstartech.wfa.logistics.WarehouseLocation;
 
-public interface PersistentReceiverWorkOrderLineItem
-extends PersistentLineItem, ReceiverWorkOrderLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
+public interface PersistentWarehouseLocation 
+extends WildObject, WarehouseLocation {
 }

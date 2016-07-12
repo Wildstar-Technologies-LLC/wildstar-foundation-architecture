@@ -44,10 +44,9 @@
  */
 package com.wildstartech.wfa.dao.logistics.ltl;
 
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
 
-public interface PersistentReceiverWorkOrderLineItem
-extends PersistentLineItem, ReceiverWorkOrderLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
+public interface SimpleQuoteDAO<T extends SimpleQuote, W extends PersistentSimpleQuote> 
+extends QuickQuoteDAO<T, W> {
+
 }
