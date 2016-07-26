@@ -44,9 +44,41 @@
  */
 package com.wildstartech.wfa.dao.logistics.ltl;
 
+import java.util.Date;
+import java.util.List;
+
+import com.wildstartech.wfa.dao.UserContext;
+import com.wildstartech.wfa.dao.WildDAO;
 import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
 
-public interface SimpleQuoteDAO<T extends SimpleQuote, W extends PersistentSimpleQuote> 
-extends QuickQuoteDAO<T, W> {
+public interface SimpleQuoteDAO 
+extends WildDAO<SimpleQuote, PersistentSimpleQuote> {
+   public PersistentSimpleQuote findByRequestId(String requestId, UserContext ctx);
 
+   /**
+    * Returns a list of all quotes that are in an "Active" status state and are
+    * not in a "Resolved" status state.
+    * 
+    * @param ctx
+    * @return
+    */
+   public List<PersistentSimpleQuote> findAllActive(UserContext ctx);
+
+   public List<PersistentSimpleQuote> findActionable(UserContext ctx);
+
+   /**
+    * Returns a list of quotes with a given status and status reason.
+    * 
+    * @param status
+    * @param statusReason
+    * @param minDate
+    * @param ctx
+    * @return The list of quotes matching the specified status, status reason,
+    *         ' and minimum date values specified.
+    */
+   public List<PersistentSimpleQuote> findByStatus(
+         String status, 
+         String statusReason, 
+         Date minDate, 
+         UserContext ctx);
 }
