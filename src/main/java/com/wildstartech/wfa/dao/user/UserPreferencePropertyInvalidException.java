@@ -42,27 +42,28 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.user;
 
-import com.wildstartech.wfa.user.User;
+import com.wildstartech.wfa.WFAException;
 
-/**
- * Data Access Object for managing User objects in the persistent data store.
- * 
- * <p>A <code>User</code> is an integral facet of the data persistence
- * framework as each transaction must be performed by a specific entity.</p>
- * 
- * <p>A user object is identified by a <code>name</code> property.  Name values
- * associated with <code>User</code> objects <em>MUST BE</em> unique.</p>
- * 
- * @author Derek Berube, Wildstar Technologies, LLC.
- * @version 1.1, 2105-06-23
- *
- */
-public interface UserDAO extends WildDAO<User, PersistentUser> {
+public class UserPreferencePropertyInvalidException extends WFAException {
 	/**
-	 * Find the instance of the <code>User</code> using its name.
+	 * Identifies the resource bundle used to format the message.
+	 * This field should be over-ridden by all subclassing object identifying a 
+	 * valid ResourceBundle key.
 	 */
-	public PersistentUser findByName(String name, UserContext ctx) 
-	throws DAOException;	
+	private static String RESOURCE_BUNDLE_KEY=
+		com.wildstartech.wfa.dao.resources.User.class.getName();
+	/**
+	 * Object Serialization/deseiralization version identifier 
+	 */
+	private static final long serialVersionUID = 8661100535925298732L;
+	public UserPreferencePropertyInvalidException(String name, String reason) {
+		super(RESOURCE_BUNDLE_KEY);
+		localizeMessage("UserPreferencePropertyInvalidException",new Object[] {
+				name,
+				reason
+			}
+			);	
+	}
 }

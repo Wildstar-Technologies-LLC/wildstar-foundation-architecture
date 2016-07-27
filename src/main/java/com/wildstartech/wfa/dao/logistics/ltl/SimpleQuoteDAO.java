@@ -47,8 +47,8 @@ package com.wildstartech.wfa.dao.logistics.ltl;
 import java.util.Date;
 import java.util.List;
 
-import com.wildstartech.wfa.dao.UserContext;
 import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.dao.user.UserContext;
 import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
 
 public interface SimpleQuoteDAO 

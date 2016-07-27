@@ -42,13 +42,15 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.user;
 
 import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
+
+import com.wildstartech.wfa.dao.WildObject;
 
 
 public interface UserContext extends WildObject {

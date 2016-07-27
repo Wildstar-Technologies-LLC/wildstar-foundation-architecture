@@ -44,6 +44,8 @@
  */
 package com.wildstartech.wfa.dao;
 
+import com.wildstartech.wfa.dao.user.UserContext;
+
 public interface PersistenceRule<D extends WildDAO<T, W>, T, W extends WildObject> {
   /**
    * Apply the the rule against the specified <code>WildObject</code>.

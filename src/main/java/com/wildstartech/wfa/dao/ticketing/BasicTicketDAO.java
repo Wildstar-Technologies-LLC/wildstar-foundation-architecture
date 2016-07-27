@@ -48,8 +48,8 @@ import java.util.Date;
 import java.util.List;
 
 import com.wildstartech.wfa.dao.DAOException;
-import com.wildstartech.wfa.dao.UserContext;
 import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.dao.user.UserContext;
 import com.wildstartech.wfa.ticketing.BasicTicket;
 
 public interface BasicTicketDAO<T extends BasicTicket, 

@@ -45,6 +45,7 @@
 package com.wildstartech.wfa.dao.document;
 
 import com.wildstartech.wfa.dao.*;
+import com.wildstartech.wfa.dao.user.UserContext;
 
 import java.util.List;
 

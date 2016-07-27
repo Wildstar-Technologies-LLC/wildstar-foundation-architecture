@@ -42,9 +42,24 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.user;
 
-public interface UserContextDAO 
-extends WildDAO<UserContext, UserContext> {
-	public UserContext findByUserName(String userName, UserContext ctx);
+import com.wildstartech.wfa.WFAException;
+
+public class UserPreferenceKeyInvalidException extends WFAException {
+	/**
+	 * Identifies the resource bundle used to format the message.
+	 * This field should be over-ridden by all subclassing object identifying a 
+	 * valid ResourceBundle key.
+	 */
+	private static String RESOURCE_BUNDLE_KEY=
+		com.wildstartech.wfa.dao.resources.User.class.getName();
+	/**
+	 * Object Serialization/deseiralization version identifier 
+	 */
+	private static final long serialVersionUID = 8661100535925298732L;
+	public UserPreferenceKeyInvalidException(String msgKey, Object[] params) {
+		super(RESOURCE_BUNDLE_KEY);
+		localizeMessage("UserPreferenceKeyInvalidException",params);
+	}
 }

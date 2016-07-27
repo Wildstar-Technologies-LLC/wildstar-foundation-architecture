@@ -42,28 +42,11 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.user;
 
-import com.wildstartech.wfa.WFAException;
+import com.wildstartech.wfa.dao.WildDAO;
 
-public class UserPreferenceKeyTooLongException extends WFAException {
-	/**
-	 * Identifies the resource bundle used to format the message.
-	 * This field should be over-ridden by all subclassing object identifying a 
-	 * valid ResourceBundle key.
-	 */
-	private static String RESOURCE_BUNDLE_KEY=
-		com.wildstartech.wfa.dao.resources.User.class.getName();
-	/**
-	 * Object Serialization/deseiralization version identifier 
-	 */
-	private static final long serialVersionUID = 8661100535925298732L;
-	public UserPreferenceKeyTooLongException(String name, int length) {
-		super(RESOURCE_BUNDLE_KEY);
-		localizeMessage("UserPreferenceKeyTooLongException",new Object[] {
-				name,
-				length
-			}
-			);	
-	}
+public interface UserContextDAO 
+extends WildDAO<UserContext, UserContext> {
+	public UserContext findByUserName(String userName, UserContext ctx);
 }

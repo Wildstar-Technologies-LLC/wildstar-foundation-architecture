@@ -45,6 +45,7 @@
 package com.wildstartech.wfa.dao.role;
 
 import com.wildstartech.wfa.dao.*;
+import com.wildstartech.wfa.dao.user.UserContext;
 import com.wildstartech.wfa.role.Role;
 
 import java.util.List;

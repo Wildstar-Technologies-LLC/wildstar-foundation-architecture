@@ -44,9 +44,9 @@
  */
 package com.wildstartech.wfa.dao;
 
-import com.wildstartech.wfa.dao.UserContext;
 import com.wildstartech.wfa.dao.WildDAO;
 import com.wildstartech.wfa.dao.WildObject;
+import com.wildstartech.wfa.dao.user.UserContext;
 import com.wildstartech.wfa.rules.Result;
 
 public interface PersistenceRuleSet<D extends WildDAO<T, W>, T, W extends WildObject> {

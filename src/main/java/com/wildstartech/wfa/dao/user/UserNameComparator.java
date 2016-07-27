@@ -42,11 +42,32 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.user;
 
-import com.wildstartech.wfa.user.User;
+import java.io.Serializable;
+import java.util.Comparator;
 
-public interface UserPersistenceRuleSet 
-extends PersistenceRuleSet<UserDAO, User, PersistentUser> {
-  
+public class UserNameComparator implements Comparator<PersistentUser>, Serializable {
+	private static final long serialVersionUID = -1161346132249017387L;
+	
+	/**
+	 * Compare two instances of the <code>User</code> class.
+	 */
+	public int compare(PersistentUser user1, PersistentUser user2) {
+		int comparison;
+		String msg=null;
+		if ((user1 == null) || (user2 == null)) {
+			if ((user1 == null) && (user2 == null)) {
+				msg="Both parameters are null.";
+			} else if (user1 == null) {
+				msg="The first parameter is null.";
+			} else {
+				msg="The second parameter is null.";
+			}
+			throw new NullPointerException(msg);
+		} else {
+			comparison = user1.getName().compareTo(user2.getName());
+		} // END if ((user1 == null) || (user2 == null))
+		return comparison;
+	}
 }

@@ -46,6 +46,9 @@ package com.wildstartech.wfa.dao;
 
 import java.lang.reflect.Type;
 
+import com.wildstartech.wfa.dao.user.PersistentUser;
+import com.wildstartech.wfa.dao.user.UserContext;
+
 public interface PersistenceManager {
 	/**
 	 * 

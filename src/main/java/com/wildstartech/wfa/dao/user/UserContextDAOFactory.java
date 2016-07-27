@@ -42,9 +42,13 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.user;
 
 import java.util.logging.Logger;
+
+import com.wildstartech.wfa.dao.AuthenticationException;
+import com.wildstartech.wfa.dao.DAOException;
+import com.wildstartech.wfa.dao.WildDAOFactory;
 
 public class UserContextDAOFactory 
 extends WildDAOFactory<UserContextDAO,UserContext, UserContext> {

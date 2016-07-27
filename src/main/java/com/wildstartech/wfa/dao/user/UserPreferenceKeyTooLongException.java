@@ -42,11 +42,11 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.user;
 
 import com.wildstartech.wfa.WFAException;
 
-public class UserPreferenceKeyInvalidException extends WFAException {
+public class UserPreferenceKeyTooLongException extends WFAException {
 	/**
 	 * Identifies the resource bundle used to format the message.
 	 * This field should be over-ridden by all subclassing object identifying a 
@@ -58,8 +58,12 @@ public class UserPreferenceKeyInvalidException extends WFAException {
 	 * Object Serialization/deseiralization version identifier 
 	 */
 	private static final long serialVersionUID = 8661100535925298732L;
-	public UserPreferenceKeyInvalidException(String msgKey, Object[] params) {
+	public UserPreferenceKeyTooLongException(String name, int length) {
 		super(RESOURCE_BUNDLE_KEY);
-		localizeMessage("UserPreferenceKeyInvalidException",params);
+		localizeMessage("UserPreferenceKeyTooLongException",new Object[] {
+				name,
+				length
+			}
+			);	
 	}
 }

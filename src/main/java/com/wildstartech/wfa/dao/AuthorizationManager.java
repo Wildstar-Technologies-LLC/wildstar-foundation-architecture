@@ -44,6 +44,8 @@
  */
 package com.wildstartech.wfa.dao;
 
+import com.wildstartech.wfa.dao.user.PersistentUser;
+
 public interface AuthorizationManager<K> {
 	/**
 	 * Indicates if a user is authorized to access the specified URI.

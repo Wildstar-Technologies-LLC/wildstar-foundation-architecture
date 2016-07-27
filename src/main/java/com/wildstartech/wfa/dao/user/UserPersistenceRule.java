@@ -42,22 +42,12 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.user;
 
-/**
- * A container used to store user-specific preferences.
- * Add class description here.
- * 
- * @author Derek Berube, Wildstar Technologies, LLC.
- * @version 1.0 Jan 1, 2007
- */
-public interface UserPreference {
-	//***** key
-	public String getKey();
-	public void setKey(String key) 
-	throws UserPreferenceKeyInvalidException, UserPreferenceKeyTooLongException;
-	//***** property
-	public Object getProperty();
-	public void setProperty(Object property) 
-	throws UserPreferencePropertyInvalidException;
+import com.wildstartech.wfa.dao.PersistenceRule;
+import com.wildstartech.wfa.user.User;
+
+public interface UserPersistenceRule 
+extends PersistenceRule<UserDAO, User, PersistentUser> {
+
 }

@@ -48,8 +48,8 @@ import java.util.List;
 
 import com.wildstartech.wfa.company.Company;
 import com.wildstartech.wfa.dao.DAOException;
-import com.wildstartech.wfa.dao.UserContext;
 import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.dao.user.UserContext;
 
 
 public interface CompanyDAO extends WildDAO<Company,PersistentCompany> {

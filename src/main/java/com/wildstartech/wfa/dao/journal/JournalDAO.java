@@ -47,6 +47,7 @@ package com.wildstartech.wfa.dao.journal;
 import java.util.List;
 
 import com.wildstartech.wfa.dao.*;
+import com.wildstartech.wfa.dao.user.UserContext;
 import com.wildstartech.wfa.journal.JournalEntry;
 
 public interface JournalDAO 

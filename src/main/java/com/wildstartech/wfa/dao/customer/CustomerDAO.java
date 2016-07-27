@@ -46,8 +46,8 @@ package com.wildstartech.wfa.dao.customer;
 
 import com.wildstartech.wfa.customer.Customer;
 import com.wildstartech.wfa.dao.DAOException;
-import com.wildstartech.wfa.dao.UserContext;
 import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.dao.user.UserContext;
 
 import java.util.List;
 

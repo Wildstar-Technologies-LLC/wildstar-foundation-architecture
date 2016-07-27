@@ -46,6 +46,8 @@ package com.wildstartech.wfa.dao;
 
 import java.util.List;
 
+import com.wildstartech.wfa.dao.user.UserContext;
+
 /**
  * Wildstar Data Access Object DAO generic interface.
  * 

@@ -44,6 +44,7 @@
  */
 package com.wildstartech.wfa.dao;
 
+import com.wildstartech.wfa.dao.user.UserContext;
 import com.wildstartech.wfa.group.Group;
 
 public interface GroupDAO extends WildDAO<Group, PersistentGroup> {
