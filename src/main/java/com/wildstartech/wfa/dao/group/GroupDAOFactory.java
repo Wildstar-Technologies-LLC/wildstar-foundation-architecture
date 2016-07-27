@@ -42,15 +42,11 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.group;
 
-import com.wildstartech.wfa.dao.user.UserContext;
+import com.wildstartech.wfa.dao.WildDAOFactory;
 import com.wildstartech.wfa.group.Group;
 
-public interface GroupDAO extends WildDAO<Group, PersistentGroup> {
-	/**
-	 * Find an instance of the <code>Group</code> object by name.
-	 */
-	public PersistentGroup findByName(String name, UserContext ctx) 
-	throws DAOException;	
+public class GroupDAOFactory 
+extends WildDAOFactory<GroupDAO, Group, PersistentGroup> {
 }

@@ -42,41 +42,17 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.group;
 
-import java.util.List;
-
+import com.wildstartech.wfa.dao.DAOException;
+import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.dao.user.UserContext;
 import com.wildstartech.wfa.group.Group;
-import com.wildstartech.wfa.group.GroupNameTooLongException;
-import com.wildstartech.wfa.user.User;
 
-public interface PersistentGroup 
-extends WildObject, Group {
+public interface GroupDAO extends WildDAO<Group, PersistentGroup> {
 	/**
-	 * Stores the name of the company.
-	 * @param java.lang.String The value to be used as the name of the group.
-	 * @throws GroupNameTooLongException
+	 * Find an instance of the <code>Group</code> object by name.
 	 */
-	public void setName(String name) throws GroupNameTooLongException;
-	/**
-	 * Returns the value currently designated as the name of the group.
-	 */
-	public String getName();
-	/**
-	 * Add a user to the group.
-	 */
-	public void addUser(User user);
-	/**
-	 * Return a list of users that currently belong to the group.
-	 * @return java.util.List A collection of users that belong to the group.
-	 */
-	public List<User> getUsers();
-	/**
-	 * Indicates whether or not the specified user is a member of the group.
-	 */
-	public boolean contains(User user);
-	/**
-	 * Remove the specified user from the list of associated user.
-	 */
-	public void removeUser(User user);
+	public PersistentGroup findByName(String name, UserContext ctx) 
+	throws DAOException;	
 }

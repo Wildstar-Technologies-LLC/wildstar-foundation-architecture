@@ -46,8 +46,8 @@ package com.wildstartech.wfa.dao.user;
 
 import java.util.List;
 
-import com.wildstartech.wfa.dao.PersistentGroup;
 import com.wildstartech.wfa.dao.WildObject;
+import com.wildstartech.wfa.dao.group.PersistentGroup;
 import com.wildstartech.wfa.group.Group;
 import com.wildstartech.wfa.user.PasswordTooLongException;
 import com.wildstartech.wfa.user.User;

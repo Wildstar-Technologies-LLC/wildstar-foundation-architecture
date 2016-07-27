@@ -42,10 +42,42 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.group;
 
+import java.util.List;
+
+import com.wildstartech.wfa.dao.WildObject;
 import com.wildstartech.wfa.group.Group;
+import com.wildstartech.wfa.group.GroupNameTooLongException;
+import com.wildstartech.wfa.user.User;
 
-public class GroupDAOFactory 
-extends WildDAOFactory<GroupDAO, Group, PersistentGroup> {
+public interface PersistentGroup 
+extends WildObject, Group {
+	/**
+	 * Stores the name of the company.
+	 * @param java.lang.String The value to be used as the name of the group.
+	 * @throws GroupNameTooLongException
+	 */
+	public void setName(String name) throws GroupNameTooLongException;
+	/**
+	 * Returns the value currently designated as the name of the group.
+	 */
+	public String getName();
+	/**
+	 * Add a user to the group.
+	 */
+	public void addUser(User user);
+	/**
+	 * Return a list of users that currently belong to the group.
+	 * @return java.util.List A collection of users that belong to the group.
+	 */
+	public List<User> getUsers();
+	/**
+	 * Indicates whether or not the specified user is a member of the group.
+	 */
+	public boolean contains(User user);
+	/**
+	 * Remove the specified user from the list of associated user.
+	 */
+	public void removeUser(User user);
 }
