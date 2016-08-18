@@ -126,6 +126,10 @@ public abstract class WildDAOFactory<D extends WildDAO<T, W>, T, W extends WildO
 				logger.log(Level.SEVERE,
 					"Error creating instance of DAO "+property,
 					ex);
+			} catch (java.lang.ExceptionInInitializerError ex) {
+			   logger.log(Level.SEVERE,
+			         "ExceptionInInitializerError invoking newInstance() method.",
+			         ex);
 			} catch (IOException ex) {
 				logger.log(Level.SEVERE,
 					"IOException loading the wild-dao.properties file.",

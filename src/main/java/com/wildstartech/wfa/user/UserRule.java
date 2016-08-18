@@ -42,33 +42,34 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.user;
 
-import java.util.Date;
+import java.util.logging.Logger;
 
-import com.wildstartech.wfa.identifiable.Identifiable;
+import com.wildstartech.wfa.rules.Rule;
 
-public interface WildObject extends Identifiable<String> {
-	/**
-	 * Returns the date/time the <code>WildObject</code> was created.
-	 * @return
-	 */
-	public Date getDateCreated();
-	/**
-	 * Returns the date/time the <code>WildObject</code> was modified.
-	 * @return
-	 */
-	public Date getDateModified(); 
-	/**
-	 * Returns the name of the <code>User</code> who initially created the object.
-	 */
-	public String getCreatedBy();
-	/**
-	 * Returns the name of the <code>User</code> who last modified the object.
-	 */
-	public String getModifiedBy();
-	/**
-	 * Returns the unique identifier for the <code>WildObject</code>.
-	 */
-	public String getIdentifier();
+/**
+ * Base class used for validating the the data in the User object is valid.
+ * @author Derek Berube, Wildstar Technologies, LLC.
+ * @version 0.1, 08/05/2015
+ */
+public abstract class UserRule implements Rule<User> {
+   /* Used in the process of logging messages during class execution. */
+   private static String _CLASS=UserRule.class.getName();
+   /* A static reference to a Logger object for all instances of the class. */
+   private static Logger logger=Logger.getLogger(_CLASS);
+   
+   /**
+    * Default, no-argument constructor.
+    */
+   public UserRule() {
+      logger.entering(_CLASS, "UserRule()");
+      logger.exiting(_CLASS, "UserRule()");
+   }
+   
+   /**
+    * Apply the validation rule against the specified {@code User} object.
+    */
+   @Override
+   public abstract void apply(User target);
 }

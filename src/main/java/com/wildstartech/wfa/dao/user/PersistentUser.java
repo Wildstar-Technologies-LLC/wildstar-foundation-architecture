@@ -60,6 +60,19 @@ extends WildObject, User {
 	 */
 	public static final String RESOURCE_BUNDLE_KEY=
 		"com.wildstartech.wfa.dao.resources.User";
+	
+	/**
+	 * Update this persistent class using information from the specified,
+	 * non-persistent object.
+	 * 
+	 * @param source The reference object whose data should be used to 
+	 * update the current object.
+	 * 
+	 * @see CRM00176 
+    * @author Derek Berube, Wildstar Technologies, LLC.
+	 */
+	public void updateFromObject(User source);
+	
 	//********** federatedId
 	/**
 	 * Returns an indicator as to whether the account is federated.

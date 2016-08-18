@@ -42,33 +42,43 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.user;
 
-import java.util.Date;
+import java.util.logging.Logger;
 
-import com.wildstartech.wfa.identifiable.Identifiable;
-
-public interface WildObject extends Identifiable<String> {
-	/**
-	 * Returns the date/time the <code>WildObject</code> was created.
-	 * @return
-	 */
-	public Date getDateCreated();
-	/**
-	 * Returns the date/time the <code>WildObject</code> was modified.
-	 * @return
-	 */
-	public Date getDateModified(); 
-	/**
-	 * Returns the name of the <code>User</code> who initially created the object.
-	 */
-	public String getCreatedBy();
-	/**
-	 * Returns the name of the <code>User</code> who last modified the object.
-	 */
-	public String getModifiedBy();
-	/**
-	 * Returns the unique identifier for the <code>WildObject</code>.
-	 */
-	public String getIdentifier();
+import com.wildstartech.wfa.rules.RuleException;
+import com.wildstartech.wfa.rules.RuleException.Level;
+import com.wildstartech.wfa.user.User;
+import com.wildstartech.wfa.user.UserRule;
+/**
+ * Checks to make sure the value specified for the {@code name}
+ * property is not null.
+ * 
+ * @author Derek Berube, Wildstar Technologies, LLC.
+ * @version 0.1, 2016-08-15
+ *
+ */
+public class UserNameNotBlankRule extends UserRule {
+   private static final String _CLASS=UserNameNotBlankRule.class.getName();
+   private static final Logger logger=Logger.getLogger(_CLASS);
+   
+   @Override
+   public void apply(User user) {
+      logger.entering(_CLASS, "apply(User)",user);
+      String name=null;
+      String msg="";
+      
+      if (user != null) {
+         name=user.getName();
+         if ((name == null) || (name.length() == 0)) {
+            msg="The name property of the User object is blank.";
+            throw new RuleException(Level.ERROR,"name",msg);
+         } // END if ((name == null) || (name.length() == 0))          
+      } else {
+         msg="The parameter passed to the rule is null.";
+         logger.warning(msg);
+         throw new RuleException(Level.ERROR,"name",msg);
+      } // END if (user != null
+      logger.exiting(_CLASS, "apply(User)");
+   }
 }
