@@ -44,62 +44,59 @@
  */
 package com.wildstartech.wfa.dao;
 
-import java.util.Date;
+import java.util.ListResourceBundle;
 
-import com.wildstartech.wfa.identifiable.Identifiable;
-
-public interface WildObject extends Identifiable<String> {
-   public String RESOURCE_BUNDLE="com.wildstartech.wfa.dao.WildObjectResources";
+/**
+ * A {@code ResourceBundle} containing message templates for use by 
+ * implementations of the {@code WildDAO} interface.
+ * 
+ * @author Derek Berube, Wildstar Technologies, LLC.
+ * @version 0.1, 2016-09-08
+ *
+ */
+public class WildDAOResources extends ListResourceBundle {
+   public static final String MSGKEY_ADMIN_PWD_NULL="MSGKEY_ADMIN_PWD_NULL";
+   public static final String MSGKEY_DELETE_FAIL_NOT_SAVED=
+         "MSGKEY_DELETE_FAIL_NOT_SAVED";
+   public static final String MSGKEY_NOT_AUTHENTICATED=
+         "MSGKEY_NOT_AUTHENTICATED";
+   public static final String MSGKEY_NOT_FOUND="MSGKEY_NOT_FOUND";
+   public static final String MSGKEY_PARAM_DELETE_NULL=
+         "MSGKEY_PARAM_DELETE_NULL";
+   public static final String MSGKEY_PARAM_NULL="MSGKEY_PARAM_NULL";
+   public static final String MSGKEY_PROPERTIES_NOT_FOUND=
+         "MSGKEY_PROPERTIES_NOT_FOUND";
+   public static final String MSGKEY_PROPERTIES_ERROR_READING=
+         "MSGKEY_PROPERTIES_ERROR_READING";
    
-   /**
-    * Returns the name of the <code>User</code> who initially created the object.
-    */
-   public String getCreatedBy();
-   
-   /**
-	 * Returns the date/time the <code>WildObject</code> was created.
-	 * @return
-	 */
-	public Date getDateCreated();
-	/**
-	 * Returns the date/time the <code>WildObject</code> was modified.
-	 * @return
-	 */
-   public Date getDateModified(); 
-	
-   /**
-    * Returns the unique identifier for the <code>WildObject</code>.
-    */
-   public String getIdentifier();
-   
-   /**
-    * Returns a localized message formatted with the values passed to the
-    * method in the {@code Object} array passed as a parameter.
-    * 
-    * <p>Implementations of this message should try to resolve the message
-    * with the specified {@code resourceId}.  If they cannot, then they 
-    * should delegate to their super class.</p>
-    * 
-    * @param resourceId An identifier which is used to identify the 
-    * appropriate message template in the {@code ResourceBundle}.
-    * 
-    * @param params An array of {@code Object} instances that should be 
-    * substituted into variables in the specified message template.
-    * @return
-    */
-   public String getLocalizedMessage(String resourceId, Object[] params);
-   
-   /**
-	 * Returns the name of the <code>User</code> who last modified the object.
-	 */
-	public String getModifiedBy();
-	
-	/**
-	 * Returns the {@code baseName} for the {@code ResourceBundle} that should
-	 * be used when localizing messages. 
-	 * @return A string value that will be used by the 
-	 * {@code getLocalizedMessage} method to return the requested localized
-	 * resource.
-	 */
-	public String getResourceBundleBaseName();
+   @Override
+   protected Object[][] getContents() {
+      return new Object[][] {
+         // BEGIN: LOCALIZE the second string in each array.
+         {MSGKEY_ADMIN_PWD_NULL,
+          "Admin Password not specified. Using default"
+         },
+         {MSGKEY_DELETE_FAIL_NOT_SAVED,
+          "No key, so object hasn't been saved."            
+         },
+         {MSGKEY_NOT_AUTHENTICATED,
+          "The specified UserContext, \"{0}\", is not authenticated."
+         },
+         {MSGKEY_NOT_FOUND, 
+          "Unable to find the entity for the specified key - \"{0}\"."},
+         {MSGKEY_PARAM_DELETE_NULL,
+          "The alleged object to be deleted is null."             
+         },
+         {MSGKEY_PARAM_NULL,
+          "The {0} parameter was null."
+         },
+         {MSGKEY_PROPERTIES_NOT_FOUND,
+          "Unable to find the properties file."
+         },
+         {MSGKEY_PROPERTIES_ERROR_READING,
+          "Error loading properties file."
+         }
+         // END: LOCALIZE
+      };
+   }
 }

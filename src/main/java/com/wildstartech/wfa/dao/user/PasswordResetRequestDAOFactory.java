@@ -42,64 +42,15 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.user;
 
-import java.util.Date;
+import com.wildstartech.wfa.dao.WildDAOFactory;
+import com.wildstartech.wfa.user.PasswordResetRequest;
 
-import com.wildstartech.wfa.identifiable.Identifiable;
+public class PasswordResetRequestDAOFactory
+extends WildDAOFactory<
+   PasswordResetRequestDAO, 
+   PasswordResetRequest, 
+   PersistentPasswordResetRequest> {
 
-public interface WildObject extends Identifiable<String> {
-   public String RESOURCE_BUNDLE="com.wildstartech.wfa.dao.WildObjectResources";
-   
-   /**
-    * Returns the name of the <code>User</code> who initially created the object.
-    */
-   public String getCreatedBy();
-   
-   /**
-	 * Returns the date/time the <code>WildObject</code> was created.
-	 * @return
-	 */
-	public Date getDateCreated();
-	/**
-	 * Returns the date/time the <code>WildObject</code> was modified.
-	 * @return
-	 */
-   public Date getDateModified(); 
-	
-   /**
-    * Returns the unique identifier for the <code>WildObject</code>.
-    */
-   public String getIdentifier();
-   
-   /**
-    * Returns a localized message formatted with the values passed to the
-    * method in the {@code Object} array passed as a parameter.
-    * 
-    * <p>Implementations of this message should try to resolve the message
-    * with the specified {@code resourceId}.  If they cannot, then they 
-    * should delegate to their super class.</p>
-    * 
-    * @param resourceId An identifier which is used to identify the 
-    * appropriate message template in the {@code ResourceBundle}.
-    * 
-    * @param params An array of {@code Object} instances that should be 
-    * substituted into variables in the specified message template.
-    * @return
-    */
-   public String getLocalizedMessage(String resourceId, Object[] params);
-   
-   /**
-	 * Returns the name of the <code>User</code> who last modified the object.
-	 */
-	public String getModifiedBy();
-	
-	/**
-	 * Returns the {@code baseName} for the {@code ResourceBundle} that should
-	 * be used when localizing messages. 
-	 * @return A string value that will be used by the 
-	 * {@code getLocalizedMessage} method to return the requested localized
-	 * resource.
-	 */
-	public String getResourceBundleBaseName();
 }

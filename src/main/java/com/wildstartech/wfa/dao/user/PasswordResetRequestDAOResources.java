@@ -42,64 +42,44 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao;
+package com.wildstartech.wfa.dao.user;
 
-import java.util.Date;
+import java.util.ListResourceBundle;
 
-import com.wildstartech.wfa.identifiable.Identifiable;
-
-public interface WildObject extends Identifiable<String> {
-   public String RESOURCE_BUNDLE="com.wildstartech.wfa.dao.WildObjectResources";
+/**
+ * A {@code ResourceBundle} containing templates for messages that are to
+ * be displayed by the {@code PasswordResetRequestDAO}.
+ * 
+ * @author Derek Berube, Wildstar Technologies, LLC.
+ * @version 0.1, 2016-09-08
+ *
+ */
+public class PasswordResetRequestDAOResources extends ListResourceBundle {
+   public static final String MSGKEY_ONLY_ONE_ALLOWED=
+         "MSGKEY_ONLY_ONE_ALLOWED";
+   public static final String MSGKEY_REQUEST_NOT_FOUND=
+         "MSGKEY_REQUEST_NOT_FOUND";
+   public static final String MSGKEY_FINDBYDATE_REQUIREDATE=
+         "MSGKEY_STARTDATE_REQUIRED";
+   public static final String MSGKEY_FINDBYDATE_PASTENDDATE=
+         "MSGKEY_FINDBYDATE_PASTENDDATE";
    
-   /**
-    * Returns the name of the <code>User</code> who initially created the object.
-    */
-   public String getCreatedBy();
-   
-   /**
-	 * Returns the date/time the <code>WildObject</code> was created.
-	 * @return
-	 */
-	public Date getDateCreated();
-	/**
-	 * Returns the date/time the <code>WildObject</code> was modified.
-	 * @return
-	 */
-   public Date getDateModified(); 
-	
-   /**
-    * Returns the unique identifier for the <code>WildObject</code>.
-    */
-   public String getIdentifier();
-   
-   /**
-    * Returns a localized message formatted with the values passed to the
-    * method in the {@code Object} array passed as a parameter.
-    * 
-    * <p>Implementations of this message should try to resolve the message
-    * with the specified {@code resourceId}.  If they cannot, then they 
-    * should delegate to their super class.</p>
-    * 
-    * @param resourceId An identifier which is used to identify the 
-    * appropriate message template in the {@code ResourceBundle}.
-    * 
-    * @param params An array of {@code Object} instances that should be 
-    * substituted into variables in the specified message template.
-    * @return
-    */
-   public String getLocalizedMessage(String resourceId, Object[] params);
-   
-   /**
-	 * Returns the name of the <code>User</code> who last modified the object.
-	 */
-	public String getModifiedBy();
-	
-	/**
-	 * Returns the {@code baseName} for the {@code ResourceBundle} that should
-	 * be used when localizing messages. 
-	 * @return A string value that will be used by the 
-	 * {@code getLocalizedMessage} method to return the requested localized
-	 * resource.
-	 */
-	public String getResourceBundleBaseName();
+   @Override
+   protected Object[][] getContents() {
+      return new Object[][] {
+         // BEGIN: LOCALIZE the second string in each array.
+         {MSGKEY_ONLY_ONE_ALLOWED,
+         "There can be only one instance of a PasswordResetRequest object in the persistent data store."},
+         {MSGKEY_REQUEST_NOT_FOUND,
+         "A PasswordResetRequest for the \"{0}\" user could not be found."
+         },
+         {MSGKEY_FINDBYDATE_REQUIREDATE,
+          "In order to search for PasswordResetRequest instances, you must specify either a value for the startDate or stopData parameters."         
+         },
+         {MSGKEY_FINDBYDATE_PASTENDDATE,
+          "To search for an end date that is in the past, you must specify values for both the startDate and endDate parameters."
+         }
+         // END: LOCALIZE
+      };
+   }
 }

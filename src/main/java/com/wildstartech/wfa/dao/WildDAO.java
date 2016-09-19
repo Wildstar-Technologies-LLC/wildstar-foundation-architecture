@@ -62,31 +62,38 @@ import com.wildstartech.wfa.dao.user.UserContext;
  *          interface.
  */
 public interface WildDAO<T, W extends WildObject> {
+   /**
+    * The base name of the {@code ResouceBundle} which contains message
+    * templates that are to be formatted. 
+    */
+   public String RESOURCE_BUNDLE=
+         "com.wildstartech.wfa.dao.WildDAOResources";
+   public final String MSGKEY_NOT_FOUND="NOT_FOUND";
   /**
    * Property entry for the password of the administrative user's password.
    */
-  public static final String PROPKEY_ADMIN_PASSWORD = 
+  public final String PROPKEY_ADMIN_PASSWORD = 
       "com.wildstartech.wfa.dao.adminPassword";
   /**
    * Property entry to identify the administrative user.
    */
-  public static final String PROPKEY_ADMIN_USER = 
+  public final String PROPKEY_ADMIN_USER = 
       "com.wildstartech.wfa.dao.adminUser";
   /**
    * Property entry to identify the default page size for retrieving objects.
    */
-  public static final String PROPKEY_PAGE_SIZE=
+  public final String PROPKEY_PAGE_SIZE=
       "com.wildstartech.wfa.dao.pageSize";
   /**
    * Property entry to identify the default sort criteria to be used when 
    * retrieving objects.
    */
-  public static final String PROPKEY_SORT_CRITERIA=
+  public final String PROPKEY_SORT_CRITERIA=
       "com.wildstartech.wfa.dao.sortCriteria";
   /**
    * The name of the WFA DAO Properties file.
    */
-  public static final String PROPKEY_CONFIG = 
+  public final String PROPKEY_CONFIG = 
       "com.wildstartech.wfa.dao.propfile";
 
   /**
@@ -180,6 +187,32 @@ public interface WildDAO<T, W extends WildObject> {
    */
   public W findInstance(T object, UserContext ctx) throws DAOException;
 
+  /**
+   * Returns a localized message formatted with the values passed to the
+   * method in the {@code Object} array passed as a parameter.
+   * 
+   * <p>Implementations of this message should try to resolve the message
+   * with the specified {@code resourceId}.  If they cannot, then they 
+   * should delegate to their super class.</p>
+   * 
+   * @param resourceId An identifier which is used to identify the 
+   * appropriate message template in the {@code ResourceBundle}.
+   * 
+   * @param params An array of {@code Object} instances that should be 
+   * substituted into variables in the specified message template.
+   * @return
+   */
+  public String getLocalizedMessage(String resourceId, Object[] params);
+  
+  /**
+   * Returns the {@code baseName} for the {@code ResourceBundle} that should
+   * be used when localizing messages. 
+   * @return A string value that will be used by the 
+   * {@code getLocalizedMessage} method to return the requested localized
+   * resource.
+   */
+  public String getResourceBundleBaseName();
+  
   /**
    * Return the current number of the page used to retrieve data.
    */
