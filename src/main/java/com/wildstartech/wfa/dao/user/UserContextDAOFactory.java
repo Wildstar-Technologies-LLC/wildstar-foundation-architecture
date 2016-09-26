@@ -115,7 +115,7 @@ extends WildDAOFactory<UserContextDAO,UserContext, UserContext> {
          msg="Authentication failed.";
          logger.severe(msg);
          ctx=null;
-         throw new AuthenticationException("Authentication failed.");
+         throw new AuthenticationException(name);
        }
      } else {
        msg="The username was null or blank.";
