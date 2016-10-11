@@ -44,66 +44,33 @@
  */
 package com.wildstartech.wfa.dao;
 
-import java.util.List;
-
 /**
  * For the time being, this is a marker interface.
- * 
  * @author Derek Berube, Wildstar Technologies, LLC.
- * @version 0.1, 2016-10-11
+ * @version 0.1, 2016-10-03
  */
-public interface Query  {
+public interface Filter {
+   public static enum FilterOperator {
+      LESS, 
+      LESS_OR_EQUAL, 
+      EQUAL, 
+      GREATER_OR_EQUAL, 
+      GREATER};
+      
    /**
-    * Adds a filter that should be applied when performing the query.
+    * The {@code FilterOperator} that should be used when filtering the
+    * specified property.
     * 
-    * @param filter The {@code Filter} object that should be added to the list
-    * of {@code Filter} objects that are applied when executing the 
-    * {@code Query}.
-    * 
-    * @return {@code true} is returned if the specified {@code Filter} was
-    * added to the list of {@code Filter} objects associated with the
-    * {@code Query}.  {@code false} is returned if the specified {@code Filter}
-    * was NOT added.
+    * @return The {@code FilterOperator} that should be used when applying
+    * the {@code Filter} that looks for the {@code propertyValue} in the
+    * specified {@code propertyName}.
     */
-   public boolean addFilter(Filter filter);
-   
+   public FilterOperator getFilterOperator();
    /**
-    * Adds the specified list of filters to the query.
-    * @param filters The list of {@code Filter} objects that should be 
-    * applied when the query is executed.
-    * @return The {@code Filter} objects that were added to the list
-    * of {@code Filter} objects associated with the {@code Query}.
+    * Stores the {@code FilterOperator} that should be used when applying
+    * the {@code Filter} against the query.
+    * @param operator The {@code FilterOperator} that should be used when 
+    * processing the results of the query.
     */
-   public List<Filter> addFilters(List<Filter> filters);
-   
-   /**
-    * Removes all {@code} Filter objects associated with the query.   
-    */
-   public void clearFilters();
-   
-   /**
-    * Returns the list of filters that have been associated with the query.
-    * @return Either an empty {@code List} of {@code Filter} objects or
-    * a {@code List} of {@code Filter} objects that are supposed to be
-    * applied to the query.
-    */
-   public List<Filter> getFilters();
-   
-   /**
-    * Removes the specified {@code Filter} object from the list of filters
-    * associated with the Query.
-    * 
-    * @return {@code true} is returned if the specified {@code Filter} was
-    * removed from the list of {@code Filter} objects associated with the
-    * {@code Query}.  {@code false} is returned if the specified {@code Filter}
-    * was NOT removed.
-    */
-   public boolean removeFilter(Filter filter);
-   
-   /**
-    * Removes the specified {@code Filter} objects from the list of filters
-    * associated with the query.
-    * @return The list
-    */
-   public List<Filter> removeFilters(List<Filter> filters);
+   public void setFilterOperator(FilterOperator operator);
 }
