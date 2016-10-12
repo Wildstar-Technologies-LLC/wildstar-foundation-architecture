@@ -44,24 +44,27 @@
  */
 package com.wildstartech.wfa.dao;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
-public class PropertyFilter<T> implements Filter {
-   private static final String _CLASS=PropertyFilter.class.getName();
+public class CompoundFilter implements Filter {  
+   private static final String _CLASS=CompoundFilter.class.getName();
    private static final Logger logger=Logger.getLogger(_CLASS);
    
-   public static enum FilterOperator {
-      LESS, 
-      LESS_OR_EQUAL, 
-      EQUAL, 
-      GREATER_OR_EQUAL, 
-      GREATER 
-      };
-      
+   public static enum FilterOperator {AND,OR};
+   
    private FilterOperator filterOperator=null;
-   private String propertyName="";
-   private T propertyValue=null;
-      
+   private List<Filter> filters=null;
+   
+   /**
+    * Default, no-argument constructor.
+    */
+   public CompoundFilter() {
+      logger.entering(_CLASS, "CompoundFilter()");
+      logger.exiting(_CLASS, "CompoundFilter()");
+   }
+   
    /**
     * The {@code FilterOperator} that should be used when filtering the
     * specified property.
@@ -89,51 +92,65 @@ public class PropertyFilter<T> implements Filter {
    }
    
    /**
-    * Returns the name of the property.
-    * @return
-    */
-   public String getPropertyName() {
-      logger.entering(_CLASS, "getPropertyName()");
-      logger.exiting(_CLASS, "getPropertyName()",this.propertyName);
-      return this.propertyName;
-   }
-   /**
-    * Stores the name of the property to which the filter should be applied
-    * when executing the query.
+    * Returns a list of the filters that are a part of the
+    * {@code CompoundFilter}.
     * 
-    * @param propertyName The name of the property against which the specified
-    * filter should be applied.
     */
-   public void setPropertyName(String propertyName) {
-      logger.entering(_CLASS, "setPropertyName(String)",propertyName);
-      if (propertyName == null) {
-         this.propertyName="";
-      } else {
-         this.propertyName=propertyName;
-      } // END if (propertyName == null)
-      logger.exiting(_CLASS, "setPropertyName(String)");
+   public List<Filter> getFilters() {
+      logger.entering(_CLASS, "getFilters()");
+      logger.exiting(_CLASS, "getFilters()",this.filters);
+      return this.filters;
    }
    
-   //*****
    /**
-    * Returns the value of the property which should be used in filtering. 
+    * Adds the specified list of {@code Filter} objects that are part 
+    * of the {@code CompoundFilter}.
     * 
-    * @return The value for the property that should be filtered.
+    * @param Variable list of {@code Filter} objects that are to be 
+    * considered part of the {@code CompoundFilter}.
     */
-   public T getPropertyValue() {
-      logger.entering(_CLASS, "getPropertyValue()");
-      logger.exiting(_CLASS, "getPropertyValue()",this.propertyValue);
-      return this.propertyValue;
+   public void addFilters(Filter... filters) {
+      logger.entering(_CLASS, "addFilters(Filter...)",filters);
+      if (filters != null) {
+         if (this.filters == null) {
+            this.filters=new ArrayList<Filter>();
+         } // END if (this.filters == null)
+         for (Filter filter: filters) {
+            this.filters.add(filter);
+         } // END for (Filter filter: filters)
+      } // END if (filters != null)
+      logger.exiting(_CLASS, "addFilters(Filter...)");
    }
+   
    /**
-    * Stores the value that should be used when filtering query results.
+    * Removes the specified {@code Filter} object(s) from the list of
+    * {@code Filter} objects associated with the {@code CompoundFilter}.
     * 
-    * @param propertyValue The value that should be used when filtering 
-    * query results.
+    * @param filters The array of {@code Filter} objects to be removed from
+    * the list of filters associated with the {@code CompoundFilter}.
+    * @return The list of {@code Filter} objects that were removed from the 
+    * {@code CompoundFilter}
     */
-   public void setPropertyValue(T propertyValue) {
-      logger.entering(_CLASS, "setPropertyValue(T)",propertyValue);
-      this.propertyValue=propertyValue;
-      logger.exiting(_CLASS, "setPropertyValue(T)");
+   public List<Filter> removeFilters(Filter...filters) {
+      logger.entering(_CLASS, "removeFilters(Filter...)",filters);
+      boolean removed=false;
+      List<Filter> removedFilters=null;
+      
+      removedFilters=new ArrayList<Filter>();
+      if (
+            (filters != null) && 
+            (this.filters != null) &&
+            (this.filters.size() > 0)
+         ) {
+         for (Filter filter: filters) {
+            removed=this.filters.remove(filter);
+            if (removed) {
+               removedFilters.add(filter);
+            } // END if (removed)
+         } // END for (Filter filter: filters)
+      } // END if ((filters != null) && (this.filters != null) && ...
+      
+      logger.exiting(_CLASS, "removeFilters(Filter...)",removedFilters);
+      return removedFilters;
    }
 }

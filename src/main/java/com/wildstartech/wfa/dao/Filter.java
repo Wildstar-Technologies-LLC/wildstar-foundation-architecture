@@ -50,27 +50,5 @@ package com.wildstartech.wfa.dao;
  * @version 0.1, 2016-10-03
  */
 public interface Filter {
-   public static enum FilterOperator {
-      LESS, 
-      LESS_OR_EQUAL, 
-      EQUAL, 
-      GREATER_OR_EQUAL, 
-      GREATER};
-      
-   /**
-    * The {@code FilterOperator} that should be used when filtering the
-    * specified property.
-    * 
-    * @return The {@code FilterOperator} that should be used when applying
-    * the {@code Filter} that looks for the {@code propertyValue} in the
-    * specified {@code propertyName}.
-    */
-   public FilterOperator getFilterOperator();
-   /**
-    * Stores the {@code FilterOperator} that should be used when applying
-    * the {@code Filter} against the query.
-    * @param operator The {@code FilterOperator} that should be used when 
-    * processing the results of the query.
-    */
-   public void setFilterOperator(FilterOperator operator);
+   
 }

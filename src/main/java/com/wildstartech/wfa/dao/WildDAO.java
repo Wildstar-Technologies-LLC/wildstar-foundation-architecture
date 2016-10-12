@@ -114,6 +114,12 @@ public interface WildDAO<T, W extends WildObject> {
   public W create(T object, UserContext ctx);
 
   /**
+   * Create an instance of the {@code Query} object to be used to filter
+   * results when searching the persistent data store.
+   */
+  public Query createQuery();
+  
+  /**
    * Removes the specified <code>object</code> from the data store.
    */
   public W delete(T object, UserContext ctx) throws DAOException;

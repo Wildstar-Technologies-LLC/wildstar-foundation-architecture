@@ -80,7 +80,7 @@ public interface Query  {
     * Removes all {@code} Filter objects associated with the query.   
     */
    public void clearFilters();
-   
+    
    /**
     * Returns the list of filters that have been associated with the query.
     * @return Either an empty {@code List} of {@code Filter} objects or
