@@ -52,6 +52,7 @@ import com.wildstartech.wfa.ticketing.BasicTicket;
 
 public interface WorkOrder extends BasicTicket, Journalizable {
    public enum AdjustmentType { FixedAmount, Percentage };
+   public enum Type {Delivery, Pickup};
    
    //***** accessorialCharges
    public double getAccessorialTotal();
@@ -331,9 +332,14 @@ public interface WorkOrder extends BasicTicket, Journalizable {
    //***** totalWeight
    public int getTotalWeight();
    
+   //***** type
+   public Type getType();
+   public void setType(Type type);
+   
    //***** unpacking
    public boolean isUnpackagingRequired();
    public void setUnpackagingRequired(boolean unpackaging);
+   
    //***** valuation
    public double getValuation();
    public void setValuation(double amount);
