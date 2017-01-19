@@ -67,4 +67,11 @@ extends BasicTicketDAO<WorkOrder, PersistentWorkOrder> {
          String workOrderId, 
          UserContext ctx)
    throws DAOException;
+   
+   public List<PersistentWorkOrder> findByTypeAndStatus(
+         String type,
+         String statusState,
+         String statusReason, 
+         UserContext ctx)
+   throws DAOException;
 }
