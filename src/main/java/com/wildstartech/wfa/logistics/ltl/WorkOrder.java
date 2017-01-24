@@ -44,6 +44,7 @@
  */
 package com.wildstartech.wfa.logistics.ltl;
 
+import java.util.Date;
 import java.util.List;
 
 import com.wildstartech.wfa.journal.Journalizable;
@@ -318,14 +319,21 @@ public interface WorkOrder extends BasicTicket, Journalizable {
    public String getReferralOther();
    public void setReferralOther(String other);
    
-   //***** stairCarry
-   public boolean isStairCarry();
-   public void setStairCarry(boolean value);
+   //***** scheduledDeliveryDate
+   public Date getScheduledDeliveryDate();
+   public void setScheduledDeliveryDate(Date scheduledDeliveryDate);
    
+   //***** scheduledPickupDate
+   public Date getScheduledPickupDate();
+   public void setScheduledPickupDate(Date scheduledPickupDate);
    //***** serviceLevel
    public String getServiceLevel();
    public void setServiceLevel(String serviceLevel);
 
+   //***** stairCarry
+   public boolean isStairCarry();
+   public void setStairCarry(boolean value);
+   
    //***** totalCubes
    public int getTotalCubes();
    
