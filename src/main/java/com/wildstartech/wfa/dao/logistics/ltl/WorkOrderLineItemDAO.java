@@ -48,7 +48,7 @@ import java.util.List;
 
 import com.wildstartech.wfa.dao.WildDAO;
 import com.wildstartech.wfa.dao.user.UserContext;
-import com.wildstartech.wfa.logistics.ltl.WorkOrderLineItem;
+import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrderLineItem;
 
 public interface WorkOrderLineItemDAO 
 extends WildDAO<WorkOrderLineItem, PersistentWorkOrderLineItem>{

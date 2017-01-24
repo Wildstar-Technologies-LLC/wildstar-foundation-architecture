@@ -52,7 +52,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.wildstartech.wfa.logistics.ltl.Quote;
-import com.wildstartech.wfa.logistics.ltl.WorkOrder;
+import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrder;
 
 /**
  *  

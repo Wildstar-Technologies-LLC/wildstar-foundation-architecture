@@ -42,13 +42,29 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.workorder;
 
-public interface WorkOrderLineItem extends EditableCommodityLineItem {
-    //********** price
-    public float getPrice();
-    public void setPrice(float price);
-    
-    //********** totalPrice
-    public float getTotalPrice();
+import java.util.ListResourceBundle;
+
+public class WorkOrderResources extends ListResourceBundle {
+   public Object[][] getContents() {
+      return new Object[][] {
+         // BEGIN TEXT LOCALIZATION
+         {"AssignedToGroupNameTooLongException",
+         "The specifie value, \"{1}\", exceeds the maximum allowable length for the 'Assigned To Group' field ({2} characters)."},
+         {"AssignedToIndividualNameTooLongException",
+         "The specifie value, \"{1}\", exceeds the maximum allowable length for the 'Assigned To Individual' field ({2} characters)."},
+         {"BillingReferenceIdTooLongException",
+         "The specified value, \"{1}\", exceeds the maximum allowable length of a billing reference identifier ({2} characters)."},
+         {"ChargeDescriptionTooLongException",
+         "The specified charge description, {1}, exceeds the maximum allowable length of {2} characters."},
+         {"CustomerOrderIdTooLongException",
+         "The specified value, \"{1}\", exceeds the maximum allowable length of a customer's order identifier ({2} characters)."},
+         {"InvalidDimensionException",
+         "The specified value, \"{1}\", is not a valid value for the {2} dimension."},
+         {"WorkOrderIdTooLongException",
+         "The specified value, \"{1}\", exceeds the maximum allowable length of a work order identifier ({2} characters)."}
+         // END TEXT LOCALIZATION
+      };
+   }
 }

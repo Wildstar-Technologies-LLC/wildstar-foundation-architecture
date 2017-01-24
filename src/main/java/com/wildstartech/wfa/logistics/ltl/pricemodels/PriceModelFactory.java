@@ -54,7 +54,7 @@ import java.util.logging.Logger;
 import com.wildstartech.wfa.logistics.ltl.QuickQuote;
 import com.wildstartech.wfa.logistics.ltl.Quote;
 import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
-import com.wildstartech.wfa.logistics.ltl.WorkOrder;
+import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrder;
 
 /**
  * Provides a mechanism to obtain an instance of a PriceModel.

@@ -45,8 +45,8 @@
 package com.wildstartech.wfa.logistics.ltl.pricemodels.weightZone;
 
 import com.wildstartech.wfa.logistics.ltl.Quote;
-import com.wildstartech.wfa.logistics.ltl.WorkOrder;
 import com.wildstartech.wfa.logistics.ltl.pricemodels.PriceModel;
+import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrder;
 
 public interface WeightZonePriceModel extends PriceModel {
    // ***** beyondCharge

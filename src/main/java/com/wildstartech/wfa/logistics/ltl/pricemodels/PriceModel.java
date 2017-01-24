@@ -47,7 +47,7 @@ package com.wildstartech.wfa.logistics.ltl.pricemodels;
 import com.wildstartech.wfa.logistics.ltl.QuickQuote;
 import com.wildstartech.wfa.logistics.ltl.Quote;
 import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
-import com.wildstartech.wfa.logistics.ltl.WorkOrder;
+import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrder;
 
 /**
  * Pricing model for use in determining shipping rates.

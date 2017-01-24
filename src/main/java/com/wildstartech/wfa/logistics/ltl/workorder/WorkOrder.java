@@ -42,12 +42,13 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.workorder;
 
 import java.util.Date;
 import java.util.List;
 
 import com.wildstartech.wfa.journal.Journalizable;
+import com.wildstartech.wfa.logistics.ltl.AccessorialCharge;
 import com.wildstartech.wfa.logistics.ltl.pricemodels.PriceModel;
 import com.wildstartech.wfa.ticketing.BasicTicket;
 

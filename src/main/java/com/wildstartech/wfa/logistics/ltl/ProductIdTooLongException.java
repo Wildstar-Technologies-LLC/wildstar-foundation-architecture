@@ -45,6 +45,7 @@
 package com.wildstartech.wfa.logistics.ltl;
 
 import com.wildstartech.wfa.WFAException;
+import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrderResources;
 
 public class ProductIdTooLongException extends WFAException {
     /**

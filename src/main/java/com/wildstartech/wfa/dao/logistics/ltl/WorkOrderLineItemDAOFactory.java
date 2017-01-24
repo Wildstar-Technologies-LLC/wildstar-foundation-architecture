@@ -45,7 +45,7 @@
 package com.wildstartech.wfa.dao.logistics.ltl;
 
 import com.wildstartech.wfa.dao.WildDAOFactory;
-import com.wildstartech.wfa.logistics.ltl.WorkOrderLineItem;
+import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrderLineItem;
 
 public class WorkOrderLineItemDAOFactory 
 extends WildDAOFactory<WorkOrderLineItemDAO, 
