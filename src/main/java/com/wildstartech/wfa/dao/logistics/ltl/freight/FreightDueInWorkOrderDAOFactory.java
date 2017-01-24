@@ -42,10 +42,10 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.freight;
 
 import com.wildstartech.wfa.dao.WildDAOFactory;
-import com.wildstartech.wfa.logistics.ltl.FreightDueInWorkOrder;
+import com.wildstartech.wfa.logistics.ltl.freight.FreightDueInWorkOrder;
 
 /**
  * Used to obtain a DAO that can save a<code>FreightDueInWorkOrder</code>.

@@ -42,26 +42,12 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.freight;
 
-import java.util.List;
+import com.wildstartech.wfa.dao.ticketing.BasicTicketDAO;
+import com.wildstartech.wfa.logistics.ltl.freight.FreightDueInWorkOrder;
 
-import com.wildstartech.wfa.dao.WildDAO;
-import com.wildstartech.wfa.dao.user.UserContext;
-import com.wildstartech.wfa.logistics.ltl.FreightDueInWorkOrderLineItem;
+public interface FreightDueInWorkOrderDAO 
+extends BasicTicketDAO<FreightDueInWorkOrder, PersistentFreightDueInWorkOrder> {
 
-public interface FreightDueInWorkOrderLineItemDAO 
-extends WildDAO<FreightDueInWorkOrderLineItem, 
-                PersistentFreightDueInWorkOrderLineItem> {
-
-   /**
-    * Returns a list of items belonging to the specified work order.
-    * @param id The unique identifier of the work order that should be used
-    * when looking for associated line items.
-    * @param ctx The UserContext that should be used when performing the search
-    * for the requested line items.
-    * @return
-    */
-   List<PersistentFreightDueInWorkOrderLineItem> findByWorkOrderId(
-         String id, UserContext ctx);
 }

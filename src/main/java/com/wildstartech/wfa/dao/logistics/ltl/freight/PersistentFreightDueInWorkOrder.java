@@ -42,14 +42,12 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.freight;
 
-import com.wildstartech.wfa.dao.WildDAOFactory;
-import com.wildstartech.wfa.logistics.ltl.FreightDueInWorkOrderLineItem;
+import com.wildstartech.wfa.dao.ticketing.PersistentBasicTicket;
+import com.wildstartech.wfa.logistics.ltl.freight.FreightDueInWorkOrder;
 
-public class FreightDueInWorkOrderLineItemDAOFactory
-extends WildDAOFactory<FreightDueInWorkOrderLineItemDAO,
-                       FreightDueInWorkOrderLineItem,
-                       PersistentFreightDueInWorkOrderLineItem> {
-
+public interface PersistentFreightDueInWorkOrder
+extends FreightDueInWorkOrder, PersistentBasicTicket<FreightDueInWorkOrder> {
+   public void updateFromObject(FreightDueInWorkOrder workOrder);
 }

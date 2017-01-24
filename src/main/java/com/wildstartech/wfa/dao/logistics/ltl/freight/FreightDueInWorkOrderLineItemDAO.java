@@ -42,10 +42,26 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.freight;
 
-public class FreightDueInWorkOrderLineItemComparator
-      extends LineItemComparator<FreightDueInWorkOrderLineItem> {
-   /** Used in object serialization. */
-   private static final long serialVersionUID = -9065974976192981762L;
+import java.util.List;
+
+import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.dao.user.UserContext;
+import com.wildstartech.wfa.logistics.ltl.freight.FreightDueInWorkOrderLineItem;
+
+public interface FreightDueInWorkOrderLineItemDAO 
+extends WildDAO<FreightDueInWorkOrderLineItem, 
+                PersistentFreightDueInWorkOrderLineItem> {
+
+   /**
+    * Returns a list of items belonging to the specified work order.
+    * @param id The unique identifier of the work order that should be used
+    * when looking for associated line items.
+    * @param ctx The UserContext that should be used when performing the search
+    * for the requested line items.
+    * @return
+    */
+   List<PersistentFreightDueInWorkOrderLineItem> findByWorkOrderId(
+         String id, UserContext ctx);
 }

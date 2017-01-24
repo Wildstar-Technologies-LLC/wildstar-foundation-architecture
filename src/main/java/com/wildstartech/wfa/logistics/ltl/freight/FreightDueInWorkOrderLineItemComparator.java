@@ -42,12 +42,12 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.freight;
 
-import com.wildstartech.wfa.dao.ticketing.PersistentBasicTicket;
-import com.wildstartech.wfa.logistics.ltl.FreightDueInWorkOrder;
+import com.wildstartech.wfa.logistics.ltl.LineItemComparator;
 
-public interface PersistentFreightDueInWorkOrder
-extends FreightDueInWorkOrder, PersistentBasicTicket<FreightDueInWorkOrder> {
-   public void updateFromObject(FreightDueInWorkOrder workOrder);
+public class FreightDueInWorkOrderLineItemComparator
+      extends LineItemComparator<FreightDueInWorkOrderLineItem> {
+   /** Used in object serialization. */
+   private static final long serialVersionUID = -9065974976192981762L;
 }

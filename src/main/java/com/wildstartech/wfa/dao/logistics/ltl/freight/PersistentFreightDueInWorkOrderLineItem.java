@@ -42,12 +42,11 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.freight;
 
-import com.wildstartech.wfa.dao.ticketing.BasicTicketDAO;
-import com.wildstartech.wfa.logistics.ltl.FreightDueInWorkOrder;
+import com.wildstartech.wfa.dao.logistics.ltl.PersistentEditableCommodityLineItem;
+import com.wildstartech.wfa.logistics.ltl.freight.FreightDueInWorkOrderLineItem;
 
-public interface FreightDueInWorkOrderDAO 
-extends BasicTicketDAO<FreightDueInWorkOrder, PersistentFreightDueInWorkOrder> {
-
+public interface PersistentFreightDueInWorkOrderLineItem
+extends PersistentEditableCommodityLineItem, FreightDueInWorkOrderLineItem {
 }

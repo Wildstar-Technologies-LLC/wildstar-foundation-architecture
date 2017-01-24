@@ -42,9 +42,14 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.freight;
 
-public interface FreightDueInWorkOrderLineItem extends EditableCommodityLineItem {
-   public String getWorkOrderIdentifier();
-   public void setWorkOrderIdentifier(String identifier);
+import com.wildstartech.wfa.dao.WildDAOFactory;
+import com.wildstartech.wfa.logistics.ltl.freight.FreightDueInWorkOrderLineItem;
+
+public class FreightDueInWorkOrderLineItemDAOFactory
+extends WildDAOFactory<FreightDueInWorkOrderLineItemDAO,
+                       FreightDueInWorkOrderLineItem,
+                       PersistentFreightDueInWorkOrderLineItem> {
+
 }
