@@ -326,6 +326,7 @@ public interface WorkOrder extends BasicTicket, Journalizable {
    //***** scheduledPickupDate
    public Date getScheduledPickupDate();
    public void setScheduledPickupDate(Date scheduledPickupDate);
+   
    //***** serviceLevel
    public String getServiceLevel();
    public void setServiceLevel(String serviceLevel);
