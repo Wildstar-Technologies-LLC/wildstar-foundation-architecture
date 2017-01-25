@@ -42,36 +42,12 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.workorder;
 
-import com.wildstartech.wfa.dao.*;
-import com.wildstartech.wfa.dao.ticketing.BasicTicketDAO;
-import com.wildstartech.wfa.dao.user.UserContext;
+import com.wildstartech.wfa.dao.WildDAOFactory;
 import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrder;
 
-import java.util.List;
+public class WorkOrderDAOFactory 
+extends WildDAOFactory<WorkOrderDAO, WorkOrder, PersistentWorkOrder> {
 
-public interface WorkOrderDAO
-extends BasicTicketDAO<WorkOrder, PersistentWorkOrder> {
-	
-	/**
-	 * Return a list of work orders matching the specified customer order id.
-	 */
-	public List<PersistentWorkOrder> findByCustomerOrderId(
-		String customerOrderId, UserContext ctx) throws DAOException;	
-	
-	/**
-    * Locate an instance of the <code>WorkOrder</code> by it's ID.
-    */
-   public PersistentWorkOrder findByWorkOrderId(
-         String workOrderId, 
-         UserContext ctx)
-   throws DAOException;
-   
-   public List<PersistentWorkOrder> findByTypeAndStatus(
-         String type,
-         String statusState,
-         String statusReason, 
-         UserContext ctx)
-   throws DAOException;
 }

@@ -42,21 +42,36 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.workorder;
 
-import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrderLineItem;
+import com.wildstartech.wfa.dao.*;
+import com.wildstartech.wfa.dao.ticketing.BasicTicketDAO;
+import com.wildstartech.wfa.dao.user.UserContext;
+import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrder;
 
-public interface PersistentWorkOrderLineItem 
-extends PersistentEditableCommodityLineItem, WorkOrderLineItem {
-  /**
-   * Returns the identifier of the work order with which the object is 
-   * associated.
-   * @return The unique identifier of the work order with which the line item is
-   * associated.
-   */
-  public String getWorkOrderIdentifier();
-  /**
-   * Sets the identifier of the work order with which the object is associated.
-   */
-  public void setWorkOrderIdentifier(String identifier);
+import java.util.List;
+
+public interface WorkOrderDAO
+extends BasicTicketDAO<WorkOrder, PersistentWorkOrder> {
+	
+	/**
+	 * Return a list of work orders matching the specified customer order id.
+	 */
+	public List<PersistentWorkOrder> findByCustomerOrderId(
+		String customerOrderId, UserContext ctx) throws DAOException;	
+	
+	/**
+    * Locate an instance of the <code>WorkOrder</code> by it's ID.
+    */
+   public PersistentWorkOrder findByWorkOrderId(
+         String workOrderId, 
+         UserContext ctx)
+   throws DAOException;
+   
+   public List<PersistentWorkOrder> findByTypeAndStatus(
+         String type,
+         String statusState,
+         String statusReason, 
+         UserContext ctx)
+   throws DAOException;
 }

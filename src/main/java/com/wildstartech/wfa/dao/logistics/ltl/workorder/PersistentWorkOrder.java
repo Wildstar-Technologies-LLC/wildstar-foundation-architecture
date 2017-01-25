@@ -42,7 +42,7 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.workorder;
 
 import com.wildstartech.wfa.dao.ticketing.PersistentBasicTicket;
 import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrder;

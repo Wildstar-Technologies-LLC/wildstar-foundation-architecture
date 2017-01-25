@@ -42,12 +42,22 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.workorder;
 
-import com.wildstartech.wfa.dao.WildDAOFactory;
-import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrder;
+import com.wildstartech.wfa.dao.logistics.ltl.PersistentEditableCommodityLineItem;
+import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrderLineItem;
 
-public class WorkOrderDAOFactory 
-extends WildDAOFactory<WorkOrderDAO, WorkOrder, PersistentWorkOrder> {
-
+public interface PersistentWorkOrderLineItem 
+extends PersistentEditableCommodityLineItem, WorkOrderLineItem {
+  /**
+   * Returns the identifier of the work order with which the object is 
+   * associated.
+   * @return The unique identifier of the work order with which the line item is
+   * associated.
+   */
+  public String getWorkOrderIdentifier();
+  /**
+   * Sets the identifier of the work order with which the object is associated.
+   */
+  public void setWorkOrderIdentifier(String identifier);
 }

@@ -42,25 +42,13 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.workorder;
 
-import java.util.List;
-
-import com.wildstartech.wfa.dao.WildDAO;
-import com.wildstartech.wfa.dao.user.UserContext;
+import com.wildstartech.wfa.dao.WildDAOFactory;
 import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrderLineItem;
 
-public interface WorkOrderLineItemDAO 
-extends WildDAO<WorkOrderLineItem, PersistentWorkOrderLineItem>{
-   /**
-    * Returns a list of <code>WorkOrderLineItem<code> instances that are
-    * associated with the specified <code>workOrderId</code>.
-    * @param workOrderId The unique identifier of the work order whose 
-    * <code>WorkOrderLineItem</code> objects you are interested in.
-    * @return A list of <code>WorkOrderLineItem</code> objects that are
-    * associated with the work order identified by the value passed via the 
-    * <code>workOrderId</code> parameter.
-    */
-   public List<WorkOrderLineItem> 
-      findByWorkOrderIdentifier(String workOrderId, UserContext ctx);
+public class WorkOrderLineItemDAOFactory 
+extends WildDAOFactory<WorkOrderLineItemDAO, 
+                       WorkOrderLineItem, 
+                       PersistentWorkOrderLineItem> {
 }
