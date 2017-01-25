@@ -1,4 +1,4 @@
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.quote;
 
 import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
 

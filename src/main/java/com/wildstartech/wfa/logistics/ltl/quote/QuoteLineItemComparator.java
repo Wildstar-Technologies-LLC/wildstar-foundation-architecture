@@ -42,58 +42,28 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.quote;
 
-import java.util.Date;
+import java.util.logging.Logger;
 
-import com.wildstartech.wfa.location.address.Address;
+import com.wildstartech.wfa.logistics.ltl.EditableCommodityLineItemComparator;
 
-public interface OriginalQuote {
-	public static enum DELIVERYTYPE {
-		WHITE_GLOVE, ROOM_OF_CHOICE, STANDARD, DOCK_TO_DOOR};	
-	
-	public Date getQuoteDate();
-	public void setQuoteDate(Date date);
-	
-	public String getCallerName();
-	public void setCallerName(String name);
-	
-	public String getContactName();
-	public void setContactName();
-	
-	public String getBusinessName();
-	public void setBUsinessName(String name);
+public class QuoteLineItemComparator
+extends EditableCommodityLineItemComparator<QuoteLineItem> {
+   /** Used in object serialization. */
+   private static final long serialVersionUID = -2204755672275229977L;
+   private static final String _CLASS=
+         QuoteLineItemComparator.class.getName();
+   private static final Logger logger=Logger.getLogger(_CLASS);
 
-	public Address getAddress();
-	public void setAddress(Address address);
-	
-	public DELIVERYTYPE getDeliveryType();
-	public void setDeliveryType(DELIVERYTYPE deliveryType);
-	
-	public Date getExpectedDeliveryDate();
-	public void setExpectedDeliveryDate(Date expectedDeliveryDate);
-
-	public boolean isResidence();
-	public void setResidence(boolean residence);
-	
-	public Address getDeliveryAddress();
-	public void setDeliveryAddress(Address address);
-	
-	public boolean isMoveToOtherRoomsSet();
-	public void setMoveToOtherRoomsSet(boolean move);
-	
-	public int getAssemblyHours();
-	public void setAssemblyHours(int assemblyHours);
-	
-	public int getAssemblyMinutes();
-	public void setAssemblyMinutes(int assemblyMinutes);
-	
-	public float getAssemblyHourlyRate();
-	public void setAssemblyHourlyRate(float hourlyRate);
-	
-	public float getInsuranceValue();
-	public void setInsuranceValue(float insuranceValue);
-	
-	public String getAccountRepresentativeName();
-	public void setAccountRepresentativeName();
+   public int compare(QuoteLineItem lineItem1, QuoteLineItem lineItem2) {
+      logger.entering(_CLASS, "compare(T,T)",
+            new Object[] {lineItem1,lineItem2});
+      
+      int result=0;
+      result=super.compare(lineItem1, lineItem2);
+      
+      logger.exiting(_CLASS, "compare(T,T)",result);
+      return result;
+   }  
 }

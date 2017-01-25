@@ -42,7 +42,21 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.quote;
 
-public interface QuoteLineItem extends EditableCommodityLineItem {   
+import java.util.List;
+
+import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.dao.user.UserContext;
+import com.wildstartech.wfa.logistics.ltl.quote.QuoteLineItem;
+
+public interface QuoteLineItemDAO 
+extends WildDAO<QuoteLineItem, PersistentQuoteLineItem> {
+  /**
+   * Returns a list of QuoteLineItems associated with the specified quote.
+   * @param quoteId
+   * @return
+   */
+  public List<PersistentQuoteLineItem> 
+    findByQuoteIdentifier(String quoteId, UserContext ctx);
 }

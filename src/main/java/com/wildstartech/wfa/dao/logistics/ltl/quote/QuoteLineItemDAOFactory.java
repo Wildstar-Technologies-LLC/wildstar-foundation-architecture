@@ -42,20 +42,13 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.quote;
 
-import com.wildstartech.wfa.logistics.ltl.QuoteLineItem;
+import com.wildstartech.wfa.dao.WildDAOFactory;
+import com.wildstartech.wfa.logistics.ltl.quote.QuoteLineItem;
 
-public interface PersistentQuoteLineItem 
-extends PersistentEditableCommodityLineItem, QuoteLineItem {
-  /**
-   * Returns the identifier of the quote with which the object is associated.
-   * @return The unique identifier of the quote with which the line item is
-   * associated.
-   */
-  public String getQuoteIdentifier();
-  /**
-   * Sets the identifier of the quote with which the object is associated.
-   */
-  public void setQuoteIdentifier(String identifier);
+public class QuoteLineItemDAOFactory 
+extends WildDAOFactory<QuoteLineItemDAO, 
+  QuoteLineItem, 
+  PersistentQuoteLineItem> {
 }

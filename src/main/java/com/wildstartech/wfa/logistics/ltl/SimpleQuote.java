@@ -1,5 +1,7 @@
 package com.wildstartech.wfa.logistics.ltl;
 
+import com.wildstartech.wfa.logistics.ltl.quote.QuickQuote;
+
 public interface SimpleQuote extends QuickQuote {	
 	//***** assemblyRequired
 	public boolean isAssemblyRequired();

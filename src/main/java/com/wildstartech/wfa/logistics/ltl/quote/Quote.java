@@ -42,9 +42,12 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.quote;
 
 import java.util.List;
+
+import com.wildstartech.wfa.logistics.ltl.AccessorialCharge;
+import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
 
 public interface Quote extends SimpleQuote {
 

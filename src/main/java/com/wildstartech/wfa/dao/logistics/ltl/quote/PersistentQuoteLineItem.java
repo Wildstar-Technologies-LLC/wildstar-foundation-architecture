@@ -42,21 +42,21 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.quote;
 
-import java.util.List;
+import com.wildstartech.wfa.dao.logistics.ltl.PersistentEditableCommodityLineItem;
+import com.wildstartech.wfa.logistics.ltl.quote.QuoteLineItem;
 
-import com.wildstartech.wfa.dao.WildDAO;
-import com.wildstartech.wfa.dao.user.UserContext;
-import com.wildstartech.wfa.logistics.ltl.QuoteLineItem;
-
-public interface QuoteLineItemDAO 
-extends WildDAO<QuoteLineItem, PersistentQuoteLineItem> {
+public interface PersistentQuoteLineItem 
+extends PersistentEditableCommodityLineItem, QuoteLineItem {
   /**
-   * Returns a list of QuoteLineItems associated with the specified quote.
-   * @param quoteId
-   * @return
+   * Returns the identifier of the quote with which the object is associated.
+   * @return The unique identifier of the quote with which the line item is
+   * associated.
    */
-  public List<PersistentQuoteLineItem> 
-    findByQuoteIdentifier(String quoteId, UserContext ctx);
+  public String getQuoteIdentifier();
+  /**
+   * Sets the identifier of the quote with which the object is associated.
+   */
+  public void setQuoteIdentifier(String identifier);
 }

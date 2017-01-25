@@ -42,13 +42,11 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.quote;
 
-import com.wildstartech.wfa.dao.WildDAOFactory;
-import com.wildstartech.wfa.logistics.ltl.QuoteLineItem;
+import com.wildstartech.wfa.logistics.ltl.quote.Quote;
 
-public class QuoteLineItemDAOFactory 
-extends WildDAOFactory<QuoteLineItemDAO, 
-  QuoteLineItem, 
-  PersistentQuoteLineItem> {
+public interface PersistentQuote 
+extends Quote, PersistentSimpleQuote {
+  public void updateFromObject(Quote quote);
 }

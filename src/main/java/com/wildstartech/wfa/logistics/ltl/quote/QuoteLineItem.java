@@ -42,26 +42,9 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.quote;
 
-import java.util.logging.Logger;
+import com.wildstartech.wfa.logistics.ltl.EditableCommodityLineItem;
 
-public class QuoteLineItemComparator
-extends EditableCommodityLineItemComparator<QuoteLineItem> {
-   /** Used in object serialization. */
-   private static final long serialVersionUID = -2204755672275229977L;
-   private static final String _CLASS=
-         QuoteLineItemComparator.class.getName();
-   private static final Logger logger=Logger.getLogger(_CLASS);
-
-   public int compare(QuoteLineItem lineItem1, QuoteLineItem lineItem2) {
-      logger.entering(_CLASS, "compare(T,T)",
-            new Object[] {lineItem1,lineItem2});
-      
-      int result=0;
-      result=super.compare(lineItem1, lineItem2);
-      
-      logger.exiting(_CLASS, "compare(T,T)",result);
-      return result;
-   }  
+public interface QuoteLineItem extends EditableCommodityLineItem {   
 }

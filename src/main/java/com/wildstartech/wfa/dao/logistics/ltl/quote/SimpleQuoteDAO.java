@@ -42,43 +42,43 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.quote;
 
 import java.util.Date;
 import java.util.List;
 
 import com.wildstartech.wfa.dao.WildDAO;
 import com.wildstartech.wfa.dao.user.UserContext;
-import com.wildstartech.wfa.logistics.ltl.QuickQuote;
+import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
 
-public interface QuickQuoteDAO 
-extends WildDAO<QuickQuote, PersistentQuickQuote> {
-	public QuickQuote findByRequestId(String requestId, UserContext ctx);
+public interface SimpleQuoteDAO 
+extends WildDAO<SimpleQuote, PersistentSimpleQuote> {
+   public PersistentSimpleQuote findByRequestId(String requestId, UserContext ctx);
 
-	/**
-	 * Returns a list of all quotes that are in an "Active" status state and are
-	 * not in a "Resolved" status state.
-	 * 
-	 * @param ctx
-	 * @return
-	 */
-	public List<PersistentQuickQuote> findAllActive(UserContext ctx);
+   /**
+    * Returns a list of all quotes that are in an "Active" status state and are
+    * not in a "Resolved" status state.
+    * 
+    * @param ctx
+    * @return
+    */
+   public List<PersistentSimpleQuote> findAllActive(UserContext ctx);
 
-	public List<PersistentQuickQuote> findActionable(UserContext ctx);
+   public List<PersistentSimpleQuote> findActionable(UserContext ctx);
 
-	/**
-	 * Returns a list of quotes with a given status and status reason.
-	 * 
-	 * @param status
-	 * @param statusReason
-	 * @param minDate
-	 * @param ctx
-	 * @return The list of quotes matching the specified status, status reason,
-	 *         ' and minimum date values specified.
-	 */
-	public List<PersistentQuickQuote> findByStatus(
-			String status, 
-			String statusReason, 
-			Date minDate, 
-			UserContext ctx);
+   /**
+    * Returns a list of quotes with a given status and status reason.
+    * 
+    * @param status
+    * @param statusReason
+    * @param minDate
+    * @param ctx
+    * @return The list of quotes matching the specified status, status reason,
+    *         ' and minimum date values specified.
+    */
+   public List<PersistentSimpleQuote> findByStatus(
+         String status, 
+         String statusReason, 
+         Date minDate, 
+         UserContext ctx);
 }

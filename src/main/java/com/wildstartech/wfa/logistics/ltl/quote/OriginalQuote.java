@@ -42,11 +42,58 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.quote;
 
-import com.wildstartech.wfa.logistics.ltl.Quote;
+import java.util.Date;
 
-public interface PersistentQuote 
-extends Quote, PersistentSimpleQuote {
-  public void updateFromObject(Quote quote);
+import com.wildstartech.wfa.location.address.Address;
+
+public interface OriginalQuote {
+	public static enum DELIVERYTYPE {
+		WHITE_GLOVE, ROOM_OF_CHOICE, STANDARD, DOCK_TO_DOOR};	
+	
+	public Date getQuoteDate();
+	public void setQuoteDate(Date date);
+	
+	public String getCallerName();
+	public void setCallerName(String name);
+	
+	public String getContactName();
+	public void setContactName();
+	
+	public String getBusinessName();
+	public void setBUsinessName(String name);
+
+	public Address getAddress();
+	public void setAddress(Address address);
+	
+	public DELIVERYTYPE getDeliveryType();
+	public void setDeliveryType(DELIVERYTYPE deliveryType);
+	
+	public Date getExpectedDeliveryDate();
+	public void setExpectedDeliveryDate(Date expectedDeliveryDate);
+
+	public boolean isResidence();
+	public void setResidence(boolean residence);
+	
+	public Address getDeliveryAddress();
+	public void setDeliveryAddress(Address address);
+	
+	public boolean isMoveToOtherRoomsSet();
+	public void setMoveToOtherRoomsSet(boolean move);
+	
+	public int getAssemblyHours();
+	public void setAssemblyHours(int assemblyHours);
+	
+	public int getAssemblyMinutes();
+	public void setAssemblyMinutes(int assemblyMinutes);
+	
+	public float getAssemblyHourlyRate();
+	public void setAssemblyHourlyRate(float hourlyRate);
+	
+	public float getInsuranceValue();
+	public void setInsuranceValue(float insuranceValue);
+	
+	public String getAccountRepresentativeName();
+	public void setAccountRepresentativeName();
 }

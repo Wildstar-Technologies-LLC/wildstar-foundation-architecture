@@ -1,4 +1,4 @@
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.quote;
 
 import com.wildstartech.wfa.journal.Journalizable;
 import com.wildstartech.wfa.logistics.ltl.pricemodels.PriceModel;
