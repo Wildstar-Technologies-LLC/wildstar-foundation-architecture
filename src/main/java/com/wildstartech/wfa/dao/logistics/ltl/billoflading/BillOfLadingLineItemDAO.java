@@ -42,30 +42,12 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.billoflading;
 
-import com.wildstartech.wfa.WFAException;
-import com.wildstartech.wfa.logistics.ltl.workorder.WorkOrderResources;
+import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.logistics.ltl.billoflading.BillOfLadingLineItem;
 
-public class BillingReferenceIdTooLongException extends WFAException {
+public interface BillOfLadingLineItemDAO 
+extends WildDAO<BillOfLadingLineItem, PersistentBillOfLadingLineItem> {
 
-    /**
-     * Unique class version identifier used in object serialization.
-     */
-    private static final long serialVersionUID = 4301704601539922886L;
-    /**
-     * Identifies the resource bundle used to format the message.
-     * This field should be over-ridden by all subclassing object identifying a
-     * valid ResourceBundle key.
-     */
-    private static String RESOURCE_BUNDLE_KEY =
-            WorkOrderResources.class.getName();
-
-    public BillingReferenceIdTooLongException(
-            String billingReferenceId, int length) {
-        super(RESOURCE_BUNDLE_KEY);
-        localizeMessage("BillingReferenceIdTooLongException", new Object[]{
-                    billingReferenceId, length
-                });
-    }
 }

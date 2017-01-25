@@ -42,12 +42,13 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.billoflading;
 
-import com.wildstartech.wfa.dao.WildDAOFactory;
-import com.wildstartech.wfa.logistics.ltl.BillOfLading;
+import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.dao.logistics.ltl.billoflading.PersistentBillOfLading;
+import com.wildstartech.wfa.logistics.ltl.billoflading.BillOfLading;
 
-public class BillOfLadingDAOFacotry 
-extends WildDAOFactory<BillOfLadingDAO, BillOfLading, PersistentBillOfLading> {
+public interface BillOfLadingDAO 
+extends WildDAO<BillOfLading, PersistentBillOfLading> {
 
 }

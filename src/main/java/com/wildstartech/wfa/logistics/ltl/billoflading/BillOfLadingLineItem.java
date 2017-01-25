@@ -42,13 +42,63 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.billoflading;
 
-import com.wildstartech.wfa.dao.WildDAO;
-import com.wildstartech.wfa.dao.logistics.ltl.PersistentBillOfLading;
-import com.wildstartech.wfa.logistics.ltl.BillOfLading;
+public interface BillOfLadingLineItem {
 
-public interface BillOfLadingDAO 
-extends WildDAO<BillOfLading, PersistentBillOfLading> {
+  //********** isHazardous
+  public boolean isHazardous();
+
+  public void setHazardous(boolean isHazardous);
+
+  //********** numberOfShippingUnits
+  public int getNumberOfShippingUnits();
+
+  public void setNumberOfShippingUnits(int numberOfShippingUnits);
+
+  //********** numberOfPieces 
+  public int getNumberOfPieces();
+
+  public void setNumberOfPieces(int numberOfPieces);
+
+  //********** length 
+  public double getLength();
+
+  public void setLength(double length);
+
+  //********** height
+  public double getHeight();
+
+  public void setHeight(double height);
+
+  //********** width
+  public double getWidth();
+
+  public void setWidth(double width);
+
+  //********** description
+  public String getDescription();
+
+  public void setDescription(String description);
+
+  //********** itemClass
+  public String getItemClass();
+
+  public void setItemClass(String itemClass);
+
+  //********** nmfcItemNumber
+  public String getNmfcItemNumber();
+
+  public void setNmfcItemNumber(String nmfcItemNumber);
+
+  //********** unitOfMeasure
+  public String getUnitOfMeasure();
+
+  public void setUnitOfMeasure(String unitOfMeasure);
+
+  //********** kindOfPackage
+  public String getKindOfPackage();
+
+  public void setKindOfPackage(String kindOfPackage);
 
 }

@@ -42,11 +42,12 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.billoflading;
 
 import com.wildstartech.wfa.dao.WildObject;
-import com.wildstartech.wfa.logistics.ltl.BillOfLading;
+import com.wildstartech.wfa.logistics.ltl.billoflading.BillOfLadingLineItem;
 
-public interface PersistentBillOfLading 
-extends BillOfLading, WildObject {
+public interface PersistentBillOfLadingLineItem 
+extends WildObject, BillOfLadingLineItem {
+
 }
