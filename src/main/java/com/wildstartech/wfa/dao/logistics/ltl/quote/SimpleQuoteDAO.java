@@ -49,7 +49,7 @@ import java.util.List;
 
 import com.wildstartech.wfa.dao.WildDAO;
 import com.wildstartech.wfa.dao.user.UserContext;
-import com.wildstartech.wfa.logistics.ltl.SimpleQuote;
+import com.wildstartech.wfa.logistics.ltl.quote.SimpleQuote;
 
 public interface SimpleQuoteDAO 
 extends WildDAO<SimpleQuote, PersistentSimpleQuote> {
