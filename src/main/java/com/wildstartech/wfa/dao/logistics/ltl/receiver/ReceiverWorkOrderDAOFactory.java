@@ -42,12 +42,13 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.receiver;
 
-import com.wildstartech.wfa.dao.ticketing.BasicTicketDAO;
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrder;
+import com.wildstartech.wfa.dao.WildDAOFactory;
+import com.wildstartech.wfa.logistics.ltl.receiver.ReceiverWorkOrder;
 
-public interface ReceiverWorkOrderDAO
-extends BasicTicketDAO<ReceiverWorkOrder, PersistentReceiverWorkOrder> {
-
+public class ReceiverWorkOrderDAOFactory extends
+      WildDAOFactory<ReceiverWorkOrderDAO, 
+                     ReceiverWorkOrder, 
+                     PersistentReceiverWorkOrder> {
 }

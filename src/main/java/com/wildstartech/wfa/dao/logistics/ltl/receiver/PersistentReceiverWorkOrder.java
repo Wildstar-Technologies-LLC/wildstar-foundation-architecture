@@ -42,22 +42,12 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.receiver;
 
-import java.util.List;
+import com.wildstartech.wfa.dao.ticketing.PersistentBasicTicket;
+import com.wildstartech.wfa.logistics.ltl.receiver.ReceiverWorkOrder;
 
-import com.wildstartech.wfa.dao.WildDAO;
-import com.wildstartech.wfa.dao.user.UserContext;
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+public interface PersistentReceiverWorkOrder 
+extends PersistentBasicTicket<ReceiverWorkOrder>, ReceiverWorkOrder {
 
-public interface ReceiverWorkOrderLineItemDAO 
-extends WildDAO<ReceiverWorkOrderLineItem, PersistentReceiverWorkOrderLineItem> {
-	/**
-	   * Returns a list of ReceiverWorkOrderLineItems associated with the 
-	   * specified work order.
-	   * @param workOrderId
-	   * @return
-	   */
-	  public List<PersistentReceiverWorkOrderLineItem> 
-	  	findByWorkOrderId(String workOrderId, UserContext ctx);
 }

@@ -42,14 +42,22 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.receiver;
 
-import com.wildstartech.wfa.dao.WildDAOFactory;
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+import java.util.List;
 
-public class ReceiverWorkOrderLineItemDAOFactory 
-extends WildDAOFactory<ReceiverWorkOrderLineItemDAO, 
-                       ReceiverWorkOrderLineItem, 
-                       PersistentReceiverWorkOrderLineItem> {
+import com.wildstartech.wfa.dao.WildDAO;
+import com.wildstartech.wfa.dao.user.UserContext;
+import com.wildstartech.wfa.logistics.ltl.receiver.ReceiverWorkOrderLineItem;
 
+public interface ReceiverWorkOrderLineItemDAO 
+extends WildDAO<ReceiverWorkOrderLineItem, PersistentReceiverWorkOrderLineItem> {
+	/**
+	   * Returns a list of ReceiverWorkOrderLineItems associated with the 
+	   * specified work order.
+	   * @param workOrderId
+	   * @return
+	   */
+	  public List<PersistentReceiverWorkOrderLineItem> 
+	  	findByWorkOrderId(String workOrderId, UserContext ctx);
 }

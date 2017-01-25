@@ -1,7 +1,8 @@
-package com.wildstartech.wfa.logistics.ltl;
+package com.wildstartech.wfa.logistics.ltl.receiver;
 
 import com.wildstartech.wfa.journal.Journalizable;
 import com.wildstartech.wfa.logistics.WarehouseLocation;
+import com.wildstartech.wfa.logistics.ltl.LineItem;
 
 public interface ReceiverWorkOrderLineItem 
 extends LineItem, Journalizable {

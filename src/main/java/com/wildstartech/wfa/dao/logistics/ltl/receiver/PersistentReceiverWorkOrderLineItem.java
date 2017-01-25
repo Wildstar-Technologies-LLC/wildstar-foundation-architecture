@@ -42,9 +42,10 @@
  *      derek.berube@wildstartech.com
  *      www.wildstartech.com
  */
-package com.wildstartech.wfa.dao.logistics.ltl;
+package com.wildstartech.wfa.dao.logistics.ltl.receiver;
 
-import com.wildstartech.wfa.logistics.ltl.ReceiverWorkOrderLineItem;
+import com.wildstartech.wfa.dao.logistics.ltl.PersistentLineItem;
+import com.wildstartech.wfa.logistics.ltl.receiver.ReceiverWorkOrderLineItem;
 
 public interface PersistentReceiverWorkOrderLineItem
 extends PersistentLineItem, ReceiverWorkOrderLineItem {
