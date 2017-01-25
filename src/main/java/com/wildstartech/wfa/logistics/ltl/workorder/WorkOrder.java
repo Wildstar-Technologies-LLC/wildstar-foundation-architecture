@@ -64,6 +64,14 @@ public interface WorkOrder extends BasicTicket, Journalizable {
    public AccessorialCharge getAccessorialCharge(int i);
    public AccessorialCharge removeAccessorialCharge(AccessorialCharge charge);
    
+   //***** actualDeliveryDate
+   public Date getActualDeliveryDate();
+   public void setActualDeliveryDate(Date deliveryDate);
+   
+   //***** actualPickupDate
+   public Date getActualPickupDate();
+   public void setActualPickupDate(Date pickupDate);
+   
    //***** adjustmentAmount
    public double getAdjustmentAmount();
    public void setAdjustmentAmount(double amount);
@@ -320,6 +328,22 @@ public interface WorkOrder extends BasicTicket, Journalizable {
    public String getReferralOther();
    public void setReferralOther(String other);
    
+   //***** requestedDeliveryDate
+   public Date getRequestedDeliveryDate();
+   public void setRequestedDeliveryDate(Date deliveryDate);
+   
+   //***** requestedPickupWindow
+   public String getRequestedDeliveryWindow();
+   public void setRequestedDeliveryWindow(String deliveryWindow);
+   
+   //***** requestedPickupDate
+   public Date getRequestedPickupDate();
+   public void setRequestedPickupDate(Date pickupDate);
+   
+   //***** requestedPickupWindow
+   public String getRequestedPickupWindow();
+   public void setRequestedPickupWindow(String pickupWindow);
+   
    //***** scheduledDeliveryDate
    public Date getScheduledDeliveryDate();
    public void setScheduledDeliveryDate(Date scheduledDeliveryDate);
@@ -335,6 +359,10 @@ public interface WorkOrder extends BasicTicket, Journalizable {
    //***** stairCarry
    public boolean isStairCarry();
    public void setStairCarry(boolean value);
+   
+   //***** storageRequired
+   public boolean isStorageRequired();
+   public void setStorageRequired(boolean required);
    
    //***** totalCubes
    public int getTotalCubes();
