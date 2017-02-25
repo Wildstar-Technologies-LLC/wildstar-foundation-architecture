@@ -7,6 +7,7 @@ import com.wildstartech.wfa.ticketing.BasicTicket;
 public interface QuickQuote
 extends BasicTicket, Journalizable {
 	public enum AdjustmentType { FixedAmount, Percentage };
+	public enum QuoteMethod {ByCube, ByWeight };
 	
 	//***** adjustmentAmount
 	public double getAdjustmentAmount();
@@ -83,6 +84,25 @@ extends BasicTicket, Journalizable {
 	 */
 	public void setPriceModel(PriceModel model);	
 
+	//***** quoteMethod
+	/** 
+	 * Returns the value of the {@code quoteMethod} property as a {@code String}.
+	 * @return A {@code String} representation of the quote method.
+	 */
+	public String getQuoteMethodLabel();
+	/**
+	 * Returns the value of the {@code quoteMethod} property.
+	 * 
+	 * @return
+	 */
+	public QuoteMethod getQuoteMethod();
+	/**
+	 * Saves the {@code quoteMethod}
+	 * @param method
+	 */
+	public void setQuoteMethod(QuoteMethod method);
+	public void setQuoteMethod(String method);
+	
 	//***** serviceLevel
 	public String getServiceLevel();
 	public void setServiceLevel(String serviceLevel);

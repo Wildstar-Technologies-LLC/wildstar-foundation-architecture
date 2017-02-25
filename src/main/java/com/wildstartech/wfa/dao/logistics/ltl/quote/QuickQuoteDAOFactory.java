@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2016 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2017 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -44,46 +44,14 @@
  */
 package com.wildstartech.wfa.dao.logistics.ltl.quote;
 
-import java.util.Date;
-import java.util.List;
-
-import com.wildstartech.wfa.dao.WildDAO;
-import com.wildstartech.wfa.dao.user.UserContext;
-import com.wildstartech.wfa.logistics.ltl.quote.SimpleQuote;
-
+import com.wildstartech.wfa.dao.WildDAOFactory;
+import com.wildstartech.wfa.logistics.ltl.quote.QuickQuote;
 /**
- * Used to obtain a DAO capable of persisting a <code>SimpleQuote</code>.
+ * Used to obtain a DAO capable of persisting a <code>QuickQuote</code>.
  * @author Derek Berube, Wildstar Technologies, LLC.
  *
  */
-public interface SimpleQuoteDAO 
-extends WildDAO<SimpleQuote, PersistentSimpleQuote> {
-   public PersistentSimpleQuote findByRequestId(String requestId, UserContext ctx);
+public class QuickQuoteDAOFactory 
+extends WildDAOFactory<QuickQuoteDAO, QuickQuote, PersistentQuickQuote> {
 
-   /**
-    * Returns a list of all quotes that are in an "Active" status state and are
-    * not in a "Resolved" status state.
-    * 
-    * @param ctx
-    * @return
-    */
-   public List<PersistentSimpleQuote> findAllActive(UserContext ctx);
-
-   public List<PersistentSimpleQuote> findActionable(UserContext ctx);
-
-   /**
-    * Returns a list of quotes with a given status and status reason.
-    * 
-    * @param status
-    * @param statusReason
-    * @param minDate
-    * @param ctx
-    * @return The list of quotes matching the specified status, status reason,
-    *         ' and minimum date values specified.
-    */
-   public List<PersistentSimpleQuote> findByStatus(
-         String status, 
-         String statusReason, 
-         Date minDate, 
-         UserContext ctx);
 }

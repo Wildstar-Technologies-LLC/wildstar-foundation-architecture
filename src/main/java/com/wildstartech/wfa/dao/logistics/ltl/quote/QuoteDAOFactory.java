@@ -48,7 +48,7 @@ import com.wildstartech.wfa.dao.WildDAOFactory;
 import com.wildstartech.wfa.logistics.ltl.quote.Quote;
 
 /**
- * Used to obtain a DAO capable of persisting a <code>QuickQuote</code>.
+ * Used to obtain a DAO capable of persisting a <code>Quote</code>.
  * @author Derek Berube, Wildstar Technologies, LLC.
  *
  */
