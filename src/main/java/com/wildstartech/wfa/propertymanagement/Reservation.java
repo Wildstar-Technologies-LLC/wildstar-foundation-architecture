@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 - 2016 Wildstar Technologies, LLC.
+ * Copyright (c) 2001 - 2017 Wildstar Technologies, LLC.
  *
  * This file is part of Wildstar Foundation Architecture.
  *
@@ -35,8 +35,7 @@
  * If you need additional information or have any questions, please contact:
  *
  *      Wildstar Technologies, LLC.
- *      63 The Greenway Loop
- *      Panama City Beach, FL 32413
+ *      Inlet Beach, FL 32461
  *      USA
  *
  *      derek.berube@wildstartech.com
@@ -65,6 +64,7 @@ public interface Reservation {
    public Date getArrivalDate();
    public void setArrivalDate(Date arrivalDate);
    
+   //***** contractConfirmed
    public boolean isContractConfirmed();
    public void setContractConfirmed(boolean confirmed);
    

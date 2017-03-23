@@ -54,9 +54,24 @@ import java.util.Date;
  */
 public interface BookingRequest {
    /**
-    * Returns the date/time when guests are scheduled to arrive.
-    * @return The date/time the guests are scheduled to arrive.
+    * Returns the date/time when guests are expected to arrive.
+    * @return The date/time the guests are expected to arrive.
     */
    public Date getScheduledArrivalDate();
+   /**
+    * Specifies the date/time the guest(s) are expected to arrive.
+    * @param arrivalDate the date/time the guest(s) are expected to arrive
+    */
    public void setScheduledArrivalDate(Date scheduledArrivalDate);
+   
+   /**
+    * Returns the date/time when guests are expected to leave.
+    * @return The date/time the guests are expected to leave.
+    */
+   public Date getScheduledDepartureDate();
+   /**
+    * Specifies the date/time the guest(s) are expected to leave.
+    * @param departureDate the date/time the guest(s) are expected to leave
+    */
+   public void setScheduledDepartureDate(Date departureDate);
 }
