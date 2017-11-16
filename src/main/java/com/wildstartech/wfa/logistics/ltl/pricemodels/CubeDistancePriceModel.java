@@ -78,6 +78,10 @@ public interface CubeDistancePriceModel extends PriceModel {
   public double getCubeDiscount();
   public void setCubeDiscount(double cubeDiscount);
   
+  //***** mileageMax
+  public int getMileageMax();
+  public void setMileageMax(int mileageMax);
+  
   //***** mileageStep 
   public double getMileageStep();
   public void setMileageStep(double mileageStep);
