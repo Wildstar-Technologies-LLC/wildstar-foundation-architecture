@@ -38,6 +38,7 @@ details. Please contact schuyler@geocoder.us if you are interested in
 receiving updates to this database as they become available.
 
 Change Log
+2018-07-05 Added Irvine, CA 92617 (33.649,-117.821)
 2018-04-29 Added Gold Canyon, AZ 85118 (33.36, -111.441)
 2018-04-11 Added Fresno, CA 93737 (36.74100, -119.786000)
 2018-04-04 Added Tracy, CA 95391 (37.761, -121.546)
