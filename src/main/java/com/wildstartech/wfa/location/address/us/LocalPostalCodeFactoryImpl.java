@@ -130,9 +130,6 @@ public class LocalPostalCodeFactoryImpl extends PostalCodeFactory implements
             while (reader.ready()) {
                line = reader.readLine();
                row++;
-if (row == 40219) {
-   System.out.println("HI");
-}
                if (line != null) {
                   try {
                      tokenizer = new StringTokenizer(line, ",");
