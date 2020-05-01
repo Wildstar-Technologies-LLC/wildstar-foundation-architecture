@@ -1,6 +1,7 @@
 Wildstar Foundation Architecture
 
-Introduction This library consists of a collection of interfaces and classes 
+Introduction
+This library consists of a collection of interfaces and classes 
 developed in the course of writing software using the Java(tm) programming 
 language. The software has been released under the GNU General Public License 
 version 3 with the classpath exception. The GPL license was selected to ensure
